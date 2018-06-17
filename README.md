@@ -1,2 +1,2 @@
 # ETIP-Project
-CNN based element tagging technique for insurance policy analysis
+CNN based element tagging technique for insurance policy analysis DataSet
