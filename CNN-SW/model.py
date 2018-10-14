@@ -167,8 +167,9 @@ def cnn_batch_train(CNN, ls_train, train_times, entropy):
         return True
     else:
         cross_entropy = CNN.cross_entropy.eval(feed_dict={CNN.x: ls_train[0], CNN.y_: ls_train[1]})
-        print("\ntrain finished, total step {}".format(train_times))
-        print("finally cross_entropy {:f}\n".format(cross_entropy))
+        if entropy == cfg.LS_CROSS_ENTROPY_TH[-1]:
+            print("\ntrain finished, total step {}".format(train_times))
+            print("finally cross_entropy {:f}\n".format(cross_entropy))
         return False
 
 
