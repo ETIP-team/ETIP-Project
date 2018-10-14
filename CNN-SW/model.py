@@ -77,7 +77,7 @@ class CNNTextClassifier(object):
         self.regularizer = tf.nn.l2_loss(self.W_fc1) + tf.nn.l2_loss(self.W_conv1, name="regularizer")
 
         self.cross_entropy = tf.reduce_mean(-tf.reduce_sum(self.y_ * tf.log(self.y_conv), reduction_indices=[1]), name="cross_entropy_before_l2")
-        self.cross_entropy = tf.reduce_mean(self.cross_entropy + beta * self.regularizer, name="cross_entropy_after_l2")
+        self.cross_entropy = tf.add(self.cross_entropy, l2_beta * self.regularizer, name="cross_entropy_after_l2")
 
         self.train_step = tf.train.AdamOptimizer(1e-4, epsilon=1e-8).minimize(self.cross_entropy, name="train_step")
 
