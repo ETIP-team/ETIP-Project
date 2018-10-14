@@ -1,3 +1,4 @@
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
 # ETIP: A general element tagging problem for contract analysis solved by sliding window technique
 -------------------
 
@@ -8,7 +9,7 @@
 
 
 ### DataSet Information
-| Category ID              |  N      |  $ \bar L  $   | $ \overline SLR  $  |
+| Category ID              |  N      |  $ \bar{L}  $   | $ \overline{SLR}  $  |
 | :-----------------------:|:-------:|:-------:|:-------:|
 | Cover(C)                 |574      |3.1      |0.13     |
 | Waiting Period(WP)       |21       |15.9     |0.91     |
@@ -17,4 +18,3 @@
 | Insured Amount(IA)       |1062     |27.3     |0.99     |
 | Exclusion(E)             |20       |13.2     |0.76     |
 | Termination(T)           |299      |9.3      |0.97     |
-
