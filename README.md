@@ -17,3 +17,6 @@
 | Insured Amount(IA)       |1062     |27.3     |0.99     |
 | Exclusion(E)             |20       |13.2     |0.76     |
 | Termination(T)           |299      |9.3      |0.97     |
+
+
+$ \bar L  $
