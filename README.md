@@ -1,5 +1,2 @@
-# ETIP-Problem
-
-**ETIP**: A general element tagging problem for contract analysis solved by sliding window technique
-
+# ETIP: A general element tagging problem for contract analysis solved by sliding window technique
 -------------------
