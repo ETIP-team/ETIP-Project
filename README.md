@@ -1,6 +1,6 @@
 # ETIP-Problem
 
-**ETIP** is a general element tagging problem, which allows not only the elements could be a phrase, clause or sentence, but also a phrase or clause element could be embedded in sentence element.
+**ETIP**: A general element tagging problem for contract analysis solved by sliding window technique
 
 -------------------
 
