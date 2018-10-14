@@ -18,5 +18,3 @@
 | Exclusion(E)             |20       |13.2     |0.76     |
 | Termination(T)           |299      |9.3      |0.97     |
 
-
-$ \bar L  $
