@@ -8,7 +8,7 @@
 
 
 ### DataSet Information
-| Category ID              |  N      |  L      | SLR     |
+| Category ID              |  N      |  $ \bar{L} $   | $ \overline{SLR} $  |
 | :-----------------------:|:-------:|:-------:|:-------:|
 | Cover(C)                 |574      |3.1      |0.13     |
 | Waiting Period(WP)       |21       |15.9     |0.91     |
