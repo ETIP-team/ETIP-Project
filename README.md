@@ -8,7 +8,7 @@
 
 
 ### DataSet Information
-| Category ID              |  N      |  ![Alt text](http://latex.codecogs.com/gif.latex?%5Cbar%7BL%7D)   | $ \overline{SLR}  $  |
+| Category ID              |  N      |  ![Alt text](http://latex.codecogs.com/gif.latex?%5Cbar%7BL%7D)   | ![Alt text](http://latex.codecogs.com/gif.latex?%5Coverline%7BSLR%7D)  |
 | :-----------------------:|:-------:|:-------:|:-------:|
 | Cover(C)                 |574      |3.1      |0.13     |
 | Waiting Period(WP)       |21       |15.9     |0.91     |
