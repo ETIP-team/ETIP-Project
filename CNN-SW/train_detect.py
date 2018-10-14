@@ -41,7 +41,6 @@ if train_flag:
         ls_train_set = model.training_set(ls_train)
         tf.global_variables_initializer().run()
         for i in range(len(model.ls_cross_entropy_th)):
-            time_start = time.time()
             flag_train = True
             while model.cnn_batch_train(CNN, ls_train_set, train_times, model.ls_cross_entropy_th[i]):
                 ls_train = model.get_train_batch(ls_all_samples)
