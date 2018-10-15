@@ -241,7 +241,11 @@ def main():
         ls_metrics_dir, confusion_matrix = compare_with_answer(detect_path, answer_path)
         # use confusion matrix to compute the result.
         data_frame, sum_result_dir = get_count_dataframe_by_confusion_matrix(confusion_matrix)
-        score = data_frame['F1_score'].mean()
+        
+        precision = sum_result_dir["TP"] / (sum_result_dir["TP"] + sum_result_dir["FP"])
+        recall = sum_result_dir["TP"] / (sum_result_dir["TP"] + sum_result_dir["FN"])
+
+        score = (2*precision*recall)/(precision+recall)
         if max_score < score:
             max_score = score
             index = entropy_index
