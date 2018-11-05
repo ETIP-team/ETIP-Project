@@ -73,7 +73,7 @@ def write_one_result(all_csv_result, th_train_iou, th_iou_nms, th_iou_p, temp_pa
     data_lists = temp_pandas.values.tolist()
     print("\nTh_train_iou:  ", th_train_iou, "th_iou_nms", th_iou_nms, "th_iou_p", th_iou_p)
     all_csv_result.write(
-        "th_train_iou, " + str(th_train_iou) + ", th_nms, " + str(th_iou_nms) + ", th_p, " + str(th_iou_p) + ",,")
+        "th_train_iou= " + str(th_train_iou) + ", th_nms= " + str(th_iou_nms) + ", th_p= " + str(th_iou_p) + ",,")
     for d_l in data_lists:
         for d in d_l:
             all_csv_result.write(str(d))

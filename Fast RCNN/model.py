@@ -6,6 +6,7 @@
 
 import torch as t
 import torch.nn as nn
+import torch.optim as optim
 import numpy as np
 import config as cfg
 
@@ -48,7 +49,7 @@ class RCNN(nn.Module):  # todo result connect one more full connected layer. to 
         then two full connected and softmax layer for class score
                 two full connected layer for loc detection."""
 
-    def __init__(self, pos_loss_method="smoothl1"):
+    def __init__(self, pos_loss_method="smoothl1", lambd=1.0):
         super(RCNN, self).__init__()
         self.conv1 = nn.Sequential(
             nn.Conv2d(in_channels=1,
@@ -72,7 +73,10 @@ class RCNN(nn.Module):  # todo result connect one more full connected layer. to 
 
         self.smooth_l1_loss = nn.SmoothL1Loss()
         self.mse_loss = nn.MSELoss()  # modify the loss calculation
+
         self.pos_loss_method = pos_loss_method
+        self.lambd = lambd
+        self.optimizer = None
 
     def forward(self, sentence, rois, ridx):  # todo a little
         sentence = sentence.float()
@@ -94,7 +98,7 @@ class RCNN(nn.Module):  # todo result connect one more full connected layer. to 
 
         return cls_softmax_score, bbox
 
-    def calc_loss(self, probs, bbox, labels, gt_bbox, lmb=1.0):
+    def calc_loss(self, probs, bbox, labels, gt_bbox):
         labels = labels.long()
         loss_cls = self.cross_entropy_loss(probs, labels)
         lbl = labels.view(-1, 1, 1).expand(labels.size(0), 1, 2)
@@ -103,9 +107,9 @@ class RCNN(nn.Module):  # todo result connect one more full connected layer. to 
         if self.pos_loss_method == "smoothl1":
             loss_loc = self.smooth_l1_loss(bbox.gather(1, lbl).squeeze(1) * mask, gt_bbox.float() * mask)
             # print(self.pos_loss_method)
-        else:
+        elif self.pos_loss_method == "mse":
             loss_loc = self.mse_loss(bbox.gather(1, lbl).squeeze(1) * mask, gt_bbox.float() * mask)
-        loss = loss_cls + lmb * loss_loc
+        loss = loss_cls + self.lambd * loss_loc
         return loss, loss_cls, loss_loc
 
 
@@ -131,7 +135,6 @@ class RCNN_NO_REGRESSOR(nn.Module):  # todo result connect one more full connect
         self.flatten_feature = feature_maps_number * pooling_out
         self.cls_fc1 = nn.Linear(self.flatten_feature, self.flatten_feature)
         self.cls_score = nn.Linear(self.flatten_feature, classes_num + 1)
-        #
         # self.bbox_fc1 = nn.Linear(self.flatten_feature, self.flatten_feature)
         # # attention there only 2* (classes_num+1)!
         # self.bbox = nn.Linear(self.flatten_feature, 2*(classes_num+1))
@@ -166,9 +169,9 @@ class RCNN_NO_REGRESSOR(nn.Module):  # todo result connect one more full connect
 
 if __name__ == '__main__':
     rcnn = RCNN()
+    rcnn.optimizer = optim.Adam(rcnn.conv1.parameters(), lr=1e-4, weight_decay=1e-3)
     print(rcnn)
 
-#
 # def train_batch(sentence, rois, ridx, gt_cls, gt_tbbox, rcnn, optimizer):
 #     predict_cls, predict_tbbox = rcnn(sentence, rois, ridx)
 #     loss, loss_cls, loss_loc = rcnn.calc_loss(predict_cls, predict_tbbox, gt_cls, gt_tbbox)

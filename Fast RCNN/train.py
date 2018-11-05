@@ -4,159 +4,107 @@
 #
 # On 2018-10-12
 
-
-import os
 import torch as t
 import torch.optim as optim
 import numpy as np
-from torch.autograd import Variable
 from model import RCNN
 import config as cfg
+from arguments import TrainArguments
 
 learning_rate = cfg.LEARNING_RATE
 beta = cfg.L2_BETA
 
 
-def train_batch(sentence, rois, ridx, gt_cls, gt_tbbox, rcnn, optimizer):  # gt train
-    predict_cls, predict_tbbox = rcnn(sentence, rois, ridx)   # gt train
-    loss, loss_cls, loss_loc = rcnn.calc_loss(predict_cls, predict_tbbox, gt_cls, gt_tbbox)   # gt train
+def train_batch(sentence, rois, ridx, gt_cls, gt_tbbox, rcnn):
+    predict_cls, predict_tbbox = rcnn(sentence, rois, ridx)
+    loss, loss_cls, loss_loc = rcnn.calc_loss(predict_cls, predict_tbbox, gt_cls, gt_tbbox)
     _loss = loss.data.cpu().numpy()
-    _loss_cls = loss_cls.data.cpu().numpy()  # gt train
-    _loss_loc = loss_loc.data.cpu().numpy()  # gt train
+    _loss_cls = loss_cls.data.cpu().numpy()
+    _loss_loc = loss_loc.data.cpu().numpy()
 
     # back propagation
-    optimizer.zero_grad()
+    rcnn.optimizer.zero_grad()
     loss.backward()
-    optimizer.step()
+    rcnn.optimizer.step()
     return _loss, _loss_cls, _loss_loc
 
 
-# todo debug
-def train_epoch(train_set, train_sentences, train_sentence_info, train_roi, train_cls, train_tbbox, rcnn, optimizer):
-    batch_sentence_num = 4  # 2
-    roi_num = 64
-    pos_roi_num = int(roi_num * 0.25)
-    neg_roi_num = roi_num - pos_roi_num
-    sentences_num = len(train_set)
-    perm = np.random.permutation(sentences_num)
-    perm = train_set[perm]
+def train_epoch(train_arguments, rcnn):
+    train_sentences_num = len(train_arguments.train_set)
+    perm = np.random.permutation(train_sentences_num)
+    perm = train_arguments.train_set[perm]
 
     losses = []
     losses_cls = []
     losses_loc = []
 
-    for i in range(0, sentences_num, batch_sentence_num):
-        left_boundary = i
-        right_boundary = min(i + batch_sentence_num, sentences_num)
-        torch_seg = perm[left_boundary:right_boundary]
-        sentence = Variable(train_sentences[torch_seg, :, :]).cuda()
-        ridx = []  # sentence's rois belong id in one batch
-        glo_ids = []
-
-        for j in range(left_boundary, right_boundary):
-            info = train_sentence_info[perm[j]]
-            pos_idx = info['pos_idx']
-            neg_idx = info['neg_idx']
-            ids = []
-
-            if len(pos_idx) > 0:
-                ids.append(np.random.choice(pos_idx, size=pos_roi_num))
-            if len(neg_idx) > 0:
-                ids.append(np.random.choice(neg_idx, size=neg_roi_num))
-            if len(ids) == 0:
-                continue
-
-            # all roi  18-10-19
-            # ids.append(pos_idx)
-            # ids.append(neg_idx)
-            # all roi
-
-            ids = np.concatenate(ids, axis=0)
-            glo_ids.append(ids)
-            ridx += [j - left_boundary] * ids.shape[0]
-
-        if len(ridx) == 0:
-            continue
-        glo_ids = np.concatenate(glo_ids, axis=0).astype(np.int64)  # id in all sentences!
-        ridx = np.array(ridx)
-        # try:
-        rois = train_roi[glo_ids]
-        # except:
-        #     wait = True
-        gt_cls = Variable(t.Tensor(train_cls[glo_ids])).cuda()
-        gt_tbbox = Variable(t.Tensor(train_tbbox[glo_ids])).cuda()
-
-        loss, loss_cls, loss_loc = train_batch(sentence, rois, ridx, gt_cls, gt_tbbox, rcnn, optimizer)  # gt train
+    for sentence, rois, ridx, gt_cls, gt_tbbox in train_arguments.batch_train_data_generator(perm):
+        loss, loss_cls, loss_loc = train_batch(sentence, rois, ridx, gt_cls, gt_tbbox, rcnn)
         # loss = train_batch(sentence, rois, ridx, gt_cls, rcnn, optimizer)
         losses.append(loss)
-        losses_cls.append(loss_cls)   # gt train
-        losses_loc.append(loss_loc)   # gt train
+        losses_cls.append(loss_cls)
+        losses_loc.append(loss_loc)
 
-    avg_loss = np.mean(losses)
-    avg_loss_sc = np.mean(losses_cls)   # gt train
-    avg_loss_loc = np.mean(losses_loc)   # gt train
-    print(f'Avg loss = {avg_loss:.4f}; loss_sc = {avg_loss_sc:.4f}, loss_loc = {avg_loss_loc:.4f}')   # gt train
-    # print(f'Avg loss = {avg_loss:.4f}')
+    avg_sum_loss = np.mean(losses)
+    avg_loss_cls = np.mean(losses_cls)
+    avg_loss_loc = np.mean(losses_loc)
+    print(f'Avg loss = {avg_sum_loss:.4f}; loss_cls = {avg_loss_cls:.4f}, loss_loc = {avg_loss_loc:.4f}')
 
 
-def start_training(th_train_iou, n_epoch, folder, start_save_epoch, pos_loss_method, norm=False):
-    rcnn = RCNN(pos_loss_method).cuda()
-    # print(rcnn)
-    # npz_path = 'dataset/train/train_data_npz/train_th_iou_'+str(th_iou)+"_norm_"+str(folder)+".npz"
-    npz_path = 'dataset/train/train_relabeled_data_npz/relabeled_train_th_iou_' + str(th_train_iou) + str(folder) + ".npz"
-    # npz_path = 'dataset/train/train_relabeled_data_npz/relabeled_train_gt'+str(folder) + ".npz"   # gt train
+def start_training(train_arguments, folder_index):
+    rcnn = RCNN(train_arguments.pos_loss_method, train_arguments.loss_weight_lambda).cuda()
+
+    npz_path = train_arguments.get_train_data_path(folder_index)
     npz = np.load(npz_path)
     print("\n\n\nload from:  ", npz_path)
-    train_sentences = npz['train_sentences']
-    train_sentence_info = npz['train_sentence_info']
-    train_roi = npz['train_roi']
-    train_cls = npz['train_cls']
+    train_arguments.train_sentences = npz['train_sentences']
+    train_arguments.train_sentence_info = npz['train_sentence_info']
+    train_arguments.train_roi = npz['train_roi']
+    train_arguments.train_cls = npz['train_cls']
+    train_arguments.train_tbbox = npz["train_norm_tbbox"] if train_arguments.normalize else npz['train_tbbox']
+    train_arguments.train_sentences = t.Tensor(train_arguments.train_sentences)
+    train_arguments.train_set = np.random.permutation(train_arguments.train_sentences.size(0))  # like shuffle
+    if train_arguments.prevent_overfitting_method.lower() == "l2 norm":
+        if train_arguments.partial_l2_penalty:
+            optimizer = optim.Adam(rcnn.conv1.parameters(), lr=train_arguments.learning_rate,
+                                   weight_decay=train_arguments.l2_beta)
+        else:
+            optimizer = optim.Adam(rcnn.parameters(), lr=train_arguments.learning_rate,
+                                   weight_decay=train_arguments.l2_beta)
+        rcnn.optimizer = optimizer
 
-    train_tbbox = npz['train_tbbox']
-    # use norm 18-10-19
-    if norm:
-        train_tbbox = npz["train_norm_tbbox"]
+    for epoch_time in range(train_arguments.max_iter_epoch):
+        print('===========================================')
+        print('[Training Epoch {}]'.format(epoch_time + 1))
 
-    train_sentences = t.Tensor(train_sentences)
-    # print("train_sentences", train_sentences.shape)
-    # print("type(train_sentences)", type(train_sentences))
-    # print("train_sentences.type", train_sentences.type())
-
-    Ntrain = train_sentences.size(0)
-    train_set = np.random.permutation(Ntrain)  # like shuffle
-
-    optimizer = optim.Adam(rcnn.parameters(), lr=learning_rate, weight_decay=beta)
-
-    for i in range(n_epoch):
-        print(f'===========================================')
-        print(f'[Training Epoch {i+1}]')
-        train_epoch(train_set, train_sentences, train_sentence_info, train_roi, train_cls, train_tbbox, rcnn, optimizer)
-        if i >= start_save_epoch:
-            if norm:
-                path = "model/rcnn_jieba/relabeled_norm_"+pos_loss_method+"_train_iou_" + str(th_train_iou) + "/" + str(folder)
-            else:
-                path = "model/rcnn_jieba/relabeled_"+pos_loss_method+"_train_iou_" + str(th_train_iou) + "/" + str(folder)
-            if not os.path.exists(path):
-                os.makedirs(path)
-            save_path = path + "/model_epoch" + str(i + 1) + ".pth"
+        train_epoch(train_arguments, rcnn)
+        if epoch_time >= train_arguments.start_save_epoch:
+            save_directory = train_arguments.get_save_directory(folder_index)
+            save_path = save_directory + "model_epoch" + str(epoch_time + 1) + ".pth"
             t.save(rcnn.state_dict(), save_path)
             print("Model save in ", save_path)
 
 
 def train_k_fold():
-    # 0.6 train_
     start_save_epoch = 30
-    th_train_iou = 0.9
-    pos_loss_method = "smoothl1"
-    norm = False  # False
-    print("For this K fold Training:\n")
-    print("Normalize      ", norm, "\n")
-    print("pos_loss_method     ", pos_loss_method, "\n")
-    print("th_train_iou      ", th_train_iou, "\n\n\n")
+    th_train_iou = 0.6
+    pos_loss_type = "mse"  # lower case
+    prevent_overfitting_method = "L2 Norm"
+    with_regressor = True
+    loss_weight_lambda = 2.0
+    norm = True  # False
+    partial_l2_penalty = True  # add penalty in conv1 parameters.
+    max_iter_epoch = 40
 
-    # for th_iou in th_iou_ls:
-    for i in range(1, cfg.K_FOLD + 1):
-        start_training(th_train_iou, 40, i, start_save_epoch, pos_loss_method, norm)
+    train_arguments = TrainArguments(start_save_epoch, pos_loss_type, norm, th_train_iou,
+                                     max_iter_epoch, prevent_overfitting_method,
+                                     with_regressor=with_regressor, partial_l2_penalty=partial_l2_penalty,
+                                     loss_weight_lambda=loss_weight_lambda)
+
+    train_arguments.show_arguments()
+
+    for folder_index in range(train_arguments.fold_k):
+        start_training(train_arguments, folder_index)
 
 
 if __name__ == '__main__':
