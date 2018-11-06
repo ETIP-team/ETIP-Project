@@ -119,9 +119,9 @@ def main():
     norm = True  # Flase
     min_test_epoch = 31
     max_test_epoch = 40
-    loss_weight_lambda = 2.0
-    prevent_overfitting_method = "L2 Norm"
-    partial_l2 = False
+    loss_weight_lambda = 1.0
+    prevent_overfitting_method = "Dropout"  # "L2 Regu" # "Dropout"
+    partial_l2 = True
 
     test_arguments = TestAruguments(norm, pos_loss_method, th_train_iou, min_test_epoch, max_test_epoch,
                                     loss_weight_lambda=loss_weight_lambda, partial_l2_penalty=partial_l2,

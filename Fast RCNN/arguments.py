@@ -61,11 +61,11 @@ class TrainArguments(BaseArguments):
         print("Position Loss Weight Lambda:      ", self.loss_weight_lambda, "\n")
         print("Learning Rate:      ", self.learning_rate, "\n")
         if self.prevent_overfitting_method.lower() == "l2 regu":
-            print("Prevent Over fitting method:      ", "L2 Regulization", "\n")
+            print("Prevent Over fitting Method:      ", "L2 Regulization", "\n")
             print("Partial l2 Penalty:      ", self.partial_l2_penalty, "\n")
             print("L2 Beta:      ", self.l2_beta, "\n")
         if self.prevent_overfitting_method.lower() == "dropout":
-            print("Prevent Over fitting method:      ", "Dropout", "\n")
+            print("Prevent Over fitting Method:      ", "Dropout", "\n")
             print("Dropout Rate:      ", self.dropout_rate, "\n")
 
         print("Th Train Iou      ", self.th_train_iou, "\n\n")
@@ -135,7 +135,7 @@ class TrainArguments(BaseArguments):
 class TestAruguments(BaseArguments):
     def __init__(self, normalize, pos_loss_method, th_train_iou, min_test_epoch, max_test_epoch,
                  loss_weight_lambda=1.0, cuda=True, score_threshold=0.6, dropout_rate=0.5,
-                 th_nms_iou=0, th_iou_p=0, partial_l2_penalty=True, prevent_overfitting_method="L2 Norm"
+                 th_nms_iou=0, th_iou_p=0, partial_l2_penalty=True, prevent_overfitting_method="L2 Regu"
                  , fold_k=5, with_regressor=True):
         super(TestAruguments, self).__init__(normalize, fold_k)
         self.is_train = False
@@ -212,9 +212,9 @@ class TestAruguments(BaseArguments):
         print("Position Loss Type:      ", self.pos_loss_method.upper(), "\n")
         print("Position Loss Weight Lambda:      ", self.loss_weight_lambda, "\n")
         if self.prevent_overfitting_method.lower() == "l2 regu":
-            print("Prevent Over fitting method:      ", "L2 Regulization", "\n")
+            print("Prevent Over Fitting Method:      ", "L2 Regulization", "\n")
             print("Partial l2 Penalty:      ", self.partial_l2_penalty, "\n")
         if self.prevent_overfitting_method.lower() == "dropout":
-            print("Prevent Over fitting method:      ", "Dropout", "\n")
+            print("Prevent Over Fitting Method:      ", "Dropout", "\n")
             print("Dropout Rate:      ", self.dropout_rate, "\n")
         print("Th Train Iou      ", self.th_train_iou, "\n\n")
