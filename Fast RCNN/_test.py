@@ -4,8 +4,6 @@
 #
 # On 2018-10-09
 
-
-import os
 import numpy as np
 import torch as t
 import torch.nn.functional as F
@@ -13,7 +11,7 @@ from torch.autograd import Variable
 import config as cfg
 from model import RCNN
 from utils import reg_to_bbox, non_maximum_suppression, evaluate, get_count_dataframe_by_confusion_matrix, denorm
-from utils import first_write, write_one_result
+from utils import first_write
 from arguments import TestAruguments
 
 word_embedding_dim = cfg.WORD_EMBEDDING_DIM
@@ -122,9 +120,10 @@ def main():
     max_test_epoch = 40
     loss_weight_lambda = 2.0
     prevent_overfitting_method = "L2 Norm"
+    partial_l2 = True
 
     test_arguments = TestAruguments(norm, pos_loss_method, th_train_iou, min_test_epoch, max_test_epoch,
-                                    loss_weight_lambda=loss_weight_lambda,
+                                    loss_weight_lambda=loss_weight_lambda, partial_l2_penalty=partial_l2,
                                     prevent_overfitting_method=prevent_overfitting_method)
     test_arguments.show_arguments()
     write_result_path = test_arguments.get_write_result_path()
@@ -137,7 +136,6 @@ def main():
         for th_nms_iou in th_nms_iou_ls:
             test_arguments.th_nms_iou = th_nms_iou
             test_arguments.th_iou_p = th_iou_p
-
             _test_k_fold(test_arguments, all_csv_result)
 
 

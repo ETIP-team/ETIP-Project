@@ -46,8 +46,8 @@ class ROIPooling(nn.Module):
 class RCNN(nn.Module):  # todo result connect one more full connected layer. to be declared!
     """A RCNN for named entity recognition.
         Uses an embedding layer, followed by a convolutional, roi pooling layer
-        then two full connected and softmax layer for class score
-                two full connected layer for loc detection."""
+        then two fully connected and softmax layer for class score
+                two fully connected layer for loc detection."""
 
     def __init__(self, pos_loss_method="smoothl1", lambd=1.0):
         super(RCNN, self).__init__()
@@ -171,113 +171,3 @@ if __name__ == '__main__':
     rcnn = RCNN()
     rcnn.optimizer = optim.Adam(rcnn.conv1.parameters(), lr=1e-4, weight_decay=1e-3)
     print(rcnn)
-
-# def train_batch(sentence, rois, ridx, gt_cls, gt_tbbox, rcnn, optimizer):
-#     predict_cls, predict_tbbox = rcnn(sentence, rois, ridx)
-#     loss, loss_cls, loss_loc = rcnn.calc_loss(predict_cls, predict_tbbox, gt_cls, gt_tbbox)
-#
-#     _loss = loss.data.cpu().numpy()
-#     _loss_cls = loss_cls.data.cpu().numpy()
-#     _loss_loc = loss_loc.data.cpu().numpy()
-#
-#     # back propagation
-#     optimizer.zero_grad()
-#     loss.backward()
-#     optimizer.step()
-#     # return fl, fl_sc, fl_loc
-#     return _loss, _loss_cls, _loss_loc
-#
-#
-# def train_epoch(train_set, train_sentences, train_sentence_info, train_roi, train_cls, train_tbbox, rcnn, optimizer):
-#     batch_sentence_num = 2
-#     roi_num = 64
-#     pos_roi_num = int(roi_num*0.25)
-#     neg_roi_num = roi_num - pos_roi_num
-#     sentences_num = len(train_set)
-#     perm = np.random.permutation(sentences_num)
-#     perm = train_set[perm]
-#
-#     losses = []
-#     losses_cls = []
-#     losses_loc = []
-#
-#     for i in range(0, sentences_num, batch_sentence_num):
-#         left_boundary = i
-#         right_boundary = min(i+batch_sentence_num, sentences_num)
-#         torch_seg = perm[left_boundary:right_boundary]
-#         sentence = Variable(train_sentences[torch_seg, :, :]).cuda()
-#         ridx = []  # sentence's rois belong id in one batch
-#         glo_ids = []
-#
-#         for j in range(left_boundary, right_boundary):
-#             info = train_sentence_info[perm[j]]
-#             pos_idx = info['pos_idx']
-#             neg_idx = info['neg_idx']
-#             ids = []
-#
-#             if len(pos_idx) > 0:
-#                 ids.append(np.random.choice(pos_idx, size=pos_roi_num))
-#             if len(neg_idx) > 0:
-#                 ids.append(np.random.choice(neg_idx, size=neg_roi_num))
-#             if len(ids) == 0:
-#                 continue
-#             ids = np.concatenate(ids, axis=0)
-#             glo_ids.append(ids)
-#             ridx += [j-left_boundary] * ids.shape[0]
-#
-#         if len(ridx) == 0:
-#             continue
-#         glo_ids = np.concatenate(glo_ids, axis=0)  # id in all sentences!
-#         ridx = np.array(ridx)
-#
-#         rois = train_roi[glo_ids]
-#         gt_cls = Variable(t.Tensor(train_cls[glo_ids])).cuda()
-#         gt_tbbox = Variable(t.Tensor(train_tbbox[glo_ids])).cuda()
-#
-#         loss, loss_cls, loss_loc = train_batch(sentence, rois, ridx, gt_cls, gt_tbbox, rcnn, optimizer)
-#         losses.append(loss)
-#         losses_cls.append(loss_cls)
-#         losses_loc.append(loss_loc)
-#
-#     avg_loss = np.mean(losses)
-#     avg_loss_sc = np.mean(losses_cls)
-#     avg_loss_loc = np.mean(losses_loc)
-#     print(f'Avg loss = {avg_loss:.4f}; loss_sc = {avg_loss_sc:.4f}, loss_loc = {avg_loss_loc:.4f}')
-#
-#
-# def start_training(n_epoch=10, folder=1):
-#     rcnn = RCNN().cuda()
-#     # print(rcnn)
-#
-#     npz = np.load('dataset/train/train_data_npz/train'+str(folder)+".npz")
-#     print("load from:  ", 'dataset/train/train_data_npz/train'+str(folder)+".npz")
-#     train_sentences = npz['train_sentences']
-#     train_sentence_info = npz['train_sentence_info']
-#     train_roi = npz['train_roi']
-#     train_cls = npz['train_cls']
-#     train_tbbox = npz['train_tbbox']
-#
-#     train_sentences = t.Tensor(train_sentences)
-#     # print("train_sentences", train_sentences.shape)
-#     # print("type(train_sentences)", type(train_sentences))
-#     # print("train_sentences.type", train_sentences.type())
-#
-#     Ntrain = train_sentences.size(0)
-#     train_set = np.random.permutation(Ntrain)  # like shuffle
-#
-#     optimizer = optim.Adam(rcnn.parameters(), lr=learning_rate, weight_decay=beta)
-#
-#     for i in range(n_epoch):
-#         print(f'===========================================')
-#         print(f'[Training Epoch {i+1}]')
-#         train_epoch(train_set, train_sentences, train_sentence_info, train_roi, train_cls, train_tbbox, rcnn, optimizer)
-#         if i >= 5:
-#             t.save(rcnn.state_dict(), "model/rcnn_jieba/"+str(folder)+"/model_epoch"+str(i)+".pth")
-#
-#
-# def train_k_fold():
-#     for i in range(1, cfg.K_FOLD+1):
-#         start_training(10, i)
-#
-#
-# train_k_fold()
