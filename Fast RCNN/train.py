@@ -66,8 +66,13 @@ def start_training(train_arguments, folder_index):
     train_arguments.train_set = np.random.permutation(train_arguments.train_sentences.size(0))  # like shuffle
     if train_arguments.prevent_overfitting_method.lower() == "l2 norm":
         if train_arguments.partial_l2_penalty:
-            optimizer = optim.Adam(rcnn.conv1.parameters(), lr=train_arguments.learning_rate,
-                                   weight_decay=train_arguments.l2_beta)
+            optimizer = optim.Adam([
+                {"params": rcnn.conv1.parameters(), "weight_decay": 0},
+                {"params": rcnn.cls_fc1.parameters(), "weight_decay": train_arguments.l2_beta},
+                {"params": rcnn.cls_score.parameters(), "weight_decay": train_arguments.l2_beta},
+                {"params": rcnn.bbox_fc1.parameters(), "weight_decay": train_arguments.l2_beta},
+                {"params": rcnn.bbox.parameters(), "weight_decay": train_arguments.l2_beta}
+            ], lr=train_arguments.learning_rate)
         else:
             optimizer = optim.Adam(rcnn.parameters(), lr=train_arguments.learning_rate,
                                    weight_decay=train_arguments.l2_beta)

@@ -169,5 +169,7 @@ class RCNN_NO_REGRESSOR(nn.Module):  # todo result connect one more full connect
 
 if __name__ == '__main__':
     rcnn = RCNN()
-    rcnn.optimizer = optim.Adam(rcnn.conv1.parameters(), lr=1e-4, weight_decay=1e-3)
-    print(rcnn)
+    # rcnn.optimizer = optim.Adam(rcnn.conv1.parameters(), lr=1e-4, weight_decay=1e-3)
+    for name, para in rcnn.named_parameters():
+        print("name", name)
+        # print("parameter", para)
