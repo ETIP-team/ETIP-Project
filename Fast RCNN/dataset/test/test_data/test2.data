@@ -1,2708 +1,1770 @@
 若 被保险人 身故
-C N N
-2,3 G#C|0,3 G#CP
+2,3 G#C
 
 我们 将 向 身故 受益人 给付 本合同 及其 附加 合同 的 已付 保险费
-R D P N N V N C V A UJ V N
 0,13 G#IA
 
 同时 本合同 及其 附加 合同 效力 终止
-C N C V A N V
 1,7 G#T
 
-若 被保险人 于 本合同 生效 之日起 每 满 2 周年 时 仍 生存
-C N P N N NS R V M T NG D V
-0,13 G#CP
+若 被保险人 于 本合同 生效 之日起 每满 2 周年 时 仍 生存
+0,12 G#CP
 
-我们 将 于 每 2 个 保险单 周年 日 向 被保险人 给付 体检 津贴
-R D P R M M N T M P N V V N
-0,14 G#IA
-
-首次 体检 津贴 的 给付 时间 为 第 2 个 保险单 周年 日
-M V N UJ V N P M M M N T M
+我们 将 于 每 2 个 保险单 周年 日向 被保险人 给付 体检 津贴
 0,13 G#IA
 
-其中
-R
+首次 体检 津贴 的 给付 时间 为 第 2 个 保险单 周年 日
+0,13 G#IA
 
-
-体检 津贴 = 基本 保险金额 × 0.3 %
-V N X N N X M X
-0,8 G#IA
+体检 津贴 = 基本 保险金额 × 0.3%
+0,7 G#IA
 
 若 被保险人 于 本合同 保险 期间 届满时 仍 生存
-C N P N N F N ZG V
 0,9 G#CP
 
 我们 按 本合同 及其 附加 合同 的 已付 保险费 给付 “ 满期 金 ”
-R P N C V A UJ V N V X D NR X
 0,14 G#IA
 
 同时 本合同 及其 附加 合同 效力 终止
-C N C V A N V
 1,7 G#T
 
 在 本 附加 合同 有效期 内
-P R V A N N
 1,6 G#CP
 
 若 被保险人 在 以下 情形 下 遭受 意外 伤害事故
-C N P F N F V A N
-7,8 G#C|0,9 G#CP
+6,9 G#C|0,9 G#CP
 
 我们 承担 本 附加 合同 所 约定 的 保险 责任
-R V R V A C V UJ N N
 0,10 G#CP
 
 （ 1 ） 被保险人 以 乘客 身份 乘坐 作为 公共 道路 交通工具 （ 5.1 ） 的 汽车 、 列车 或 公司 （ 单位 ） 上下班 班车
-X X X N P N N V V B N L X M X UJ N X N C N X N X V N
 0,26 G#CP
 
 自 踏入 汽车 、 列车 或 班车 车门 起 至 走出 汽车 、 列车 或 班车 车门 止
-P V N X N C N N V P V N X N C N N ZG
 0,18 G#CP
 
 遭受 的 意外 伤害事故
-V UJ A N
-0,4 G#CP|0,4 G#CP
+0,4 G#CP
 
 （ 2 ） 被保险人 以 乘客 身份 乘坐 或 作为 驾驶员 驾驶 一般 道路 交通工具 （ 5.2 ） 期间
-X X X N P N N V C V N V A N L X M X F
 0,19 G#CP
 
 即 被保险人 踏入 汽车 车门 起 至 走出 汽车 车门 止
-V N V N N V P V N N ZG
 0,11 G#CP
 
 遭受 的 意外 伤害事故
-V UJ A N
-
+0,4 G#CP
 
 被保险人 在 上述 情形 下 遭受 意外 伤害事故
-N P B N F V A N
-6,7 G#C|0,8 G#CP
+5,8 G#C|0,8 G#CP
 
 且 自该 事故 发生 之日起 180 天内
-C V N V NS M S
 0,7 G#CP
 
 以此 事故 为 直接 且 单独 原因 造成 本 附加 合同 所 附 《 人身保险 伤残 评定 标准 》 所 列 伤残 类别
-C N P AD ZG D N V R V A C V X N A V N X C V A N
-15,16 G#C|0,23 G#CP
+0,23 G#CP
 
 在 依照 该 标准规定 的 评定 原则 对 伤残 类别 进行 评定 后
-P P R L UJ V N P A N V V F
 0,13 G#CP
 
 我们 按 评定 结果 所 对应 的 保险金 给付 比例 乘以 基本 保险金额 给付 意外 伤残 保险金
-R P V N C VN UJ N V N V N N V A A N
 0,17 G#IA
 
-如自 意外 伤害事故 发生 之日起 180 日 内 治疗 仍 未 结束 的
-R A N V NS M M F V ZG D V UJ
-0,13 G#CP
+如自 意外 伤害事故 发生 之日起 180 日内 治疗 仍 未 结束 的
+0,12 G#CP
 
 则 按 该 事故 发生 之日起 第 180 日 的 身体 情况 进行 伤残 评定 ）
-D P R N V NS M M M UJ N N V A V X
 0,16 G#CP
 
 并 据此 给付 伤残 保险金
-C D V A N
 0,5 G#IA
 
 该次 事故 导致 的 伤残 合并 前次 因 意外 伤害事故 所致 伤残 可领 较 严重 等级 伤残 保险金 者
-R N V UJ A V R P A N C A V D A B A N K
 0,19 G#CP
 
 按较 严重 等级 标准 给付
-D A B N V
 0,5 G#IA
 
-但 前次 已 给付 的 伤残 保险金 （ 投保 前 已 存在 的 意外 伤害 所致 或因 责任 免除 事项 所致 附件 所列 的 伤残 视为 已 给付 伤残 保险金 ） 应予以 扣除
-C R D V UJ A N X VN F D V UJ A A C C N V N C N B UJ A V D V A N X NR V
-0,33 G#IA
+但 前次 已 给付 的 伤残 保险金 （ 投保 前 已 存在 的 意外 伤害 所致 或 因 责任 免除 事项 所致 附件 所列 的 伤残 视为 已 给付 伤残 保险金 ） 应予以 扣除
+0,34 G#IA
 
-意外 伤残 保险金 以 基本 保险金额 为 限
-A A N P N N P V
-0,8 G#IA
-
-累计 给付 的 意外 伤残 保险金 的 总额 达到 基本 保险金额 时
-V V UJ A A N UJ N V N N N
-
+意外 伤残 保险金 以 基本 保险金额 为限
+0,7 G#IA
 
 本 附加 合同 终止
-R V A V
 0,4 G#T
 
 若 被保险人 在 上述 情形 下 遭受 意外 伤害事故
-C N P B N F V A N
-7,8 G#C|0,9 G#CP
+6,9 G#C|0,9 G#CP
 
-且 自该 意外 伤害事故 发生 之日起 180 日 内
-C V A N V NS M M F
-0,9 G#CP
+且 自该 意外 伤害事故 发生 之日起 180 日内
+0,8 G#CP
 
 以此 事故 为 直接 且 单独 原因 身故
-C N P AD ZG D N N
-7,8 G#C|0,8 G#CP
+7,8 G#C
 
 我们 将 按 意外 伤害事故 发生 时本 附加 合同 的 基本 保险金额 向 身故 保险金 受益人 给付 意外 身故 保险金
-R D P A N V N V A UJ N N P N N N V A N N
 0,20 G#IA
 
 若 被保险人 身故 前本 附加 合同 已有 意外 伤残 保险金 给付
-C N N N V A V A A N V
-7,9 G#C|0,11 G#CP
+0,11 G#CP
 
 则 给付 意外 身故 保险金 时应 扣除 已 给付 的 意外 伤残 保险金
-D V A N N N V D V UJ A A N
 0,13 G#IA
 
-累计 给付 的 意外 伤残 保险金 及 意外 身故 保险金 的 总额 达到 本 附加 合同 的 基本 保险金额 时
-V V UJ A A N C A N N UJ N V R V A UJ N N N
-
-
 本 附加 合同 终止
-R V A V
 0,4 G#T
 
 如果 被保险人 在 等待 期后 首次 发病 并 经 专科医生 首次 确诊 患有 任何 一项 符合 我们 第 7 条约 定 保障 范围 及 定义 的 重大 疾病
-C N P V F M V C N NZ M V V R M V R M M N V V N C N UJ A N
-26,28 G#C|2,28 G#CP
+17,28 G#C|2,28 G#CP
 
 我们 将 按照 本 附加 合同 的 基本 保险金额 提前 给付 主合同 的 身故 保险金
-R D P R V A UJ N N V V N UJ N N
-13,14 G#C|0,15 G#IA
+0,15 G#IA
 
 同时 本 附加 合同 效力 终止
-C R V A N V
 0,6 G#T
 
 提前 给付 保险金 后
-V V N F
 0,4 G#CP
 
 主合同 的 基本 保险金额 变更 为 提前 给付 前 主合同 的 基本 保险金额 减去 提前 给付 金额 后 的 余额
-N UJ N N V P V V F N UJ N N V V V N F UJ N
 0,20 G#IA
 
-主合同 的 保险费 自 提前 给付 保险金 后 的 首个 保险费 约定 支付 日 起 将 按 被保险人 投保 年龄 的 费率 及 变更 后 的 基本 保险金额 支付
-N UJ N P V V N F UJ M N V V M V D P N VN N UJ N C V F UJ N N V
-0,29 G#IA
+主合同 的 保险费 自 提前 给付 保险金 后 的 首个 保险费 约定 支付 日起 将 按 被保险人 投保 年龄 的 费率 及 变更 后 的 基本 保险金额 支付
+4,8 G#CP|0,28 G#IA
 
 若 提前 给付 保险金 后主 合同 的 基本 保险金额 为 零
-C V V N N A UJ N N P M
-
+1,4 G#CP
 
 则 主合同 效力 自动 终止
-D N N VN V
 0,5 G#T
 
-若 我们 已 按 主合同 支付 了 主合同 身故 保险金 或 全 残 提前 给付 保险金
-C R D P N V UL N N N C A N V V N
-11,13 G#C
-
 则 重大 疾病 提前 给付 保险金 保险 责任 效力 自动 终止
-D A N V V N N N N VN V
 0,11 G#T
 
-若 被保险人 因 在 中国 境内 （ 不 包括 台湾 、 香港 、 澳门地区 ） 其 居住 地域 （ 见 释义 ） 以外 的 地区 旅行 （ 见 释义 ） 遭受 意外 伤害事故 （ 见 释义 ）
-C N P P NS S X D V NS X NS X NS X R V N X V NR X C UJ N VN X V NR X V A N X V NR X
-31,32 G#C|0,37 G#CP
+若 被保险人 因在 中国 境内 （ 不 包括 台湾 、 香港 、 澳门地区 ） 其 居住 地域 （ 见 释义 ） 以外 的 地区 旅行 （ 见 释义 ） 遭受 意外 伤害事故 （ 见 释义 ）
+29,32 G#C|0,36 G#CP
 
 且 自该 意外 伤害事故 发生 之日起 一百八十 日 内因 该 意外 伤害事故 导致 身故 的
-C V A N V NS M M N R A N V N UJ
-13,14 G#C|0,15 G#CP
+9,14 G#C|0,15 G#CP
 
-我们 将 按 本 附加 合同 载明 的 保险金额 扣除 累计 已 给付 的 境内 旅行 意外 伤残 保险金 后 的 金额 给付 境内 旅行 意外 身故 保险金
-R D P R V A V UJ N V V D V UJ S VN A A N F UJ N V S VN A N N
-16,18 G#C|0,28 G#IA
-
-在 我们 给付 境内 旅行 意外 身故 保险金 后
-P R V S VN A N N F
-
+我们 将 按本 附加 合同 载明 的 保险金额 扣除 累计 已 给付 的 境内 旅行 意外 伤残 保险金 后 的 金额 给付 境内 旅行 意外 身故 保险金
+0,27 G#IA
 
 本 附加 合同 终止
-R V A V
 0,4 G#T
 
-若 被保险人 因 在 中国 境外 （ 包括 台湾 、 香港 、 澳门地区 ） 旅行 遭受 意外 伤害事故
-C N P P NS S X V NS X NS X NS X VN V A N
-16,17 G#C|0,18 G#CP
+若 被保险人 因在 中国 境外 （ 包括 台湾 、 香港 、 澳门地区 ） 旅行 遭受 意外 伤害事故
+14,17 G#C|0,17 G#CP
 
 且 自该 意外 伤害事故 发生 之日起 一百八十 日 内因 该 意外 伤害事故 导致 身故 的
-C V A N V NS M M N R A N V N UJ
-13,14 G#C|0,15 G#CP
+9,14 G#C|0,15 G#CP
 
-我们 将 按 本 附加 合同 载明 的 保险金额 的 两倍 扣除 累计 已 给付 的 境外 旅行 意外 伤残 保险金 后 的 金额 给付 境外 旅行 意外 身故 保险金
-R D P R V A V UJ N UJ M V V D V UJ S VN A A N F UJ N V S VN A N N
-0,30 G#IA
-
-在 我们 给付 境外 旅行 意外 身故 保险金 后
-P R V S VN A N N F
-
+我们 将 按本 附加 合同 载明 的 保险金额 的 两倍 扣除 累计 已 给付 的 境外 旅行 意外 伤残 保险金 后 的 金额 给付 境外 旅行 意外 身故 保险金
+0,29 G#IA
 
 本 附加 合同 终止
-R V A V
 0,4 G#T
 
-若 被保险人 因 在 中国 境内 （ 不 包括 台湾 、 香港 、 澳门地区 ） 其 居住 地域 以外 的 地区 旅行 遭受 意外 伤害事故
-C N P P NS S X D V NS X NS X NS X R V N C UJ N VN V A N
-23,24 G#C|0,25 G#CP
+若 被保险人 因在 中国 境内 （ 不 包括 台湾 、 香港 、 澳门地区 ） 其 居住 地域 以外 的 地区 旅行 遭受 意外 伤害事故
+21,24 G#C|0,24 G#CP
 
 且 自该 意外 伤害事故 发生 之日起 一百八十 日 内因 该 意外 伤害事故 导致 身体 伤残 的
-C V A N V NS M M N R A N V N A UJ
 0,16 G#CP
 
 且 该 伤残 属于 中国 保险行业 协会 、 中国 法医学 会 联合 发布 的 《 人身保险 伤残 评定 标准 （ 行业标准 ） 》 （ 中保 协发 [ 2013 ] 88 号
-C R A V NS N N X NS NT V V V UJ X N A V N X N X X X J V X M X M M
 0,31 G#CP
 
-见 附表 二 ） （ 以下 简称 “ 本 标准 ” ） 中 所列 的 伤残 项目 的
-V N M X X F V X R N X X F B UJ A N UJ
-0,18 G#CP
+见 附表 二 ） （ 以下 简称 “ 本 标准 ” ） 中所列 的 伤残 项目 的
+0,17 G#CP
 
 我们 将 根据 该 伤残 项目 所 对应 的 给付 比例 乘以 本 附加 合同 载明 的 保险金额 给付 境内 旅行 意外 伤残 保险金
-R D P R A N C VN UJ V N V R V A V UJ N V S VN A A N
-4,5 G#C|0,24 G#IA
-
-我们 向 同一 被保险人 给付 的 境内 旅行 意外 伤残 保险金 的 累计 金额 达到 保险单 上 载明 的 保险金额 时
-R P B N V UJ S VN A A N UJ V N V N F V UJ N N
-
+0,24 G#IA
 
 本 附加 合同 终止
-R V A V
 0,4 G#T
 
 我们 向 同一 被保险人 给付 的 境内 旅行 意外 伤残 保险金 和 境外 旅行 意外 伤残 保险金 的 累计 金额 最高 为 保险单 上 载明 的 保险金额 的 两倍
-R P B N V UJ S VN A A N C S VN A A N UJ V N A P N F V UJ N UJ M
 0,29 G#IA
 
-当 达到 此 限额 时
-T V ZG N N
-
-
 本 附加 合同 终止
-R V A V
+0,4 G#T
 
-
-若 被保险人 因 在 中国 境外 （ 包括 台湾 、 香港 、 澳门地区 ） 旅行 遭受 意外 伤害事故
-C N P P NS S X V NS X NS X NS X VN V A N
-16,17 G#C|0,18 G#CP
+若 被保险人 因在 中国 境外 （ 包括 台湾 、 香港 、 澳门地区 ） 旅行 遭受 意外 伤害事故
+14,17 G#C|0,17 G#CP
 
 且 自该 意外 伤害事故 发生 之日起 一百八十 日 内因 该 意外 伤害事故 导致 身体 伤残 的
-C V A N V NS M M N R A N V N A UJ
 0,16 G#CP
 
-且 该 伤残 属于 “ 本 标准 ” 中 所列 的 伤残 项目 的
-C R A V X R N X F B UJ A N UJ
-0,14 G#CP
+且 该 伤残 属于 “ 本 标准 ” 中所列 的 伤残 项目 的
+0,13 G#CP
 
 我们 将 根据 该 伤残 项目 所 对应 的 给付 比例 乘以 本 附加 合同 载明 的 保险金额 的 两倍 给付 境外 旅行 意外 伤残 保险金
-R D P R A N C VN UJ V N V R V A V UJ N UJ M V S VN A A N
-4,5 G#C|0,26 G#IA
-
-我们 向 同一 被保险人 给付 的 境外 旅行 意外 伤残 保险金 的 累计 金额 达到 保险单 上 载明 的 保险金额 的 两倍 时
-R P B N V UJ S VN A A N UJ V N V N F V UJ N UJ M N
-
+0,26 G#IA
 
 本 附加 合同 终止
-R V A V
 0,4 G#T
 
 我们 向 同一 被保险人 给付 的 境内 旅行 意外 伤残 保险金 和 境外 旅行 意外 伤残 保险金 的 累计 金额 最高 为 保险单 上 载明 的 保险金额 的 两倍
-R P B N V UJ S VN A A N C S VN A A N UJ V N A P N F V UJ N UJ M
 0,29 G#IA
 
-当 达到 此 限额 时
-T V ZG N N
-
-
 本 附加 合同 终止
-R V A V
-
+0,4 G#T
 
 在 本合同 有效期 内
-P N N N
 0,4 G#CP
 
-若 被保险人 身故 或 全 残
-C N N C A N
-2,3 G#C|4,6 G#C|0,6 G#CP
+若 被保险人 身故 或 全残
+2,3 G#C|4,5 G#C
 
-则 我们 给付 等值 于 本合同 当时 保险金额 的 身故 或 全 残 保险金 （ 若 被保险人 同时 致成 一项 以上 全 残 情形 时
-D R V N P N T N UJ N C A N N X C N C V M F A N N N
-0,25 G#IA
+则 我们 给付 等值 于 本合同 当时 保险金额 的 身故 或 全残 保险金 （ 若 被保险人 同时 致成 一项 以上 全残 情形 时
+0,23 G#IA
 
-该 给付 以 一项 为 限 ）
-R V P M P V X
-0,7 G#IA
+该 给付 以 一项 为限 ）
+0,6 G#IA
 
 本合同 效力 终止
-N N V
 0,3 G#T
 
 在 保险 期间 内
-P N F N
 0,4 G#CP
 
-被保险人 遭受 意外 伤害事故
-N V A N
-2,3 G#C|0,4 G#CP
-
 并 自 事故 发生 之日起 180 日 内因 该 事故 身故 的
-C R N V NS M M N R N N UJ
-10,11 G#C|0,12 G#CP
+8,11 G#C|0,12 G#CP
 
 保险人 按 保险金额 给付 身故 保险金
-N P N V N N
-0,6 G#IA|0,6 G#IA
+0,6 G#IA
 
 对 该 被保险人 的 保险 责任 终止
-P R N UJ N N V
 0,7 G#T
 
-被保险人 因 遭受 意外 伤害事故 且 自该 事故 发生 日 起 下落不明
-N P V A N C V N V M V L
-0,12 G#CP
+被保险人 因 遭受 意外 伤害事故 且 自该 事故 发生 日起 下落不明
+1,5 G#C|0,11 G#CP
 
-后 经 人民法院 宣告 死亡 的
-F N NT N V UJ
-0,6 G#CP
+后经 人民法院 宣告 死亡 的
+0,5 G#CP
 
 保险人 按 保险金额 给付 身故 保险金
-N P N V N N
-
-
-但若 被保险人 被 宣告 死亡 后生 还 的
-C N P N V N D UJ
-
-
-保险金 受领 人 应于 知道 或 应当 知道 被保险人 生还 后 30 日 内 退还 保险人 给付 的 身故 保险金
-N V N V V C V V N V T M M F V N V UJ N N
-
+0,6 G#IA
 
 被保险人 身故 前 保险人 已 给付 本条 第 （ 二 ） 款 约定 的 残疾 、 烧烫伤 保险金 的
-N N F N D V R M X M X M V UJ N X VN N UJ
-14,15 G#C|0,19 G#IA
+0,19 G#IA
 
 身故 保险金 应 扣除 已 给付 的 保险金
-N N V V D V UJ N
 0,8 G#IA
 
 在 保险 期间 内
-P N F N
 0,4 G#CP
 
 被保险人 遭受 意外 伤害事故
-N V A N
-2,3 G#C|0,4 G#CP
+0,4 G#CP
 
-并 自该 事故 发生 之日起 180 日 内因 该 事故 造成 《 人身保险 残疾 评定 标准 》 （ 中国 保险行业 协会 、 中国 法医学 会 于 二零一 三年 六月 八日 联合 发布
-C V N V NS M M N R N V X N N V N X X NS N N X NS NT V P M M T T V V
-13,14 G#C|0,32 G#CP
+并 自该 事故 发生 之日起 180 日 内因 该 事故 造成 《 人身保险 残疾 评定 标准 》 （ 中国 保险行业 协会 、 中国 法医学 会于 二零一 三年 六月 八日 联合 发布
+0,31 G#CP
 
 以下 简称 《 残疾 评定 行业标准 》 ） 所 列 残疾 之一 的
-F V X N V N X X C V N R UJ
-0,13 G#CP
+2,12 G#C|0,13 G#CP
 
 保险人 根据 《 残疾 评定 行业标准 》 中 伤残 等级 对应 的 给付 比例 乘以 保险金额 给付 残疾 保险金 （ 即 与 人身保险 伤残 程度 等级 相对 应 的 保险金 给付 比例 分为 十档
-N P X N V N X F A B VN UJ V N V N V N N X V P N A N B D V UJ N V N V M
-8,9 G#C|0,34 G#IA
+0,34 G#IA
 
-伤残 程度 第一级 对应 的 保险金 给付 比例 为 100 %
-A N M VN UJ N V N P M X
+伤残 程度 第一级 对应 的 保险金 给付 比例 为 100%
+0,10 G#IA
+
+伤残 程度 第十 级 对应 的 保险金 给付 比例 为 10%
 0,11 G#IA
 
-伤残 程度 第十 级 对应 的 保险金 给付 比例 为 10 %
-A N M Q VN UJ N V N P M X
-0,12 G#IA
-
-每级 相差 10 %
-R V M X
-0,4 G#IA
-
-下同 ）
-V X
-
+每级 相差 10%
+0,3 G#IA
 
 如 第 180 日 治疗 仍 未 结束 的
-V M M M V ZG D V UJ
 0,9 G#CP
 
 按 当日 的 身体 情况 进行 残疾 鉴定
-P T UJ N N V N V
 0,8 G#CP
 
 并 据此 给付 残疾 保险金
-C D V N N
 0,5 G#IA
 
 （ 1 ） 被保险人 因 同一 意外 伤害事故 导致 两处 或 两处 以上 伤残 时
-X X X N P B A N V M C M F A N
-0,15 G#CP
+4,14 G#C
 
 如 几处 伤残 等级 不同
-V M A B A
 0,5 G#CP
 
 保险人 仅 给付 其中 给付 比例 最高 一项 的 残疾 保险金
-N D V R V N A M UJ N N
 0,11 G#IA
 
 如 两处 或 两处 以上 伤残 等级 相同
-V M C M F A B D
 0,8 G#CP
 
 保险人 在 原 评定 基础 上 晋升 一级 给付 残疾 保险金
-N P N V N F NR M V N N
 0,11 G#IA
 
-最高 晋升 至 第一级
-A NR P M
-
-
-同一 部位 和 性质 的 伤残
-B N C N UJ A
-
-
-仅 按 一处 伤残 进行 评定
-D P M A V V
-
-
 （ 2 ） 被保险人 如 在 本次 意外 伤害事故 之前 已有 残疾
-X X X N V P R A N F V N
 0,12 G#CP
 
 保险人 按 合并 后 的 残疾 程度 在 《 残疾 评定 行业标准 》 中 所 对应 的 给付 比例 给付 残疾 保险金
-N P V F UJ N N P X N V N X F C VN UJ V N V N N
 0,22 G#IA
 
-但 应 扣除 原有 残疾 程度 在 《 残疾 评定 行业标准 》 所 对应 的 残疾 保险金
-C V V V N N P X N V N X C VN UJ N N
-0,17 G#IA
+但应 扣除 原有 残疾 程度 在 《 残疾 评定 行业标准 》 所 对应 的 残疾 保险金
+0,16 G#IA
 
 被保险人 因 遭受 意外 伤害事故
-N P V A N
-3,4 G#C|0,5 G#CP
+1,5 G#C
 
 并 自 意外 伤害事故 发生 之日起 180 日 内因 同一 原因 身故 的
-C R A N V NS M M N B N N UJ
 11,12 G#C|0,13 G#CP
 
 保险人 按 私家车 意外 伤害 保险金额 给付 身故 保险金
-N P N A A N V N N
 0,9 G#IA
 
 被保险人 因 遭受 意外 伤害事故
-N P V A N
-3,4 G#C|0,5 G#CP
+1,5 G#C
 
 并 自 事故 发生 之日起 180 日 内因 同一 原因 造成 身体 残疾 的
-C R N V NS M M N B N V N N UJ
-12,13 G#C|0,14 G#CP
+11,13 G#C|0,14 G#CP
 
 保险人 根据 本 保险条款 所附 的 《 人身保险 伤残 评定 标准 》 中 （ 以下 简称 “ 伤残 标准 ” ） 所 列 给付 比例 乘以 私家车 意外 伤害 保险金额 给付 残疾 保险金
-N P R N V UJ X N A V N X F X F V X A N X X C V V N V N A A N V N N
-8,9 G#C|0,33 G#IA
+0,33 G#IA
 
 如 治疗 仍 未 结束 的
-V V ZG D V UJ
 0,6 G#CP
 
 按 事故 发生 之日起 第 180 日时 的 身体 情况 进行 残疾 鉴定
-P N V NS M M T UJ N N V N V
 0,13 G#CP
 
 并 据此 给付 残疾 保险金
-C D V N N
 0,5 G#IA
 
 当 本合同 项 下 发生 两次 或 两次 以上 保险 事故
-T N N F V M C M F N N
 0,11 G#CP
 
 后 一次 事故 导致 的 残疾 合并 前次 事故 导致 的 残疾
-F M N V UJ N V R N V UJ N
 0,12 G#CP
 
 按较 严重 项目 标准 给付
-D A N N V
 0,5 G#IA
 
 但 前次 已 给付 的 残疾 保险金 应予以 扣除
-C R D V UJ N N NR V
 0,9 G#IA
 
-自 保险合同 生效 之日起 （ 保险合同 复效 的 则 自 最后 一次 复效 之日起 ） 365 天 后
-P N N NS X N A UJ D P F M A NS X M Q F
-0,18 G#PC|0,18 G#CP
+自 保险合同 生效 之日起 （ 保险合同 复效 的 则 自 最后 一次 复效 之日起 ） 365 天后
+2,17 G#PC|0,17 G#CP
 
 被保险人 经 医院 7.3 专科医生 7.4 确诊 初次 发生 本合同 约定 的 轻度 癌症 7.5
-N N N M NZ M V D V N V UJ D N M
-13,14 G#C|0,15 G#CP
+7,14 G#C|0,15 G#CP
 
-本 公司 按照 保险金额 的 10 % 给付 轻度 癌症 保险金
-R N P N UJ M X V D N N
-0,11 G#IA
+本 公司 按照 保险金额 的 10% 给付 轻度 癌症 保险金
+0,10 G#IA
 
 同时 该项 保险 责任 终止
-C R N N V
 0,5 G#T
 
 本合同 继续 有效
-N V A
 0,3 G#T
 
 自 保险合同 生效 之日起 （ 保险合同 复效 的 则 自 最后 一次 复效 之日起 ） 365 天内
-P N N NS X N A UJ D P F M A NS X M S
-0,17 G#PC|0,17 G#CP
+2,17 G#PC|0,17 G#CP
 
 被保险人 初次 发生 本合同 约定 的 轻度 癌症
-N D V N V UJ D N
-0,8 G#CP
+1,8 G#C
 
 本 公司 向 投保人 无息 返还 已 交纳 的 保险费
-R N P N V V D V UJ N
 0,10 G#IA
 
 同时 本合同 效力 终止
-C N N V
 1,4 G#T
 
-自 保险合同 生效 之日起 （ 保险合同 复效 的 则 自 最后 一次 复效 之日起 ） 365 天 后
-P N N NS X N A UJ D P F M A NS X M Q F
-0,18 G#PC|0,18 G#CP
+自 保险合同 生效 之日起 （ 保险合同 复效 的 则 自 最后 一次 复效 之日起 ） 365 天后
+2,17 G#PC|0,17 G#CP
 
 被保险人 经 医院 专科医生 确诊 初次 发生 本合同 约定 的 癌症 7.6
-N N N NZ V D V N V UJ N M
-10,11 G#C|0,12 G#CP
+5,11 G#C|0,12 G#CP
 
 本 公司 按照 保险金额 给付 癌症 确诊 保险金
-R N P N V N V N
 0,8 G#IA
 
 同时 该项 保险 责任 和 身故 保险金 责任 终止
-C R N N C N N N V
-0,9 G#T|5,6 G#C
-
-本合同 的 现金 价值 减至 为 零
-N UJ N N V P M
-
+0,9 G#T
 
 本合同 继续 有效
-N V A
 0,3 G#T
 
 自 保险合同 生效 之日起 （ 保险合同 复效 的 则 自 最后 一次 复效 之日起 ） 365 天内
-P N N NS X N A UJ D P F M A NS X M S
-0,17 G#PC|0,17 G#CP
+2,17 G#PC|0,17 G#CP
 
 被保险人 初次 发生 本合同 约定 的 癌症
-N D V N V UJ N
-0,7 G#CP
+1,7 G#C
 
 本 公司 向 投保人 无息 返还 已 交纳 的 保险费
-R N P N V V D V UJ N
 0,10 G#IA
 
 同时 本合同 效力 终止
-C N N V
 0,4 G#T
 
-被保险人 自 癌症 确诊 之日起 必须 生存 28 天 以上 才 可 申请 理赔 癌症 确诊 保险金
-N P N V NS D V M N F D V V V N V N
-
-
-自 保险合同 生效 之日起 （ 保险合同 复效 的 则 自 最后 一次 复效 之日起 ） 365 天 后
-P N N NS X N A UJ D P F M A NS X M Q F
-0,18 G#PC|0,18 G#CP
+自 保险合同 生效 之日起 （ 保险合同 复效 的 则 自 最后 一次 复效 之日起 ） 365 天后
+2,17 G#PC|0,17 G#CP
 
 被保险人 经 医院 专科医生 确诊 初次 发生 本合同 约定 的 癌症
-N N N NZ V D V N V UJ N
-10,11 G#C|0,11 G#CP
-
-对于 癌症 确诊 前 3 个 月 起至 被保险人 年满 80 周岁 对应 的 保单 周年 日 期间 所 发生 的 与 癌症 治疗 相关 的 医疗 费用
-P N V F M M M V N A M M VN UJ N T M F C V UJ P N V V UJ N N
-
+5,11 G#C|0,11 G#CP
 
 本 公司 按 下列 约定 给付 癌症 医疗 费用 保险金
-R N P V V V N N N N
 0,10 G#IA
 
-1 ) 对 被保险人 在 北京大学 肿瘤医院 发生 的 合理 且 必需 的 与 癌症 治疗 相关 的 医疗 费用
-X X P N P NT N V UJ VN ZG V UJ P N V V UJ N N
-
-
-本 公司 按 100 % 的 比例 给付 癌症 医疗 费用 保险金
-R N P M X UJ N V N N N N
-0,12 G#IA
-
-2 ) 对 被保险人 在 北京大学 肿瘤医院 之外 的 其他 医院 发生 的 合理 且 必需 的 与 癌症 治疗 相关 的 医疗 费用
-X X P N P NT N F UJ R N V UJ VN ZG V UJ P N V V UJ N N
-
-
-本 公司 按 70 % 的 比例 给付 癌症 医疗 费用 保险金
-R N P M X UJ N V N N N N
-0,12 G#IA
-
-保险 期间 内
-N F N
-0,3 G#CP
-
-癌症 医疗 费用 保险金 的 累计 给付 以 保险金额 为 限
-N N N N UJ V V P N P V
+本 公司 按 100% 的 比例 给付 癌症 医疗 费用 保险金
 0,11 G#IA
 
-当 癌症 医疗 费用 保险金 的 累计 给付 达到 约定 的 保险金额 时
-T N N N N UJ V V V V UJ N N
+本 公司 按 70% 的 比例 给付 癌症 医疗 费用 保险金
+0,11 G#IA
 
+保险 期间 内
+0,3 G#CP
+
+癌症 医疗 费用 保险金 的 累计 给付 以 保险金额 为限
+0,10 G#IA
 
 该项 保险 责任 终止
-R N N V
 0,4 G#T
 
 本合同 继续 有效
-N V A
 0,3 G#T
 
-被保险人 自 癌症 确诊 之日起 必须 生存 28 天 以上 才 可 申请 理赔 癌症 医疗 费用 保险金
-N P N V NS D V M N F D V V V N N N N
-
-
-对于 被保险人 在 北京大学 肿瘤医院 发生 的 合理 且 必需 的 与 癌症 相关 的 医疗 费用
-P N P NT N V UJ VN ZG V UJ P N V UJ N N
-
-
-申请 理赔 癌症 医疗 费用 保险金 时 不 受 上述 生存 28 天 的 限制
-V V N N N N NG D V B V M Q UJ V
-
-
 若 被保险人 发生 的 属于 保险 责任 范围 内 的 医疗 费用 已 通过 社会 医疗保险 7.7 、 公费医疗 或 其他 商业保险 等 途径 得到 了 部分 补偿
-C N V UJ V N N N F UJ N N D P N N M X N C R N U N V UL N VN
 0,28 G#CP
 
 本 公司 仅 对 剩余 部分 按照 本合同 的 约定 进行 给付
-R N D P V N P N UJ V V V
 0,12 G#IA
 
-自 保险合同 生效 之日起 （ 保险合同 复效 的 则 自 最后 一次 复效 之日起 ） 365 天 后
-P N N NS X N A UJ D P F M A NS X M Q F
-0,18 G#PC|0,18 G#CP
+自 保险合同 生效 之日起 （ 保险合同 复效 的 则 自 最后 一次 复效 之日起 ） 365 天后
+2,17 G#PC|0,17 G#CP
 
 被保险人 经 医院 专科医生 确诊 初次 发生 本合同 约定 的 癌症
-N N N NZ V D V N V UJ N
-10,11 G#C|0,11 G#CP
+5,11 G#C|0,11 G#CP
 
-对于 癌症 确诊 前 3 个 月 起至 被保险人 年满 80 周岁 对应 的 保单 周年 日 期间 所 发生 的 与 癌症 治疗 相关 的 住院 7.8
-P N V F M M M V N A M M VN UJ N T M F C V UJ P N V V UJ N M
-0,28 G#CP
+对于 癌症 确诊 前 3 个 月 起 至 被保险人 年满 80 周岁 对应 的 保单 周年 日 期间 所 发生 的 与 癌症 治疗 相关 的 住院 7.8
+0,29 G#CP
 
 本 公司 按 被保险人 实际 住院 天数 给付 癌症 住院 津贴 保险金
-R N P N N N N V N N N N
 0,12 G#IA
 
 癌症 住院 津贴 保险金 的 计算公式 为
-N N N N UJ N P
 0,7 G#IA
 
-癌症 住院 津贴 保险金 ＝ 保险金额 的 0.1 % × 实际 住院 天数
-N N N N X N UJ M X X N N N
-0,13 G#IA
+癌症 住院 津贴 保险金 ＝ 保险金额 的 0.1% × 实际 住院 天数
+0,12 G#IA
 
 保险 期间 内
-N F N
 0,3 G#CP
 
-癌症 住院 津贴 保险金 的 累计 给付 天数 以 100 天为限
-N N N N UJ V V N P M L
-0,11 G#IA
-
-被保险人 自 癌症 确诊 之日起 必须 生存 28 天 以上 才 可 申请 理赔 癌症 住院 津贴 保险金
-N P N V NS D V M N F D V V V N N N N
-
-
-癌症 医疗 费用 保险金 的 累计 给付 达到 约定 的 保险金额 且 癌症 住院 津贴 保险金 的 累计 给付 天数 达到 100 天时
-N N N N UJ V V V V UJ N ZG N N N N UJ V V N V M T
-
+癌症 住院 津贴 保险金 的 累计 给付 天数 以 100 天为 限
+0,12 G#IA
 
 本合同 效力 终止
-N N V
 0,3 G#T
 
 本合同 有效期 内
-N N N
 0,3 G#CP
 
 若 被保险人 身故 且 未 发生 本合同 约定 的 癌症
-C N N C D V N V UJ N
 2,3 G#C|0,10 G#CP
 
 本 公司 按 已 交纳 的 保险费 金额 与 身故 时 本合同 的 现金 价值 的 较大 者 给付 身故 保险金
-R N P D V UJ N N P N N N UJ N N UJ A K V N N
 0,21 G#IA
 
 同时 本合同 效力 终止
-C N N V
 0,4 G#T
 
 在 交费 期间 内
-P VN F N
 0,4 G#CP
 
 被保险人 经 医院 专科医生 确诊 初次 发生 本合同 约定 的 癌症
-N N N NZ V D V N V UJ N
 0,11 G#CP
 
-本 公司 豁免 其自 癌症 确诊 之日起 以后 各 期 保险费
-R N V R N V NS F R N N
-
-
 在 本合同 有效期 内
-P N N N
 1,4 G#CP
 
 若 被保险人 身故
-C N N
-2,3 G#C|0,3 G#CP
+2,3 G#C
 
 则 本 公司 将 给付 身故 保险金 予 健在 的 身故 保险金 受益人
-D R N D V N N VG V UJ N N N
 0,13 G#IA
 
 其 金额 按 下列 情况 计算
-R N P V N V
 0,6 G#IA
 
 （ 一 ） 若 被保险人 于 年满 五十五岁 （ 释义 一 ） 后 的 首个 保险单 周年 日 （ 释义 二 ） 前身 故
-X M X C N P A M X NR M X F UJ M N T M X NR M X R N
-0,24 G#CP
+23,24 G#C|0,24 G#CP
 
 则 该 身故 保险金 等于 下列 二项 金额 中 的 较大 者
-D R N N V V M N F UJ A K
 0,12 G#IA
 
 （ 1 ） 被保险人 身故 时 保证 利益 的 现金 价值 （ 释义 三 ）
-X X X N N N V N UJ N N X NR M X
-0,15 G#CP|3,6 G#CP
+0,15 G#CP
 
-（ 2 ） （ 被保险人 身故 时 累计 应付 已付 各 期 保险费 对应 的 月数 ÷ 12 ） × 按 年 付 方式 计算 的 本合同 年 标准 保险费 × 120 % 注
-X X X X N N N V VN V R N N VN UJ N X M X X P M V N V UJ N M N N X M X V
-0,34 G#IA
+（ 2 ） （ 被保险人 身故 时 累计 应付 已付 各 期 保险费 对应 的 月 数 ÷ 12 ） × 按年付 方式 计算 的 本合同 年 标准 保险费 × 120% 注
+0,32 G#IA
 
 上述 （ 2 ） 中 所 提及 的 “ 标准 保险费 ” 不 包括 根据 次 标准 体 费率 （ 释义 四 ） 计算 的 保险费
-B X X X F C V UJ X N N X D V P Q N N N X NR M X V UJ N
 0,26 G#IA
 
 若 被保险人 身故 时 本合同 已 变更 为 减额 付清 保险
-C N N N N D V P V NR N
 0,11 G#CP
 
 则 该 身故 保险金 等于 上述 （ 1 ） 项 金额
-D R N N V B X X X N N
 0,11 G#IA
 
 （ 二 ） 若 被保险人 于 年满 五十五岁 后 的 首个 保险单 周年 日 或 以后 身故
-X M X C N P A M F UJ M N T M C F N
-0,17 G#CP
+16,17 G#C|0,17 G#CP
 
 则 该 身故 保险金 等于 下列 金额
-D R N N V V N
 0,7 G#IA
 
-被保险人 身故 时 本合同 的 基本 保险金额 × 420. 累计 已 给付 的 生存 现金
-N N N N UJ N N X M V D V UJ V N
-0,15 G#IA
+被保险人 身故 时 本合同 的 基本 保险金额 × 420 . 累计 已 给付 的 生存 现金
+0,16 G#IA
 
 若 被保险人 生存 且 本合同 仍然 有效
-C N V ZG N D A
 1,7 G#CP
 
 则 自 本合同 生效 满 三年 且 被保险人 年满 五十五岁 后 的 首个 保险单 周年 日后 的 首个 保险单 月份 开始
-D P N N A M ZG N A M F UJ M N T T UJ M N N V
 0,21 G#CP
 
 本 公司 将 于 每个 保险单 月份 的 最后 一日 给付 生存 现金 予 被保险人
-R N D P R N N UJ F M V V N VG N
 0,15 G#IA
 
 直至 被保险人 年满 九十岁 后 的 首个 保险单 周年 日前 一日
-V N A M F UJ M N T T M
 0,11 G#IA
 
 每次 给付 的 生存 现金 金额 等于 基本 保险金额
-R V UJ V N N V N N
 0,9 G#IA
 
-本合同 的 生存 现金 领取 最长 为 三十五年
-N UJ V N V A P M
-
-
 若 在 生存 现金 给付 期间 被保险人 身故
-C P V N V F N N
 7,8 G#C
 
 则 本合同 终止
-D N V
 1,3 G#T
 
 且 自 被保险人 身故 之日起 本 公司 将 不再 给付 生存 现金
-C R N N NS R N D D V V N
 0,12 G#IA
 
 （ 一 ） 在 本合同 有效期 内
-X M X P N N N
 3,7 G#CP
 
-若 被保险人 身故 且 身故 时 未 年满 十八岁 （ 释义 一 ）
-C N N ZG N NG D A M X NR M X
-2,3 G#C|0,13 G#CP
+若 被保险人 身故 且 身故 时未 年满 十八岁 （ 释义 一 ）
+2,3 G#C|0,12 G#CP
 
 则 本 公司 将 给付 身故 保险金 予 健在 的 身故 保险金 受益人
-D R N D V N N VG V UJ N N N
-0,13 G#IA|0,13 G#IA
+0,13 G#IA
 
 该 身故 保险金 等于 下列 二项 金额 中 的 较大 者
-R N N V V M N F UJ A K
-0,11 G#IA|0,11 G#IA
+0,11 G#IA
 
 1 、 若 以 分期 支付 方式 支付 保险费
-X X C P VN V N V N
-0,9 G#IA|0,9 G#IA
+0,9 G#IA
 
 则 本项 金额 按 下列 公式 （ 1 ） 计算
-D R N P V N X X X V
-0,10 G#IA|0,10 G#IA
+0,10 G#IA
 
 若以 趸 缴 方式 支付 保险费
-C VG V N V N
-0,6 G#IA|0,6 G#IA
+0,6 G#IA
 
 则 本项 金额 按 下列 公式 （ 2 ） 计算
-D R N P V N X X X V
-0,10 G#IA|0,10 G#IA
+0,10 G#IA
 
-（ 1 ） 本项 金额 = （ 被保险人 身故 时 累计 应付 已付 各 期 保险费 对应 的 月数 ÷ 12 ） × 按 年 付 方式 计算 的 本合同 年 保险费 （ 2 ） 本项 金额 = 趸 缴 保险费 2 、 被保险人 身故 时 保证 利益 的 现金 价值 （ 释义 二 ）
-X X X R N X X N N N V VN V R N N VN UJ N X M X X P M V N V UJ N M N X X X R N X VG V N X X N N N V N UJ N N X NR M X
-0,55 G#IA
+（ 1 ） 本项 金额 = （ 被保险人 身故 时 累计 应付 已付 各 期 保险费 对应 的 月 数 ÷ 12 ） × 按年付 方式 计算 的 本合同 年 保险费 （ 2 ） 本项 金额 = 趸 缴 保险费 2 、 被保险人 身故 时 保证 利益 的 现金 价值 （ 释义 二 ）
+0,54 G#IA
 
 （ 二 ） 在 本合同 有效期 内
-X M X P N N N
-
+3,7 G#CP
 
 若 被保险人 身故 且 身故 时 已 年满 十八岁
-C N N ZG N NG D A M
-0,9 G#CP
+2,3 G#C|0,9 G#CP
 
 则 本 公司 将 给付 身故 保险金 予 健在 的 身故 保险金 受益人
-D R N D V N N VG V UJ N N N
-
+0,13 G#IA
 
 该 身故 保险金 等于 下列 二项 金额 中 的 较大 者
-R N N V V M N F UJ A K
-
+0,11 G#IA
 
 1 、 若 以 分期 支付 方式 支付 保险费
-X X C P VN V N V N
-
+0,9 G#IA
 
 则 本项 金额 按 下列 公式 （ 1 ） 计算
-D R N P V N X X X V
-
+0,10 G#IA
 
 若以 趸 缴 方式 支付 保险费
-C VG V N V N
-
+0,6 G#IA
 
 则 本项 金额 按 下列 公式 （ 2 ） 计算
-D R N P V N X X X V
+0,10 G#IA
 
-
-（ 1 ） 本项 金额 = 本合同 的 付费 年限 × 按 年 付 方式 计算 的 本合同 年 保险费 × 110 % （ 2 ） 本项 金额 = 趸 缴 保险费 × 110 % 2 、 被保险人 身故 时 保证 利益 的 现金 价值
-X X X R N X N UJ V N X P M V N V UJ N M N X M X X X X R N X VG V N X M X X X N N N V N UJ N N
-0,45 G#IA
+（ 1 ） 本项 金额 = 本合同 的 付费 年限 × 按年付 方式 计算 的 本合同 年 保险费 × 110% （ 2 ） 本项 金额 = 趸 缴 保险费 × 110% 2 、 被保险人 身故 时 保证 利益 的 现金 价值
+0,41 G#IA
 
 在 本 附加 合同 有效期 内
-P R V A N N
 1,6 G#CP
 
-若 本 附加 合同 的 被保险人 于 年满 六十岁 后 的 首个 保险单 周年 日 （ 若 保险单 周年 日 与 被保险人 生日 是 同一 日期
-C R V A UJ N P A M F UJ M N T M X C N T M P N T V B T
-0,26 G#CP
+若本 附加 合同 的 被保险人 于 年满 六十岁 后 的 首个 保险单 周年 日 （ 若 保险单 周年 日 与 被保险人 生日 是 同一 日期
+0,25 G#CP
 
 则 于 被保险人 六十岁 生日 ） 或 以前 身故
-D P N M T X C F N
 8,9 G#C|0,9 G#CP
 
 则 本 公司 将 自其 身故 后 的 首个 保险单 周年 日 开始
-D R N D D N F UJ M N T M V
 0,13 G#CP
 
 豁免 主合同 、 《 友邦 附加 康安 一生 终身 医疗保险 》 的 应付 未付 保险费
-V N X X N V NR M D N X UJ VN V N
 0,15 G#IA
 
-获 豁免 的 保险费 视为 已 支付
-V V UJ N V D V
-
-
 上述 保险合同 仍然 有效
-B N D A
 1,4 G#T
 
-本 附加 合同 效力 自本 附加 合同 的 被保险人 身故 日 起 终止
-R V A N A V A UJ N N M V V
-0,13 G#T
-
-但 保险费 豁免 至 本 条约 定 的 截止 期限 止
-C N V P R N V UJ V N ZG
-
+本 附加 合同 效力 自本 附加 合同 的 被保险人 身故 日起 终止
+0,12 G#T
 
 在 本 附加 合同 有效期 内
-P R V A N N
 0,6 G#CP
 
-若 本 附加 合同 的 被保险人 于 年满 六十岁 后 的 首个 保险单 周年 日 （ 若 保险单 周年 日 与 被保险人 生日 是 同一 日期
-C R V A UJ N P A M F UJ M N T M X C N T M P N T V B T
-0,26 G#CP
+若本 附加 合同 的 被保险人 于 年满 六十岁 后 的 首个 保险单 周年 日 （ 若 保险单 周年 日 与 被保险人 生日 是 同一 日期
+0,25 G#CP
 
-则 于 被保险人 六十岁 生日 ） 或 以前 全 残 （ 释义 一 ）
-D P N M T X C F A N X NR M X
-8,10 G#C|0,14 G#CP
+则 于 被保险人 六十岁 生日 ） 或 以前 全残 （ 释义 一 ）
+8,9 G#C|0,13 G#CP
 
-则 本 公司 将 在 其 全 残 持续 期内
-D R N D P R A N VD F
-0,10 G#CP
+则 本 公司 将 在 其 全残 持续 期内
+0,9 G#CP
 
 自其 全残后 的 首个 保险单 周年 日 开始
-D I UJ M N T M V
 0,8 G#CP
 
-豁免 主合同 、 《 友邦 附加 康安 一生 终身 医疗保险 》 及 本 附加 合同 的 应付 未付 保险费
-V N X X N V NR M D N X C R V A UJ VN V N
-0,19 G#IA
-
-获 豁免 的 保险费 视为 已 支付
-V V UJ N V D V
-
+豁免 主合同 、 《 友邦 附加 康安 一生 终身 医疗保险 》 及本 附加 合同 的 应付 未付 保险费
+0,18 G#IA
 
 上述 保险合同 仍然 有效
-B N D A
 0,4 G#T
 
-保险费 豁免 至 本 条约 定 的 截止 期限 止
-N V P R N V UJ V N ZG
-
-
-在 上述 两种 情况 下
-P B M N F
-
-
-保险费 可 豁免 的 截止 期限 为主 合同 被保险人 二十二岁 后 的 首个 保险单 周年 日 （ 若 保险单 周年 日 与 主合同 被保险人 的 生日 是 同一 日期
-N V V UJ V N V A N M F UJ M N T M X C N T M P N N UJ T V B T
-
-
-则 至 主合同 被保险人 二十二岁 生日 ）
-D P N N M T X
-
-
-若 此后 获 豁免 保险费 的 保险合同 仍然 有效 且 须 继续 支付 保险费 的
-C C V V N UJ N D A C D V V N UJ
-
-
-则 投保人 仍须 支付 以后 的 保险费
-D N D V F UJ N
-
-
 在 本 附加 合同 有效期 内
-P R V A N N
 1,6 G#CP
 
-若 被保险人 全 残 （ 释义 一 ） 并 在 全 残 持续 期内
-C N A N X NR M X C P A N VD F
-2,4 G#C|0,14 G#CP
+若 被保险人 全残 （ 释义 一 ） 并 在 全残 持续 期内
+2,3 G#C|0,12 G#CP
 
-则 自 被保险人 全 残后 的 下 一 保险单 周年 日 开始
-D P N A A UJ F M N T M V
-0,12 G#CP
-
-每当 主合同 根据 约定 给付 生存 现金 时
-P N P V V V N N
-0,8 G#IA
-
-本 附加 合同 同时 给付 全 残 保险金
-R V A C V A N N
-0,8 G#IA
-
-直至 主合同 停止 给付 生存 现金 时 止
-V N V V V N NG V
-0,8 G#IA
-
-每次 的 全 残 保险金 等于 主合同 当年 的 生存 现金 给付 金额 乘以 本 附加 合同 基本 保险金额 与 主合同 基本 保险金额 之 比
-R UJ A N N V N T UJ V N V N V R V A N N P N N N U P
-0,25 G#IA
-
-如 下列 公式 所示
-V V N V
-
-
-本 附加 合同 基本 保险金额 × 主合同 生存 现金 给付 金额 主合同 基本 保险金额 在 给付 全 残 保险金 时
-R V A N N X N V N V N N N N P V A N N N
-0,20 G#IA
-
-若 被保险人 身故
-C N N
-2,3 G#C|0,3 G#CP
-
-则 身故 给付 金额 为 零
-D N V N P M
-0,6 G#IA
-
-在 其他 情况 下
-P R N F
-
-
-若 被保险人 身故
-C N N
-
-
-则 按 “ 投保人 解除合同 ” 处理
-D P X N I X V
-
-
-若 全 残 持续 期 结束
-C A N VD N V
-
-
-则 本 公司 将 停止 给付 全 残 保险金
-D R N D V V A N N
-0,9 G#IA
-
-全 残 持续 期 结束 后 再次发生 的 全 残 视为 另 一次 全 残
-A N VD N V F I UJ A N V R M A N
-
-
-若 被保险人 在 本 附加 合同 的 付费 期内 全 残
-C N P R V A UJ V F A N
+则 自 被保险人 全残后 的 下 一 保险单 周年 日 开始
 0,11 G#CP
 
-除 本 附加 合同 的 保险费 因 附加 《 友邦 附加 金喜 年 年 II 豁免 保险费 定期 寿险 》 而 予以 豁免 外
-P R V A UJ N P V X N V NR M M ENG V N VN N X C V V F
+每当 主合同 根据 约定 给付 生存 现金 时
+0,8 G#IA
 
+本 附加 合同 同时 给付 全残 保险金
+0,7 G#IA
 
-投保人 仍 需 继续 支付 本 附加 合同 的 保险费 直至 本 附加 合同 效力 终止 或 付费 期 结束 （ 以 较早 发生 者 为准 ）
-N D V V V R V A UJ N V R V A N V C V N V X P D V K V X
+直至 主合同 停止 给付 生存 现金 时止
+0,7 G#IA
 
+每次 的 全残 保险金 等于 主合同 当年 的 生存 现金 给付 金额 乘以 本 附加 合同 基本 保险金额 与 主合同 基本 保险金额 之 比
+0,24 G#IA
 
-在 本 附加 合同 有效期 内
-P R V A N N
-1,6 G#CP
-
-若 被保险人 全 残 （ 释义 一 ）
-C N A N X NR M X
-2,4 G#C|0,8 G#CP
-
-则 自 被保险人 全 残 开始
-D P N A N V
-0,6 G#CP
-
-本 公司 将 于 每个 保险单 月份 的 最后 一日 给付 全 残 失能 收入 损失 保险金 予 被保险人
-R N D P R N N UJ F M V A A V V N N VG N
+本 附加 合同 基本 保险金额 × 主合同 生存 现金 给付 金额 主合同 基本 保险金额 在 给付 全残 保险金 时
 0,19 G#IA
 
-直至 被保险人 年满 九十岁 后 的 首个 保险单 周年 日前 一日 或 被保险人 身故 （ 以 较先 发生 者 为准 ） 时 止
-V N A M F UJ M N T T M C N N X P D V K V X NG V
-13,14 G#C|0,23 G#IA
+若 被保险人 身故
+2,3 G#C
+
+则 身故 给付 金额 为 零
+0,6 G#IA
+
+若 被保险人 身故
+2,3 G#C
+
+则 本 公司 将 停止 给付 全残 保险金
+0,8 G#IA
+
+若 被保险人 在 本 附加 合同 的 付费 期内 全残
+9,10 G#C|0,10 G#CP
+
+在 本 附加 合同 有效期 内
+1,6 G#CP
+
+若 被保险人 全残 （ 释义 一 ）
+2,3 G#C
+
+则 自 被保险人 全残 开始
+0,5 G#CP
+
+本 公司 将 于 每个 保险单 月份 的 最后 一日 给付 全残 失能 收入 损失 保险金 予 被保险人
+0,18 G#IA
+
+直至 被保险人 年满 九十岁 后 的 首个 保险单 周年 日前 一日 或 被保险人 身故 （ 以较 先 发生 者 为准 ） 时止
+0,22 G#IA
 
 每次 给付 的 全残 失能 收入 损失 保险金 金额 等于 本 附加 合同 的 基本 保险金额
-R V UJ N V V N N N V R V A UJ N N
 0,16 G#IA
 
-开始 给付 全 残 失能 收入 损失 保险金 后
-V V A A V V N N F
-
-
 本 附加 合同 终止
-R V A V
 0,4 G#T
 
 被保险人 在 本 主合同 生效 （ 或 最后 复效 ） 之日起 180 天 内因 疾病 身故
-N P R N N X C F A X NS M N N N N
 4,13 G#PC|14,16 G#C|0,16 G#CP
 
 我们 将 无息 返还 您 所交 的 本 主合同 的 保险费
-R D V V R B UJ N N UJ N
 0,11 G#IA
 
 本 主合同 终止
-R N V
 0,3 G#T
 
 这 180 天 的 时间 称为 等待 期
-R M Q UJ N V V N
 0,8 G#WP
 
 被保险人 因 意外 伤害 （ 见 释义 6.4 ） 导致 身故
-N P A A X V NR M X V N
-10,11 G#C|2,4 G#C
+1,11 G#C
 
 无 等待 期
-V V N
 0,3 G#WP
 
 等待 期后 发生 保险 事故
-V F V N N
 0,5 G#CP
 
 我们 按照 下列 方式 给付 保险金
-R P V N V N
 0,6 G#IA
 
 被保险人 身故
-N N
 0,2 G#CP
 
 我们 将 按 身故 当时 本 主合同 的 基本 保险金额 给付 身故 保险金
-R D P N T R N UJ N N V N N
 0,13 G#IA
 
 本 主合同 终止
-R N V
 0,3 G#T
 
 被保险人 于 本合同 生效 之日起 一百八十 日 内因 疾病 导致 身故
-N P N N NS M M N N V N
-3,7 G#PC|8,9 G#C|10,11 G#C|0,11 G#CP
+3,7 G#PC|8,11 G#C|1,11 G#C|0,11 G#CP
 
 本 公司 按所交 保险费 （ 不计 利息 ） 给付 身故 保险金
-R N X N X V N X V N N
 0,11 G#IA
 
 本合同 终止
-N V
 0,2 G#T
 
 被保险人 因 意外 伤害 或 于 本合同 生效 之日起 一百八十 日后 因 疾病 导致 身故
-N P A A C P N N NS M T P N V N
-7,11 G#PC|2,4 G#C|0,15 G#CP
+7,11 G#PC|11,15 G#C|1,4 G#C|5,15 G#C|0,15 G#CP
 
 本 公司 按 被保险人 身故 当时 的 身故 保险金额 给付 身故 保险金
-R N P N N T UJ N N V N N
 0,12 G#IA
 
 并 返还 被保险人 身故 当时 本合同 所 交 保险费 （ 不计 利息 ）
-C V N N T N C V N X V N X
 0,13 G#IA
 
 本合同 终止
-N V
-
+0,2 G#T
 
 被保险人 于 本合同 生效 之日起 一百八十 日 内因 疾病 导致 身体 高度 残疾
-N P N N NS M M N N V N N N
-3,7 G#PC|8,9 G#C|12,13 G#C|0,13 G#CP
+3,7 G#PC|8,13 G#C|0,13 G#CP
 
 本 公司 按所交 保险费 （ 不计 利息 ） 给付 身体 高度 残疾 保险金
-R N X N X V N X V N N N N
 0,13 G#IA
 
 本合同 终止
-N V
 0,2 G#T
 
 被保险人 因 意外 伤害 或 于 本合同 生效 之日起 一百八十 日后 因 疾病 导致 身体 高度 残疾
-N P A A C P N N NS M T P N V N N N
-7,11 G#PC|2,4 G#C|0,17 G#CP
+7,11 G#PC|11,17 G#C|1,4 G#C|0,17 G#CP
 
-本 公司 按 基本 保险金额 的 100 % 给付 身体 高度 残疾 保险金
-R N P N N UJ M X V N N N N
-0,13 G#IA
+本 公司 按 基本 保险金额 的 100% 给付 身体 高度 残疾 保险金
+0,12 G#IA
 
-但 给付 以 一次 为 限
-C V P M P V
-0,6 G#IA
+但 给付 以 一次 为限
+0,5 G#IA
 
 本合同 继续 有效
-N V A
 0,3 G#T
 
 在 本合同 交费 期间 内
-P N VN F N
 0,5 G#CP
 
 被保险人 因 意外 伤害 或 于 本合同 生效 之日起 一百八十 日后 因 疾病 导致 身体 高度 残疾
-N P A A C P N N NS M T P N V N N N
-7,11 G#PC|12,13 G#C|2,4 G#C|16,17 G#C|0,17 G#CP
-
-本 公司 豁免 被保险人 身体 高度 残疾 之 日 以后 至 本合同 终止 前 的 各期 应交 保险费
-R N V N N N N U M F P N V F UJ R V N
-
-
-视同 投保人 交纳 了 被保险人 身体 高度 残疾 之 日 以后 至 本合同 终止 前 的 各期 保险费
-N N V UL N N N N U M F P N V F UJ R N
-
+7,11 G#PC|11,17 G#C|1,4 G#C|0,17 G#CP
 
 本合同 继续 有效
-N V A
 0,3 G#T
 
-若 被保险人 在 本合同 生效 或 最后 一次 复效 （ 以 较 迟 者 为准 ） 之日起 180 日 （ 这 180 日 的 时间段 称为 “ 等待 期 ” ） 内 身故 或 被 确诊 初次 患 恶性肿瘤 （ 见 释义 ） （ 无论 一种 或 多种
-C N P N N C F M A X P D A K V X NS M M X R M M UJ N V X V N X X N N C P V D ZG L X V NR X X C M C M
-32,33 G#C|38,39 G#C|17,19 G#WP|0,48 G#CP
-
-下同 ）
-V X
-
+若 被保险人 在 本合同 生效 或 最后 一次 复效 （ 以较 迟者 为准 ） 之日起 180 日 （ 这 180 日 的 时间段 称为 “ 等待 期 ” ） 内 身故 或 被 确诊 初次 患 恶性肿瘤 （ 见 释义 ） （ 无论 一种 或 多种
+30,31 G#C|34,37 G#C|18,28 G#WP|0,46 G#CP
 
 我们 将 无息 退还 您 已 支付 的 保险费
-R D V V R D V UJ N
 0,9 G#IA
 
 本合同 终止
-N V
 0,2 G#T
 
 若 被保险人 在 等待 期后 身故
-C N P V F N
 5,6 G#C|0,6 G#CP
 
 我们 按 您 已 支付 的 保险费 与 被保险人 身故 时 基本 保险金额 对应 的 现金 价值 的 较大 者 给付 身故 保险金
-R P R D V UJ N P N N N N N VN UJ N N UJ A K V N N
 0,23 G#IA
 
 本合同 终止
-N V
 0,2 G#T
 
 若 被保险人 在 等待 期后 被 确诊 初次 患 本合同 约定 的 恶性肿瘤
-C N P V F P V D ZG N V UJ L
-12,13 G#C|0,13 G#CP
+7,13 G#C|0,13 G#CP
 
 我们 按 本合同 的 基本 保险金额 给付 恶性肿瘤 保险金
-R P N UJ N N V L N
 0,9 G#IA
 
 本合同 终止
-N V
 0,2 G#T
 
 若 男性 被保险人 在 等待 期后 被 确诊 初次 患 肺癌 （ 见 释义 ） 、 前列腺癌 （ 见 释义 ）
-C N N P V F P V D ZG N X V NR X X N X V NR X
-0,21 G#CP
+8,21 G#C|0,21 G#CP
 
 我们 按 本合同 约定 给付 恶性肿瘤 保险金 外
-R P N V V L N F
-5,6 G#C|0,8 G#IA|0,8 G#IA
+0,8 G#IA
 
-再 按 基本 保险金额 的 50 % 给付 特定 恶性肿瘤 额外 保险金
-D P N N UJ M X V D L B N
-0,12 G#IA|0,12 G#IA
+再 按 基本 保险金额 的 50% 给付 特定 恶性肿瘤 额外 保险金
+0,11 G#IA
 
 本合同 终止
-N V
 0,2 G#T
 
 若 女性 被保险人 在 等待 期后 被 确诊 初次 患 乳腺癌 （ 见 释义 ） 、 宫颈癌 （ 见 释义 ）
-C N N P V F P V D ZG N X V NR X X N X V NR X
-0,21 G#CP
+8,21 G#C|0,21 G#CP
 
 我们 按 本合同 约定 给付 恶性肿瘤 保险金 外
-R P N V V L N F
+0,8 G#IA
 
-
-再 按 基本 保险金额 的 50 % 给付 特定 恶性肿瘤 额外 保险金
-D P N N UJ M X V D L B N
-
+再 按 基本 保险金额 的 50% 给付 特定 恶性肿瘤 额外 保险金
+0,11 G#IA
 
 本合同 终止
-N V
-
+0,2 G#T
 
 在 保险 期间 内 被保险人 遭受 意外 伤害 或 患 疾病
-P N F N N V A A C N N
-10,11 G#C|6,8 G#C|0,11 G#CP
+9,11 G#C|5,8 G#C|0,11 G#CP
 
 经 医师 诊断 在 大中华 地区 医院 接受 医学 必要 的 每次 住院治疗 或 在 大中华 地区 医疗机构 接受 医学 必要 的 门诊 治疗
-N N V P NZ N N V N D UJ R N C P NZ N N V N D UJ N V
 0,24 G#CP
 
 由此 发生 的 、 符合 通常 惯例 水平 的 、 本条 列明 类型 的 费用
-C V UJ X V D N N UJ X R NR N UJ N
 0,15 G#IA
 
-即 保险 责任 范围 内 的 费用
-V N N N F UJ N
+保险人 按照 “ （ 每次 治疗 保险 责任 范围 内 的 费用 － 次免 赔额 ） × （ 1 － 自付 比例 ） ” 支付 保险金
+0,26 G#IA
 
-
-除 特别 列明 外
-P D NR F
-
-
-保险人 按照 “ （ 每次 治疗 保险 责任 范围 内 的 费用 － 次 免 赔额 ） × （ 1 － 自付 比例 ） ” 支付 保险金
-N P X X R V N N N F UJ N X M V N X X X X X V N X X V N
-0,27 G#IA
-
-被保险人 自 遭受 该 意外 之日起 一百八十 日 内 以 该 意外 为 直接 、 完全 原因 而 身故 的
-N P V R A NS M M F P R A P AD X AD N C N UJ
-18,19 G#C|0,20 G#CP
+被保险人 自 遭受 该 意外 之日起 一百八十 日内 以 该 意外 为 直接 、 完全 原因 而 身故 的
+17,18 G#C|0,19 G#CP
 
 保险人 按 本合同 载明 的 该 被保险人 的 意外 伤害 保险金额 给付 意外 身故 保险金
-N P N V UJ R N UJ A A N V A N N
-8,10 G#C|0,15 G#IA|0,15 G#IA
+0,15 G#IA
 
 同时 本合同 约定 的 对 该 被保险人 的 保险 责任 终止
-C N V UJ P R N UJ N N V
 1,11 G#T
 
 被保险人 因 遭受 该 意外 而 下落不明
-N P V R A C L
 0,7 G#CP
 
-后 经 法院 宣告 死亡 的
-F N N N V UJ
-0,6 G#CP
+后经 法院 宣告 死亡 的
+0,5 G#CP
 
 保险人 按 本合同 载明 的 该 被保险人 的 意外 伤害 保险金额 给付 意外 身故 保险金
-N P N V UJ R N UJ A A N V A N N
-
+0,15 G#IA
 
 同时 本合同 约定 的 对 该 被保险人 的 保险 责任 终止
-C N V UJ P R N UJ N N V
+1,11 G#T
 
+但 若 该 被保险人 生还
+0,5 G#CP
 
-但若 该 被保险人 生还
-C R N V
-0,4 G#CP
-
-保险金 申请人 应当 于 知道 或者 应当 知道 被保险人 生还 后 三十日 内 退还 保险人 已 给付 的 意外 身故 保险金
-N NR V P V C V V N V F M N V N D V UJ A N N
-
-
-然后 本合同 约定 的 对 该 被保险人 的 保险 责任 应当 视为 未 因 该次 宣告 死亡 而 终止
-C N V UJ P R N UJ N N V V D P R N V C V
-0,19 G#CP
+然后 本合同 约定 的 对 该 被保险人 的 保险 责任 应当 视为 未因 该次 宣告 死亡 而 终止
+0,18 G#CP
 
 保险金 申请人 未 在 三十日 内 退还 的
-N NR D P M N V UJ
 0,8 G#CP
 
-保险人 有权 追索
-N N V
-
-
 被保险人 身故 或者 被 宣告 死亡 前
-N N C P N V F
 0,7 G#CP
 
 保险人 根据 本合同 针对 其 已 给付 意外 伤残 保险金 的
-N P N P R D V A A N UJ
-7,9 G#C|0,11 G#IA
+0,11 G#IA
 
 意外 身故 保险金 应当 扣除 已 给付 金额
-A N N V V D V N
 0,8 G#IA
 
-被保险人 自 遭受 该 意外 之日起 一百八十 日 内 以 该 意外 为 直接 、 完全 原因 而 导致 《 人身保险 伤残 评定 标准 及 代码 》 中 所列 伤残 之一 的
-N P V R A NS M M F P R A P AD X AD N C V X N A V N C N X F B A R UJ
-0,32 G#CP
+被保险人 自 遭受 该 意外 之日起 一百八十 日内 以 该 意外 为 直接 、 完全 原因 而 导致 《 人身保险 伤残 评定 标准 及 代码 》 中所列 伤残 之一 的
+18,29 G#C|0,30 G#CP
 
 保险人 按 《 人身保险 伤残 评定 标准 及 代码 》 中 与 该项 伤残 对应 的 给付 比例 和 该 被保险人 的 意外 伤害 保险金额 的 乘积 给付 意外 伤残 保险金
-N P X N A V N C N X F P R A VN UJ V N C R N UJ A A N UJ N V A A N
-4,5 G#C|22,24 G#C|0,31 G#IA
+0,31 G#IA
 
 若 至 该 意外 发生 之日起 第一百八 十日 该 被保险人 的 伤残 程度 仍 未 完全 确定
-C P R A V NS M T R N UJ A N ZG D AD V
 0,17 G#CP
 
 保险人 根据 该 意外 发生 之日起 第一百八 十日 该 被保险人 的 身体 情况 进行 伤残 鉴定
-N P R A V NS M T R N UJ N N V A V
 0,16 G#CP
 
-并 据此 给付 意外 伤残 保险金
-C D V A A N
-
-
 人身保险 伤残 程度 等级 相对 应 的 保险金 给付 比例 分为 十档
-N A N B D V UJ N V N V M
 0,12 G#IA
 
-伤残 程度 第一级 对应 的 保险金 给付 比例 为 100 %
-A N M VN UJ N V N P M X
+伤残 程度 第一级 对应 的 保险金 给付 比例 为 100%
+0,10 G#IA
+
+伤残 程度 第十 级 对应 的 保险金 给付 比例 为 10%
 0,11 G#IA
 
-伤残 程度 第十 级 对应 的 保险金 给付 比例 为 10 %
-A N M Q VN UJ N V N P M X
-0,12 G#IA
-
-每级 相差 10 %
-R V M X
-
-
 保险人 根据 本合同 针对 每一 被保险人 给付 的 意外 身故 保险金 、 意外 伤残 保险金 累计 以 其 意外 伤害 保险金额 为 上限
-N P N P R N V UJ A N N X A A N V P R A A N P V
-9,10 G#C|0,23 G#IA
-
-当 达到 该 限额 时
-T V R N N
-
+0,23 G#IA
 
 本合同 约定 的 对 该 被保险人 的 意外 伤害 保险 责任 终止
-N V UJ P R N UJ A A N N V
 0,12 G#T
 
-被保险人 自 遭受 该 意外 之日起 一百八十 日 内 以 该 意外 为 直接 、 完全 原因 而 身故 的
-N P V R A NS M M F P R A P AD X AD N C N UJ
-18,19 G#C|0,20 G#CP
+被保险人 自 遭受 该 意外 之日起 一百八十 日内 以 该 意外 为 直接 、 完全 原因 而 身故 的
+17,18 G#C|0,19 G#CP
 
 保险人 按 本合同 载明 的 该 被保险人 的 意外 伤害 保险金额 给付 意外 身故 保险金
-N P N V UJ R N UJ A A N V A N N
-8,10 G#C|0,15 G#IA|0,15 G#IA
+0,15 G#IA
 
 同时 本合同 约定 的 对 该 被保险人 的 保险 责任 终止
-C N V UJ P R N UJ N N V
 0,11 G#T
 
 被保险人 因 遭受 该 意外 而 下落不明
-N P V R A C L
 0,7 G#CP
 
-后 经 法院 宣告 死亡 的
-F N N N V UJ
-0,6 G#CP
+后经 法院 宣告 死亡 的
+0,5 G#CP
 
 保险人 按 本合同 载明 的 该 被保险人 的 意外 伤害 保险金额 给付 意外 身故 保险金
-N P N V UJ R N UJ A A N V A N N
-
+0,15 G#IA
 
 同时 本合同 约定 的 对 该 被保险人 的 保险 责任 终止
-C N V UJ P R N UJ N N V
-
-
-但若 该 被保险人 生还
-C R N V
-
-
-保险金 申请人 应当 于 知道 或者 应当 知道 被保险人 生还 后 三十日 内 退还 保险人 已 给付 的 意外 身故 保险金
-N NR V P V C V V N V F M N V N D V UJ A N N
-
-
-然后 本合同 约定 的 对 该 被保险人 的 保险 责任 应当 视为 未 因 该次 宣告 死亡 而 终止
-C N V UJ P R N UJ N N V V D P R N V C V
-
-
-保险金 申请人 未 在 三十日 内 退还 的
-N NR D P M N V UJ
-
-
-保险人 有权 追索
-N N V
-
-
-被保险人 身故 或者 被 宣告 死亡 前
-N N C P N V F
-
-
-保险人 根据 本合同 针对 其 已 给付 意外 伤残 保险金 的
-N P N P R D V A A N UJ
-
+0,11 G#T
 
 意外 身故 保险金 应当 扣除 已 给付 金额
-A N N V V D V N
 0,8 G#IA
 
-被保险人 自 遭受 该 意外 之日起 一百八十 日 内 以 该 意外 为 直接 、 完全 原因 而 导致 《 人身保险 伤残 评定 标准 及 代码 》 中 所列 伤残 之一 的
-N P V R A NS M M F P R A P AD X AD N C V X N A V N C N X F B A R UJ
-0,32 G#CP
+被保险人 自 遭受 该 意外 之日起 一百八十 日内 以 该 意外 为 直接 、 完全 原因 而 导致 《 人身保险 伤残 评定 标准 及 代码 》 中所列 伤残 之一 的
+18,29 G#C|0,30 G#CP
 
 保险人 按 《 人身保险 伤残 评定 标准 及 代码 》 中 与 该项 伤残 对应 的 给付 比例 和 该 被保险人 的 意外 伤害 保险金额 的 乘积 给付 意外 伤残 保险金
-N P X N A V N C N X F P R A VN UJ V N C R N UJ A A N UJ N V A A N
-4,5 G#C|22,24 G#C|0,31 G#IA
+0,31 G#IA
 
 若 至 该 意外 发生 之日起 第一百八 十日 该 被保险人 的 伤残 程度 仍 未 完全 确定
-C P R A V NS M T R N UJ A N ZG D AD V
 0,17 G#CP
 
 保险人 根据 该 意外 发生 之日起 第一百八 十日 该 被保险人 的 身体 情况 进行 伤残 鉴定
-N P R A V NS M T R N UJ N N V A V
 0,16 G#CP
 
-并 据此 给付 意外 伤残 保险金
-C D V A A N
-
-
 人身保险 伤残 程度 等级 相对 应 的 保险金 给付 比例 分为 十档
-N A N B D V UJ N V N V M
 0,12 G#IA
 
-伤残 程度 第一级 对应 的 保险金 给付 比例 为 100 %
-A N M VN UJ N V N P M X
+伤残 程度 第一级 对应 的 保险金 给付 比例 为 100%
+0,10 G#IA
+
+伤残 程度 第十 级 对应 的 保险金 给付 比例 为 10%
 0,11 G#IA
 
-伤残 程度 第十 级 对应 的 保险金 给付 比例 为 10 %
-A N M Q VN UJ N V N P M X
-0,12 G#IA
-
-每级 相差 10 %
-R V M X
-0,4 G#IA
+每级 相差 10%
+0,3 G#IA
 
 保险人 根据 本合同 针对 每一 被保险人 给付 的 意外 身故 保险金 、 意外 伤残 保险金 累计 以 其 意外 伤害 保险金额 为 上限
-N P N P R N V UJ A N N X A A N V P R A A N P V
-9,10 G#C|0,23 G#IA
-
-当 达到 该 限额 时
-T V R N N
-
+0,23 G#IA
 
 本合同 约定 的 对 该 被保险人 的 意外 伤害 保险 责任 终止
-N V UJ P R N UJ A A N N V
 0,12 G#T
 
-在 本合同 保险 期间 内 且 本合同 有效
-P N N F F C N A
-0,8 G#CP
+在 本合同 保险 期间 内且 本合同 有效
+0,7 G#CP
 
 如果 被保险人 身故
-C N N
-2,3 G#C|0,3 G#CP
+2,3 G#C
 
 我们 按 被保险人 身故 时 本合同 的 保险金额 给付 身故 保险金
-R P N N N N UJ N V N N
 0,11 G#IA
 
 同时 本合同 的 效力 终止
-C N UJ N V
 0,5 G#T
 
-在 本合同 保险 期间 内 且 本合同 有效
-P N N F F C N A
-0,8 G#CP
+在 本合同 保险 期间 内且 本合同 有效
+0,7 G#CP
 
 如果 被保险人 在 年满 105 周岁 后 的 首个 保险单 周年 日 当天 零时 仍然 生存
-C N P A M M F UJ M N T M T D D V
 0,16 G#CP
 
 我们 按 本合同 的 保险金额 给付 祝寿 金
-R P N UJ N V NR NR
 0,8 G#IA
 
 同时 本合同 的 效力 终止
-C N UJ N V
 0,5 G#T
 
-在 本合同 保险 期间 内 且 本合同 有效
-P N N F F C N A
-0,8 G#CP
+在 本合同 保险 期间 内且 本合同 有效
+0,7 G#CP
 
 如果 被保险人 在 本合同 约定 的 生存 保险金 领取 年龄 后 的 首个 保险单 周年 日 4 当天 零时 仍 生存
-C N P N V UJ V N V N F UJ M N T M M T D ZG V
 0,21 G#CP
 
 我们 按 本合同 基本 保险金额 给付 生存 保险金
-R P N N N V V N
 0,8 G#IA
 
-在 本合同 保险 期间 内 且 本合同 有效
-P N N F F C N A
-0,8 G#CP
+在 本合同 保险 期间 内且 本合同 有效
+0,7 G#CP
 
 如果 被保险人 在 生存 保险金 领取 日 当天 零时 前身 故
-C N P V N V M T D R N
 10,11 G#C|0,11 G#CP
 
-我们 给付 身故 时 已 交 保险费 返还 额
-R V N NG D V N V N
-0,9 G#IA
+我们 给付 身故 时 已交 保险费 返还 额
+0,8 G#IA
 
 保险费 返还 额 按 下列 公式 计算
-N V N P V N V
 0,7 G#IA
 
 同时 本合同 的 效力 终止
-C N UJ N V
 0,5 G#T
 
-保险费 返还 额 ＝ 已 交 保险费 × （ 1 + 2.5 % × 已 交 保险费 经过 天数 / 365 ）
-N V N X D V N X X M X M X X D V N P N X M X
-0,22 G#IA
+保险费 返还 额 ＝ 已交 保险费 × （ 1 + 2.5% × 已交 保险费 经过 天数 / 365 ）
+0,19 G#IA
 
-这里 的 已 交 保险费 指以 被保险人 身故 时 本合同 的 基本 保险金额 为 基础
-R UJ D V N V N N N N UJ N N P N
-0,15 G#IA
-
-按 标准 体 5 年 交 方式 计算 的 您 已 交纳 的 保险费
-P N N M M N N V UJ R D V UJ N
+这里 的 已交 保险费 指以 被保险人 身故 时 本合同 的 基本 保险金额 为 基础
 0,14 G#IA
 
-在 本合同 保险 期间 内 且 本合同 有效
-P N N F F C N A
+按 标准 体 5 年交 方式 计算 的 您 已 交纳 的 保险费
+0,13 G#IA
 
+在 本合同 保险 期间 内且 本合同 有效
+0,7 G#CP
 
 如果 被保险人 在 生存 保险金 领取 日 当天 零时 后 身故
-C N P V N V M T D F N
-0,11 G#CP
+10,11 G#C|0,11 G#CP
 
-我们 按 本合同 基本 保险金额 的 5 % 给付 身故 保险金
-R P N N N UJ M X V N N
-0,11 G#IA
+我们 按 本合同 基本 保险金额 的 5% 给付 身故 保险金
+0,10 G#IA
 
 同时 本合同 效力 终止
-C N N V
 0,4 G#T
 
-在 本合同 保险 期间 内 且 本合同 有效
-P N N F F C N A
-0,8 G#CP
+在 本合同 保险 期间 内且 本合同 有效
+0,7 G#CP
 
 如果 被保险人 在 年满 100 周岁 后 的 首个 保险单 周年 日 当天 零时 仍 生存
-C N P A M M F UJ M N T M T D ZG V
 0,16 G#CP
 
-我们 按 本合同 基本 保险金额 的 5 % 给付 祝寿 金
-R P N N N UJ M X V NR NR
-0,11 G#IA
+我们 按 本合同 基本 保险金额 的 5% 给付 祝寿 金
+0,10 G#IA
 
 同时 本合同 效力 终止
-C N N V
 0,4 G#T
 
-自 本合同 生效日 或 昀 后 复效 日 （ 以 较 迟 者 为准 ） 起 九十日 内
-P N N C G F A M X P D A K V X V M N
-2,18 G#PC|0,18 G#CP
+自 本合同 生效日 或昀 后 复效 日 （ 以较 迟者 为准 ） 起 九十日 内
+2,15 G#PC|0,15 G#CP
 
 被保险人 因非 意外 伤害 导致 首次 发生 符合 本合同 第二十六条 中 所指 的 重大 疾病
-N C A A V M V V N M F N UJ A N
-2,4 G#C|13,15 G#C|0,15 G#CP
+8,15 G#C|0,15 G#CP
 
 并 经本 公司 指定 或 认可 的 医疗机构 的 专科医生 明确 诊断
-C N N V C V UJ N UJ NZ AD V
-0,12 G#CP|0,12 G#CP
+0,12 G#CP
 
 本 公司 按 投保人 根据 本合同 约定 已 支付 的 该 被保险人 对应 的 保险费
-R N P N P N V D V UJ R N VN UJ N
 0,15 G#CP
 
-给付 重大 疾病 保 保险金
-V A N V N
-
-
-同 对 该 被保险人 的 保险 责任 终止
-P P R N UJ N N V
-1,8 G#T
+同对 该 被保险人 的 保险 责任 终止
+1,7 G#T
 
 被保险人 因 意外 伤害
-N P A A
 0,4 G#CP
 
-或 自 合同 生效日 或 昀 后 复效 日 （ 以 较 迟 者 为准 ） 起 九十 日后 因非 意外 伤害
-C R A N C G F A M X P D A K V X V M T C A A
-0,1 G#PC|0,22 G#CP
+或 自 合同 生效日 或昀 后 复效 日 （ 以较 迟者 为准 ） 起 九十 日后 因非 意外 伤害
+3,16 G#PC|0,19 G#CP
 
 导致 首次 发生 符合 本合同 第十六条 所指 的 重大 疾病
-V M V V N M N UJ A N
 0,10 G#CP
 
 并 经本 公司 指定 或 认可 的 医疗机构 的 专科医生 明确 诊断
-C N N V C V UJ N UJ NZ AD V
-
+0,12 G#CP
 
 本 公司 按 本合同 约定 的 基本 保险金额 给付 重大 疾病 保险金
-R N P N V UJ N N V A N N
 8,12 G#IA|0,12 G#IA
 
 同时 该 被保险人 的 保险 责任 终止
-C R N UJ N N V
 0,7 G#T
 
-自 本合同 生效日 或 昀 后 复效 日 （ 以 较 迟 者 为准 ） 起 九十日 内
-P N N C G F A M X P D A K V X V M N
-2,18 G#PC|0,18 G#CP
+自 本合同 生效日 或昀 后 复效 日 （ 以较 迟者 为准 ） 起 九十日 内
+2,15 G#PC|0,15 G#CP
 
 被保险人 因非 意外 伤害 导致 首次 发生 符合 本合同 第二十六条 中 所指 的 轻症 疾病
-N C A A V M V V N M F N UJ N N
-13,15 G#C|2,4 G#C|0,15 G#CP
+8,15 G#C|0,15 G#CP
 
 并 经本 公司 指定 或 认可 的 医疗机构 的 专科医生 明确 诊断
-C N N V C V UJ N UJ NZ AD V
-0,12 G#CP|0,12 G#CP
+0,12 G#CP
 
 本 公司 按 投保人 根据 本合同 约定 已 支付 的 该 被保险人 对应 的 保险费
-R N P N P N V D V UJ R N VN UJ N
 0,15 G#IA
 
 给付 轻症 疾病 保险金
-V N N N
-0,4 G#IA|0,4 G#IA
+0,4 G#IA
 
 同时 对 该 被保险人 的 保险 责任 终止
-C P R N UJ N N V
 1,8 G#T
 
 被保险人 因 意外 伤害
-N P A A
 0,4 G#CP
 
-或 自 合同 生效日 或 昀 后 复效 日 （ 以 较 迟 者 为准 ） 起 九十 日后 因非 意外 伤害
-C R A N C G F A M X P D A K V X V M T C A A
-0,1 G#PC|0,22 G#CP
+或 自 合同 生效日 或昀 后 复效 日 （ 以较 迟者 为准 ） 起 九十 日后 因非 意外 伤害
+3,16 G#PC|0,19 G#CP
 
 导致 首次 发生 符合 本合同 第二十六条 所指 的 轻症 疾病
-V M V V N M N UJ N N
 0,10 G#CP
 
 并 经本 公司 指定 或 认可 的 医疗机构 的 专科医生 明确 诊断
-C N N V C V UJ N UJ NZ AD V
-
+0,12 G#CP
 
 且 未 达 本合同 第二十六条 所指 重大 疾病
-C D V N M N A N
-6,8 G#C|0,8 G#CP
+3,8 G#C
 
-本 公司 按 本合同 约定 的 基本 保险金额 的 20 %
-R N P N V UJ N N UJ M X
-0,11 G#IA
+本 公司 按 本合同 约定 的 基本 保险金额 的 20%
+0,10 G#IA
 
 给付 轻症 疾病 保险金
-V N N N
-
-
-给付 以 一次 为 限
-V P M P V
-
+0,4 G#IA
 
 同时 对 该 被保险人 的 该项 保险金 给付 责任 终止
-C P R N UJ R N V N V
 1,10 G#T
 
-自 本合同 生效日 或 昀 后 复效 日 （ 以 较 迟 者 为准 ） 起 九十日 内
-P N N C G F A M X P D A K V X V M N
-2,18 G#PC|0,18 G#CP
+自 本合同 生效日 或昀 后 复效 日 （ 以较 迟者 为准 ） 起 九十日 内
+2,15 G#PC|0,15 G#CP
 
 被保险人 因非 意外 伤害 导致 首次 发生 符合 本合同 第二十六条 中 所指 的 特定 疾病
-N C A A V M V V N M F N UJ D N
-2,4 G#C|14,15 G#C|0,15 G#CP
+0,15 G#CP
 
 并 经本 公司 指定 或 认可 的 医疗机构 的 专科医生 明确 诊断
-C N N V C V UJ N UJ NZ AD V
-0,12 G#CP|0,12 G#CP|0,12 G#CP|0,12 G#CP
+0,12 G#CP
 
 本 公司 按 投保人 根据 本合同 约定 已 支付 的 该 被保险人 对应 的 保险费
-R N P N P N V D V UJ R N VN UJ N
 0,15 G#IA
 
 给付 特定 疾病 保险金
-V D N N
 0,4 G#IA
 
 同时 对 该 被保险人 的 保险 责任 终止
-C P R N UJ N N V
 1,8 G#T
 
 （ 一 ） 少儿 特定 疾病 保险金 如 被保险人 未满 18 周岁
-X M X M D N N V N V M M
 0,12 G#CP
 
-因 意外 伤害 或 自 合同 生效日 或 昀 后 复效 日 （ 以 较 迟 者 为准 ） 起 九十 日后 因非 意外 伤害
-P A A C R A N C G F A M X P D A K V X V M T C A A
-3,4 G#PC|0,25 G#CP|0,25 G#CP|0,25 G#CP
+因 意外 伤害 或 自 合同 生效日 或昀 后 复效 日 （ 以较 迟者 为准 ） 起 九十 日后 因非 意外 伤害
+6,19 G#PC|0,22 G#CP
 
 导致 首次 发生 符合 本合同 第二十六条 所指 的 少儿 特定 疾病
-V M V V N M N UJ M D N
-0,11 G#CP
+4,11 G#C|0,11 G#CP
 
 并 经本 公司 指定 或 认可 的 医疗机构 的 专科医生 明确 诊断
-C N N V C V UJ N UJ NZ AD V
+0,12 G#CP
 
-
-本 公司 按 本合同 约定 的 基本 保险金额 的 20 %
-R N P N V UJ N N UJ M X
-0,11 G#IA|0,11 G#IA|0,11 G#IA
+本 公司 按 本合同 约定 的 基本 保险金额 的 20%
+0,10 G#IA
 
 给付 少儿 特定 疾病 保险金
-V M D N N
 0,5 G#IA
 
-给付 以 一次 为 限
-V P M P V
-
-
 同时 对 该 被保险人 的 该项 保险金 给付 责任 终止
-C P R N UJ R N V N V
 1,10 G#T
 
 （ 二 ） 女性 特定 疾病 保险金 如 被保险人 年满 18 周岁
-X M X N D N N V N A M M
 0,12 G#CP
 
-因 意外 伤害 或 自 合同 生效日 或 昀 后 复效 日 （ 以 较 迟 者 为准 ） 起 九十 日后 因非 意外 伤害
-P A A C R A N C G F A M X P D A K V X V M T C A A
-
+因 意外 伤害 或 自 合同 生效日 或昀 后 复效 日 （ 以较 迟者 为准 ） 起 九十 日后 因非 意外 伤害
+6,19 G#PC|0,22 G#CP
 
 导致 首次 发生 符合 本合同 第二十六条 所指 的 女性 特定 疾病
-V M V V N M N UJ N D N
-0,11 G#CP
+4,11 G#C|0,11 G#CP
 
 并 经本 公司 指定 或 认可 的 医疗机构 的 专科医生 明确 诊断
-C N N V C V UJ N UJ NZ AD V
-
-
-本 公司 按 本合同 约定 的 基本 保险金额 的 20 %
-R N P N V UJ N N UJ M X
-
-
-给付 女性 特定 疾病 保险金
-V N D N N
-0,5 G#IA
-
-给付 以 一次 为 限
-V P M P V
-
-
-同时 对 该 被保险人 的 该项 保险金 给付 责任 终止
-C P R N UJ R N V N V
-
-
-（ 三 ） 男性 特定 疾病 保险金 如 被保险人 年满 18 周岁
-X M X N D N N V N A M M
 0,12 G#CP
 
-因 意外 伤害 或 自 合同 生效日 或 昀 后 复效 日 （ 以 较 迟 者 为准 ） 起 九十 日后 因非 意外 伤害
-P A A C R A N C G F A M X P D A K V X V M T C A A
+本 公司 按 本合同 约定 的 基本 保险金额 的 20%
+0,10 G#IA
 
-
-导致 首次 发生 符合 本合同 第二十六条 所指 的 男性 特定 疾病
-V M V V N M N UJ N D N
-0,11 G#CP
-
-并 经本 公司 指定 或 认可 的 医疗机构 的 专科医生 明确 诊断
-C N N V C V UJ N UJ NZ AD V
-
-
-本 公司 按 本合同 约定 的 基本 保险金额 的 20 %
-R N P N V UJ N N UJ M X
-
-
-给付 男性 特定 疾病 保险金
-V N D N N
+给付 女性 特定 疾病 保险金
 0,5 G#IA
 
-给付 以 一次 为 限
-V P M P V
+同时 对 该 被保险人 的 该项 保险金 给付 责任 终止
+1,10 G#T
 
+（ 三 ） 男性 特定 疾病 保险金 如 被保险人 年满 18 周岁
+0,12 G#CP
+
+因 意外 伤害 或 自 合同 生效日 或昀 后 复效 日 （ 以较 迟者 为准 ） 起 九十 日后 因非 意外 伤害
+6,19 G#PC|0,22 G#CP
+
+导致 首次 发生 符合 本合同 第二十六条 所指 的 男性 特定 疾病
+4,11 G#C|0,11 G#CP
+
+并 经本 公司 指定 或 认可 的 医疗机构 的 专科医生 明确 诊断
+0,12 G#CP
+
+本 公司 按 本合同 约定 的 基本 保险金额 的 20%
+0,10 G#IA
+
+给付 男性 特定 疾病 保险金
+0,5 G#IA
 
 同时 对 该 被保险人 的 该项 保险金 给付 责任 终止
-C P R N UJ R N V N V
-
+1,10 G#T
 
 本 公司 只 给付 特定 疾病 保险金 责任 中 约定 的 少儿 特定 疾病 保险金 、 女性 特定 疾病 保险金 及 男性 特定 疾病 保险金 的 其中 一项 保险金
-R N D V D N N N F V UJ M D N N X N D N N C N D N N UJ R M N
-0,29 G#IA
+3,7 G#IA|0,29 G#IA
 
-且以 一次 为 限
-C M P V
-
-
-自 本合同 生效日 或 昀 后 复效 日 （ 以 较 迟 者 为准 ） 起 九十日 内
-P N N C G F A M X P D A K V X V M N
-2,18 G#PC|0,18 G#CP
+自 本合同 生效日 或昀 后 复效 日 （ 以较 迟者 为准 ） 起 九十日 内
+2,15 G#PC|0,15 G#CP
 
 被保险人 因非 意外 伤害 身故
-N C A A N
-4,5 G#C|2,4 G#C|0,5 G#CP
+1,5 G#C
 
 本 公司 按 投保人 根据 本合同 约定 已 支付 的 该 被保险人 对应 的 保险费 给付 身故 保险金
-R N P N P N V D V UJ R N VN UJ N V N N
 0,18 G#IA
 
 同时 对 该 被保险人 的 保险 责任 终止
-C P R N UJ N N V
 1,8 G#T
 
 被保险人 因 意外 伤害
-N P A A
-0,4 G#CP|0,4 G#CP
+1,4 G#C
 
-或 自 本合同 生效日 或 昀 后 复效 日 （ 以 较 迟 者 为准 ） 起 九十 日后 因非 意外 伤害 身故
-C R N N C G F A M X P D A K V X V M T C A A N
-0,1 G#PC|0,23 G#CP|0,23 G#CP
+或 自 本合同 生效日 或昀 后 复效 日 （ 以较 迟者 为准 ） 起 九十 日后 因非 意外 伤害 身故
+3,16 G#PC|16,20 G#C|0,20 G#CP
 
 且 被保险人 未满 18 周岁
-ZG N V M M
 0,5 G#CP
 
 本 公司 按 投保人 根据 本合同 约定 已 支付 的 该 被保险人 对应 的 保险费 或 保单 现金 价值 （ 两者 较大 值 ） 给付 身故 保险金
-R N P N P N V D V UJ R N VN UJ N C N N N X N A N X V N N
 0,27 G#IA
 
 同时 对 该 被保险人 的 保险 责任 终止
-C P R N UJ N N V
-
+1,8 G#T
 
 被保险人 因 意外 伤害
-N P A A
+1,4 G#C
 
-
-或 自 本合同 生效日 或 昀 后 复效 日 （ 以 较 迟 者 为准 ） 起 九十 日后 因非 意外 伤害 身故
-C R N N C G F A M X P D A K V X V M T C A A N
-
+或 自 本合同 生效日 或昀 后 复效 日 （ 以较 迟者 为准 ） 起 九十 日后 因非 意外 伤害 身故
+3,16 G#PC|16,20 G#C|0,20 G#CP
 
 且 被保险人 年满 18 周岁
-ZG N A M M
 0,5 G#CP
 
 本 公司 按 本合同 约定 的 基本 保险金额 给付 身故 保险金
-R N P N V UJ N N V N N
 0,11 G#IA
 
 同时 对 该 被保险人 的 保险 责任 终止
-C P R N UJ N N V
-
+1,8 G#T
 
 自 本合同 生效日 起 至 第一个 保单 周年 日
-P N N V P M N T M
 0,9 G#CP
 
 被保险人 因 疾病 导致 身故
-N P N V N
-4,5 G#C|2,3 G#C|0,5 G#CP|0,5 G#CP
+1,5 G#C
 
-我们 将 按照 被保险人 疾病 身故 之 日本 合同 的 保单 账户 价值 的 105 % 给付 身故 保险金
-R D P N N N U NS A UJ N N N UJ M X V N N
-0,19 G#IA
+我们 将 按照 被保险人 疾病 身故 之 日本 合同 的 保单 账户 价值 的 105% 给付 身故 保险金
+0,18 G#IA
 
 本合同 效力 终止
-N N V
 0,3 G#T
 
 自 本合同 生效日 起 一年 后 直至 保险 期间 届满
-P N N V M F V N F V
 0,10 G#CP
 
 被保险人 因 疾病 导致 身故
-N P N V N
+1,5 G#C
 
-
-我们 将 按照 被保险人 疾病 身故 之 日本 合同 的 保单 账户 价值 的 101 % 给付 身故 保险金
-R D P N N N U NS A UJ N N N UJ M X V N N
-0,19 G#IA
+我们 将 按照 被保险人 疾病 身故 之 日本 合同 的 保单 账户 价值 的 101% 给付 身故 保险金
+0,18 G#IA
 
 本合同 效力 终止
-N N V
+0,3 G#T
 
-
-自 本合同 生效日 起 180 日 内
-P N N V M M F
-2,7 G#PC
+自 本合同 生效日 起 180 日内
+2,6 G#PC
 
 被保险人 丧失 日常生活 能力 且 持续 至 观察期 结束
-N V I N ZG VD P N V
-0,9 G#CP|0,9 G#CP|0,9 G#CP
+0,9 G#CP
 
 我们 不 承担 给付 保险金 责任
-R D V V N N
 1,6 G#E
 
 但 可以 无息 退还 所 交 保险费 扣除 累计 部分 领取 金额 后 的 余额
-C C V V C V N V V N V N F UJ N
 0,15 G#IA
 
 本合同 效力 终止
-N N V
 0,3 G#T
 
 自 本合同 生效日 起满 180 日后 至 第一个 保单 周年 日
-P N N V M T P M N T M
 0,11 G#CP
 
 被保险人 丧失 日常生活 能力 且 持续 至 观察期 结束
-N V I N ZG VD P N V
-
+0,9 G#CP
 
 我们 按照 观察期 结束 之 日本 合同 的 保单 账户 价值 的 105 ％ 给付 关爱 护理 保险金
-R P N V U NS A UJ N N N UJ M X V V N N
 0,18 G#IA
 
 本合同 效力 终止
-N N V
-
+0,3 G#T
 
 自 本合同 生效日 起 一年 后 直至 保险 期间 届满
-P N N V M F V N F V
 0,10 G#CP
 
 被保险人 丧失 日常生活 能力 且 持续 至 观察期 结束
-N V I N ZG VD P N V
-
+0,9 G#CP
 
 我们 按照 观察期 结束 之 日本 合同 的 保单 账户 价值 的 101 ％ 给付 关爱 护理 保险金
-R P N V U NS A UJ N N N UJ M X V V N N
 0,18 G#IA
 
 本合同 效力 终止
-N N V
-
+0,3 G#T
 
 若 被保险人 在 保险 期间 届满时 生存 且 本合同 仍然 有效 的
-C N P N F N V ZG N D A UJ
 1,11 G#CP
 
 我们 按 当时 本合同 的 保单 账户 价值 给付 康健 护理 保险金
-R P T N UJ N N N V NR N N
 0,12 G#IA
 
 本合同 效力 终止
-N N V
 0,3 G#T
 
 自 保险合同 生效 之日起 （ 保险合同 复效 的 则 自 最后 一次 复效 之日起 ） 因 意外 伤害 7.3 原因
-P N N NS X N A UJ D P F M A NS X P A A M N
-16,18 G#C|0,20 G#CP
+15,18 G#C|0,20 G#CP
 
-或 自 保险合同 生效 之日起 （ 保险合同 复效 的 则 自 最后 一次 复效 之日起 ） 180 天 后 因 意外 伤害 之外 的 其它 原因
-C R N N NS X N A UJ D P F M A NS X M Q F C A A F UJ R N
-1,19 G#PC|0,26 G#CP
+或 自 保险合同 生效 之日起 （ 保险合同 复效 的 则 自 最后 一次 复效 之日起 ） 180 天后 因 意外 伤害 之外 的 其它 原因
+3,18 G#PC|18,21 G#C|0,25 G#CP
 
 被保险人 经 医院 7.4 专科医生 7.5 确诊 初次 发生 本合同 约定 的 重大 疾病 7.16
-N N N M NZ M V D V N V UJ A N M
-13,14 G#C|12,14 G#C|0,15 G#CP
+7,14 G#C|0,15 G#CP
 
 本 公司 按照 确诊 日 的 重大 疾病 保险金额 给付 重大 疾病 保险金
-R N P V M UJ A N N V A N N
 0,13 G#IA
 
-合同 效力 按 下列 情况 处理
-A N P V N V
-
-
 1 ) 被保险人 初次 发生 本合同 约定 的 重大 疾病 不 属于 本合同 约定 的 特定 疾病 的
-X X N D V N V UJ A N D V N V UJ D N UJ
-0,18 G#CP
+3,10 G#C|0,18 G#CP
 
 在 给付 重大 疾病 保险金 后 本合同 效力 终止
-P V A N N F N N V
 6,9 G#T
 
 2 ) 被保险人 初次 发生 本合同 约定 的 重大 疾病 属于 本合同 约定 的 特定 疾病 的
-X X N D V N V UJ A N V N V UJ D N UJ
-0,17 G#CP
-
-在 给付 重大 疾病 保险金 后
-P V A N N F
-
+3,10 G#C|0,17 G#CP
 
 本项 责任 及 身故 保险金 责任 终止
-R N C N N N V
-0,7 G#T|3,4 G#C
+0,7 G#T
 
 合同 继续 有效
-A V A
 0,3 G#T
 
-并 无需 交纳 重大 疾病 确诊 日 以后 的 各期 保险费
-C V V A N V M F UJ R N
-
-
 被保险人 自 保险合同 生效 之日起 （ 保险合同 复效 的 则 自 最后 一次 复效 之日起 ） 180 天 内因 意外 伤害 之外 的 其它 原因 初次 发生 本合同 约定 的 重大 疾病
-N P N N NS X N A UJ D P F M A NS X M N N A A F UJ R N D V N V UJ A N
-0,32 G#CP
+25,32 G#C|19,21 G#C|0,32 G#CP
 
 本 公司 向 投保人 无息 返还 已 交纳 的 保险费
-R N P N V V D V UJ N
 0,10 G#IA
 
 同时 本合同 效力 终止
-C N N V
-
+1,4 G#T
 
 自 保险合同 生效 之日起 （ 保险合同 复效 的 则 自 最后 一次 复效 之日起 ） 因 意外 伤害 原因
-P N N NS X N A UJ D P F M A NS X P A A N
-16,18 G#C|0,19 G#CP
+15,18 G#C|0,19 G#CP
 
 或 自 保险合同 生效 之日起 （ 保险合同 复效 的 则 自 最后 一次 复效 之日起 ） 因 意外 伤害 之外 的 其它 原因
-C R N N NS X N A UJ D P F M A NS X P A A F UJ R N
 0,23 G#CP
 
 被保险人 经 医院 专科医生 确诊 初次 发生 本合同 约定 的 特定 疾病 7.17
-N N N NZ V D V N V UJ D N M
-11,12 G#C|10,12 G#C|0,13 G#CP
+5,12 G#C|0,13 G#CP
 
-本 公司 除 给付 上述 重大 疾病 保险金 外
-R N P V B A N N F
-
-
-对于 特定 疾病 确诊 前 3 个 月 起至 被保险人 年满 80 周岁 对应 的 保单 周年 日 期间 所 发生 的 与 特定 疾病相关 的 医疗 费用
-P D N V F M M M V N A M M VN UJ N T M F C V UJ P D I UJ N N
-0,28 G#CP
+对于 特定 疾病 确诊 前 3 个 月 起 至 被保险人 年满 80 周岁 对应 的 保单 周年 日 期间 所 发生 的 与 特定 疾病相关 的 医疗 费用
+0,29 G#CP
 
 按 下列 约定 给付 特定 疾病 医疗 费用 保险金
-P V V V D N N N N
 0,9 G#IA
 
 1 ) 若 被保险人 享有 社会 医疗保险 7.6 或 公费医疗 的
-X X C N V N N M C N UJ
 0,11 G#CP
 
 对 其 发生 的 合理 且 必须 的 医疗 费用
-P R V UJ VN ZG D UJ N N
 0,10 G#IA
 
 本 公司 对 社会 医疗保险 或 公费医疗 支付 后 剩余 部分 （ 含 比例 自付 、 自费 和 乙类 先行 垫付 费用 ）
-R N P N N C N V F V N X V N V X VN C N N V N X
 0,23 G#IA
 
-按 80 % 的 比例 给付 特定 疾病 医疗 费用 保险金
-P M X UJ N V D N N N N
-0,11 G#IA
+按 80% 的 比例 给付 特定 疾病 医疗 费用 保险金
+0,10 G#IA
 
 2 ) 若 被保险人 未 享有 社会 医疗保险 和 公费医疗 的
-X X C N D V N N C N UJ
 0,11 G#CP
 
 对 其 发生 的 合理 且 必须 的 医疗 费用
-P R V UJ VN ZG D UJ N N
+0,10 G#IA
 
-
-本 公司 按 70 % 的 比例 给付 特定 疾病 医疗 费用 保险金
-R N P M X UJ N V D N N N N
-0,13 G#IA
+本 公司 按 70% 的 比例 给付 特定 疾病 医疗 费用 保险金
+0,12 G#IA
 
 保险 期间 内
-N F N
 0,3 G#CP
 
-特定 疾病 医疗 费用 保险金 的 累计 给付 以 基本 保险金额 的 30 % 为 限
-D N N N N UJ V V P N N UJ M X P V
-0,16 G#IA
-
-当 特定 疾病 医疗 费用 保险金 的 累计 给付 达到 基本 保险金额 的 30 % 时
-T D N N N N UJ V V V N N UJ M X N
-
+特定 疾病 医疗 费用 保险金 的 累计 给付 以 基本 保险金额 的 30% 为限
+0,14 G#IA
 
 本合同 效力 终止
-N N V
 0,3 G#T
 
 若 被保险人 发生 的 属于 保险 责任 范围 内 的 医疗 费用 已 通过 社会 医疗保险 、 公费医疗 或 其他 商业保险 等 途径 得到 了 部分 补偿
-C N V UJ V N N N F UJ N N D P N N X N C R N U N V UL N VN
 0,27 G#CP
 
 本 公司 仅 对 剩余 部分 按照 本合同 的 约定 进行 给付
-R N D P V N P N UJ V V V
 0,12 G#IA
 
 自 保险合同 生效 之日起 （ 保险合同 复效 的 则 自 最后 一次 复效 之日起 ） 至 被保险人 18 周岁 对应 的 保单 周年 日前 （ 不 含 当天 ） 身故
-P N N NS X N A UJ D P F M A NS X P N M M VN UJ N T T X D V T X N
-29,30 G#C|0,30 G#CP
+0,30 G#CP
 
 本 公司 按 已 交纳 的 保险费 金额 （ 不 含 利息 ） 给付 身故 保险金
-R N P D V UJ N N X D V N X V N N
-0,16 G#IA|0,16 G#IA
+0,16 G#IA
 
 同时 本合同 效力 终止
-C N N V
 0,4 G#T
 
 被保险人 于 18 周岁 对应 的 保单 周年 日后 （ 含 当天 ） 身故
-N P M M VN UJ N T T X V T X N
 0,14 G#CP
 
 本 公司 按 下列 约定 给付 身故 保险金
-R N P V V V N N
 0,8 G#IA
 
 1 ) 自 保险合同 生效 之日起 （ 保险合同 复效 的 则 自 最后 一次 复效 之日起 ） 180 天内
-X X P N N NS X N A UJ D P F M A NS X M S
-0,1 G#PC|0,19 G#CP
+4,19 G#PC|0,19 G#CP
 
 被保险人 因 意外 伤害 之外 的 其它 原因 身故
-N P A A F UJ R N N
-2,4 G#C|0,9 G#CP
+1,9 G#C
 
 本 公司 按 已 交纳 的 保险费 金额 （ 不 含 利息 ） 给付 身故 保险金
-R N P D V UJ N N X D V N X V N N
-
+0,16 G#IA
 
 同时 本合同 效力 终止
-C N N V
-
+0,4 G#T
 
 2 ) 自 保险合同 生效 之日起 （ 保险合同 复效 的 则 自 最后 一次 复效 之日起 ） 被保险人 因 意外 伤害 原因 身故
-X X P N N NS X N A UJ D P F M A NS X N P A A N N
 0,23 G#CP
 
-或者 自 保险合同 生效 之日起 （ 保险合同 复效 的 则 自 最后 一次 复效 之日起 ） 180 天 后 被保险人 因 意外 伤害 之外 的 其它 原因 身故
-C P N N NS X N A UJ D P F M A NS X M Q F N P A A F UJ R N N
-1,19 G#PC|0,28 G#CP
+或者 自 保险合同 生效 之日起 （ 保险合同 复效 的 则 自 最后 一次 复效 之日起 ） 180 天后 被保险人 因 意外 伤害 之外 的 其它 原因 身故
+3,18 G#PC|19,27 G#C|0,27 G#CP
 
 本 公司 按 基本 保险金额 给付 身故 保险金
-R N P N N V N N
 0,8 G#IA
 
 同时 本合同 效力 终止
-C N N V
+0,4 G#T
 
+1 . 被保险人 于 本合同 生效 （ 或 合同 效力 恢复 ） 之日起 一年 内因 疾病
+2,16 G#CP
 
-1. 被保险人 于 本合同 生效 （ 或 合同 效力 恢复 ） 之日起 一年 内因 疾病
-M N P N N X C A N V X NS M N N
-1,15 G#CP
-
-由 本 公司 认可 医院 的 专科医生 确诊 初次 发生 本合同 所指 的 重大 疾病
-P R N V N UJ NZ V D V N N UJ A N
-13,15 G#C|0,15 G#CP|0,15 G#CP
+由本 公司 认可 医院 的 专科医生 确诊 初次 发生 本合同 所指 的 重大 疾病
+7,14 G#C|0,14 G#CP
 
 本 公司 给付 重大 疾病 保险金
-R N V A N N
 0,6 G#IA
 
-其 金额 为 本 保险 实际 交纳 的 保险费 的 1.1 倍
-R N P R N N V UJ N UJ M M
-0,12 G#IA
+其 金额 为本 保险 实际 交纳 的 保险费 的 1.1 倍
+0,11 G#IA
 
 本合同 终止
-N V
 0,2 G#T
 
-2. 被保险人 因 意外 伤害 或 于 本合同 生效 （ 或 合同 效力 恢复 ） 之日起 一年 后 因 疾病
-M N P A A C P N N X C A N V X NS M F C N
-3,5 G#C|2,20 G#CP
+2 . 被保险人 因 意外 伤害 或 于 本合同 生效 （ 或 合同 效力 恢复 ） 之日起 一年 后 因 疾病
+3,6 G#C|3,21 G#CP
 
-由 本 公司 认可 医院 的 专科医生 确诊 初次 发生 本合同 所指 的 重大 疾病
-P R N V N UJ NZ V D V N N UJ A N
-
+由本 公司 认可 医院 的 专科医生 确诊 初次 发生 本合同 所指 的 重大 疾病
+7,14 G#C|0,14 G#CP
 
 本 公司 按 基本 保险金额 给付 重大 疾病 保险金
-R N P N N V A N N
 0,9 G#IA
 
 本合同 终止
-N V
-
+0,2 G#T
 
 被保险人 在 乘坐 客运 航班 班机 期间 因 遭受 意外 伤害事故
-N P V N N N F P V A N
-9,10 G#C|0,11 G#CP
+7,11 G#C|0,11 G#CP
 
-并 自 事故 发生 之日起 180 日 内 以此 事故 为 直接 且 单独 原因 造成 本合同 所 附 《 残疾 程度 与 给付 比例表 》 （ 附表 1 ） 所 列 残疾 之一 者
-C R N V NS M M F C N P AD ZG D N V N C V X N N P V L X X N X X C V N R K
-20,21 G#C|0,35 G#CP
+并 自 事故 发生 之日起 180 日内 以此 事故 为 直接 且 单独 原因 造成 本合同 所 附 《 残疾 程度 与 给付 比例表 》 （ 附表 1 ） 所 列 残疾 之一 者
+0,34 G#CP
 
 本 公司 按照 附表 1 中 对应 的 给付 比例
-R N P N M NS VN UJ V N
 0,10 G#IA
 
 乘以 保险金额
-V N
 0,2 G#IA
 
 给付 意外 残疾 保险金
-V A N N
 0,4 G#IA
 
-若 自 事故 发生 之日起 的 第 180 日 治疗 仍 未 结束
-C R N V NS UJ M M M V ZG D V
-0,13 G#CP
+若自 事故 发生 之日起 的 第 180 日 治疗 仍 未 结束
+0,12 G#CP
 
 则 对 该 第 180 日 被保险人 的 身体 情况 进行 残疾 鉴定
-D P R M M M N UJ N N V N V
 0,13 G#CP
 
 并 据此 给付 意外 残疾 保险金
-C D V A N N
-0,6 G#IA
+2,6 G#IA|0,6 G#IA
 
 若 被保险人 因 同一 意外 伤害事故 导致 附表 1 所列 两项 以上 （ 含 ） 身体 残疾 的
-C N P B A N V N M B M F X V X N N UJ
 0,18 G#CP
 
 本 公司 给付 各项 意外 残疾 保险金 之 和
-R N V R A N N U C
 0,9 G#IA
 
-但 不同 残疾 项目 属于 同一 手 或 同一 足 时
-C A N N V B N C B A NG
-1,11 G#CP
+但 不同 残疾 项目 属于 同一 手 或 同一 足时
+1,10 G#CP
 
 本 公司 仅 给付 一项
-R N D V M
 0,5 G#IA
 
 若 残疾 项目 所属 等级 不同
-C N N B B A
 0,6 G#CP
 
 则 给付 较 严重 项目 的 意外 残疾 保险金
-D V ZG A N UJ A N N
 0,9 G#IA
 
-若 较后 发生 的 意外 伤害事故 导致 的 残疾 可与 较 前 发生 的 意外 伤害事故 导致 的 残疾 合并
-C D V UJ A N V UJ N V D F V UJ A N V UJ N V
-0,20 G#CP
+若 较 后 发生 的 意外 伤害事故 导致 的 残疾 可 与 较 前 发生 的 意外 伤害事故 导致 的 残疾 合并
+0,22 G#CP
 
 则 按照 合并 后 较 严重 残疾 项目 给付 保险金
-D P V F D A N N V N
 0,10 G#IA
 
-但 应 扣除 对 前次 残疾 项目 已 给付 的 意外 残疾 保险金 （ 若 被保险人 于 投保 前 已 患有 附表 所 列 残疾
-C V V P R N N D V UJ A N N X C N P VN F D V N C V N
-0,25 G#IA
-
-或者 被保险人 前次 残疾 系因 责任 免除 事项 所致
-C N R N N N V N C
-
+但应 扣除 对 前次 残疾 项目 已 给付 的 意外 残疾 保险金 （ 若 被保险人 于 投保 前 已 患有 附表 所 列 残疾
+0,24 G#IA
 
 则 视为 对 该项 残疾 已 向 其 给付 意外 残疾 保险金 ）
-D V P R N D P R V A N N X
+8,12 G#IA
 
-
-本 公司 累计 给付 的 意外 残疾 保险金 以 保险金额 为 限
-R N V V UJ A N N P N P V
-0,12 G#IA
+本 公司 累计 给付 的 意外 残疾 保险金 以 保险金额 为限
+0,11 G#IA
 
 被保险人 在 乘坐 客运 航班 班机 期间 因 遭受 意外 伤害事故 烧伤
-N P V N N N F P V A N V
-9,10 G#C|0,12 G#CP
+7,12 G#C|0,12 G#CP
 
 本 公司 按照 《 意外 烧伤 与 给付 比例表 》 （ 附表 2 ） 中 对应 的 给付 比例
-R N P X A V P V L X X N X X F VN UJ V N
-4,6 G#C|0,19 G#IA
+0,19 G#IA
 
 乘以 保险金额
-V N
 0,2 G#IA
 
 给付 意外 烧伤 保险金
-V A V N
 0,4 G#IA
 
 若 被保险人 因 同一 意外 伤害事故 导致 的 烧伤
-C N P B A N V UJ V
-0,9 G#CP
+2,9 G#C
 
 无论 是否 发生 在 身体 的 同一 部位
-C V V P N UJ B N
 0,8 G#CP
 
-本 公司 按 给付 金额 较高 的 一项 给付 意外 烧伤 保险金
-R N P V N A UJ M V A V N
-0,12 G#IA
+本 公司 按 给付 金额 较 高 的 一项 给付 意外 烧伤 保险金
+9,13 G#IA|0,13 G#IA
 
 被保险人 因 不同 意外 伤害事故 导致 的 烧伤
-N P A A N V UJ V
-0,8 G#CP
+1,8 G#C
 
 若 发生 在 身体 的 同一 部位
-C V P N UJ B N
 0,7 G#CP
 
-以 较高 的 意外 烧伤 保险金 金额 为准
-P A UJ A V N N V
+以较 高 的 意外 烧伤 保险金 金额 为准
 0,8 G#IA
 
 若 后次 意外 烧伤 保险金 的 金额 较 高
-C R A V N UJ N D A
 0,9 G#IA
 
 则 需 扣除 前次 已 给付 的 意外 烧伤 保险金
-D V V R D V UJ A V N
 0,10 G#IA
 
 若 前次 意外 烧伤 保险金 的 金额 较 高
-C R A V N UJ N D A
 0,9 G#IA
 
 则 本 公司 不再 给付 后次 的 意外 烧伤 保险金
-D R N D V R UJ A V N
 0,10 G#IA
 
-不同 意外 伤害事故 导致 的 烧伤
-A A N V UJ V
-
-
 若 发生 在 身体 不同 的 部位
-C V P N A UJ N
 0,7 G#CP
 
 本 公司 给付 各项 意外 烧伤 保险金 之 和
-R N V R A V N U C
 0,9 G#IA
 
-本 公司 累计 给付 的 意外 烧伤 保险金 以 保险金额 为 限
-R N V V UJ A V N P N P V
-0,12 G#IA
+本 公司 累计 给付 的 意外 烧伤 保险金 以 保险金额 为限
+0,11 G#IA
 
 被保险人 在 乘坐 客运 航班 班机 期间 因 遭受 意外 伤害事故
-N P V N N N F P V A N
-9,10 G#C|0,11 G#CP
+0,11 G#CP
 
-并 自 事故 发生 之日起 180 日 内 以此 事故 为 直接 且 单独 原因 导致 身故 的
-C R N V NS M M F C N P AD ZG D N V N UJ
-16,17 G#C|0,18 G#CP
+并 自 事故 发生 之日起 180 日内 以此 事故 为 直接 且 单独 原因 导致 身故 的
+15,16 G#C|0,17 G#CP
 
 本 公司 按照 保险金额 扣除 已 给付 的 意外 残疾 保险金 和 意外 烧伤 保险金 后 的 余额 给付 意外 身故 保险金
-R N P N V D V UJ A N N C A V N F UJ N V A N N
-9,10 G#C|13,14 G#C|0,22 G#IA
+0,22 G#IA
 
 本合同 效力 终止
-N N V
 0,3 G#T
 
 保险 期间 内
-N F N
 0,3 G#CP
 
 被保险人 因 遭受 意外 伤害事故 导致 失踪
-N P V A N V V
-0,7 G#CP
+1,7 G#C
 
 并 经 人民法院 宣告 死亡 的
-C N NT N V UJ
 0,6 G#CP
 
-本 公司 将 根据 法院 判决 所 确定 的 被保险人 死亡 日期
-R N D P N V C V UJ N V T
-
-
 按 本合同 约定 的 保险 责任 确定 意外 身故 保险金 的 给付
-P N V UJ N N V A N N UJ V
 0,12 G#IA
 
 本合同 生效 （ 若 曾 复效
-N N X C D A
 1,6 G#PC
 
-则 自 本合同 最后 复效 ） 之日起 180 日 内
-D P N F A X NS M M F
-3,10 G#PC
+则 自 本合同 最后 复效 ） 之日起 180 日内
+3,9 G#PC
 
-本合同 的 被保险人 即 被 豁免 合同 的 投保人 经 医院 初次 确诊 非 因 意外 伤害 导致 罹患 本合同 所 定义 的 重大 疾病 （ 无论 一种 或者 多种 ）
-N UJ N V P V A UJ N N N D V H N A A V V N C N UJ A N X C M C M X
-23,25 G#C|15,17 G#C|0,31 G#CP|0,2 G#CP
+本合同 的 被保险人 即 被 豁免 合同 的 投保人 经 医院 初次 确诊 非因 意外 伤害 导致 罹患 本合同 所 定义 的 重大 疾病 （ 无论 一种 或者 多种 ）
+0,30 G#CP|9,24 G#CP
 
 我们 向 您 无息 返还 累计 已 交纳 的 本合同 的 保险费
-R P R V V V D V UJ N UJ N
 0,12 G#IA
 
 本合同 终止
-N V
 0,2 G#T
 
 本合同 的 被保险人 即 被 豁免 合同 的 投保人 经 医院 初次 确诊 因 意外 伤害 导致 罹患 本合同 所 定义 的 重大 疾病
-N UJ N V P V A UJ N N N D V P A A V V N C N UJ A N
 0,24 G#CP
 
 或者 于 本合同 生效 （ 若 曾 复效
-C P N N X C D A
-
+3,8 G#PC
 
 则 自 本合同 最后 复效 ） 之日起 180 日后
-D P N F A X NS M T
 3,9 G#PC
 
-经 医院 初次 确诊 非 因 意外 伤害 导致 罹患 本合同 所 定义 的 重大 疾病
-N N D V H N A A V V N C N UJ A N
-
-
-则 自 确诊 日后 首个 被 豁免 合同 的 保险费 约定 交纳 日 开始
-D P V T M P V A UJ N V V M V
-
-
-直至 被 豁免 合同 最后 一次 保险费 约定 交纳 日 止
-V P V A F M N V V M V
-
-
-我们 豁免 前述 期间 内 被 豁免 合同 投保人 应 交纳 的 被 豁免 合同 的 保险费
-R V B F F P V A N V V UJ P V A UJ N
-
-
-我们 视 豁免 的 保险费 为 前述 投保人 已 交纳 的 保险费
-R VG V UJ N P B N D V UJ N
-
+经 医院 初次 确诊 非因 意外 伤害 导致 罹患 本合同 所 定义 的 重大 疾病
+0,15 G#CP
 
 本合同 终止
-N V
-
-
-本合同 所 定义 的 重大 疾病 载明 于 本合同 “ 9.2 重大 疾病 定义 ”
-N C N UJ A N V P N X M A N N X
-
+0,2 G#T
 
 身故 保险金 本合同 生效 （ 若 曾 复效
-N N N N X C D A
-3,8 G#PC|0,1 G#C
+3,8 G#PC
 
-则 自 本合同 最后 复效 ） 之日起 180 日 内
-D P N F A X NS M M F
-3,10 G#PC
+则 自 本合同 最后 复效 ） 之日起 180 日内
+3,9 G#PC
 
-被保险人 非 因 意外 伤害 （ 见 9.6 ） 导致 身故
-N H N A A X V M X V N
-3,5 G#C|0,11 G#CP
+被保险人 非因 意外 伤害 （ 见 9.6 ） 导致 身故
+1,10 G#C
 
 我们 将 向 身故 保险金 受益人 给付 身故 保险金
-R D P N N N V N N
-0,9 G#IA|0,9 G#IA
+0,9 G#IA
 
 其 数额 等于 您 已 交纳 的 本合同 及 《 泰康 附加 e 康 D 款 重大 疾病 保险 》 合同 （ 以下 简称 “ 附加 合同 ” ） 的 累计 保险费 数额
-R N V R D V UJ N C X NR V ENG NR ENG M A N N X A X F V X V A X X UJ V N N
-16,18 G#C|0,33 G#IA
+0,33 G#IA
 
 本合同 终止
-N V
 0,2 G#T
 
 被保险人 因 意外 伤害 导致 身故
-N P A A V N
-0,6 G#CP
+1,6 G#C
 
 或者 于 本合同 生效 （ 若 曾 复效
-C P N N X C D A
+3,8 G#PC
 
-
-则 自 本合同 最后 复效 ） 之日起 180 日后 非 因 意外 伤害 导致 身故
-D P N F A X NS M T H N A A V N
-3,9 G#PC|0,15 G#CP
+则 自 本合同 最后 复效 ） 之日起 180 日后 非因 意外 伤害 导致 身故
+3,9 G#PC|0,14 G#CP
 
 我们 将 向 身故 保险金 受益人 给付 身故 保险金
-R D P N N N V N N
-
+0,9 G#IA
 
 本合同 终止
-N V
-
+0,2 G#T
 
 身故 保险金 的 数额 为
-N N UJ N P
 0,5 G#IA
 
 （ 1 ） 如果 被保险人 身故 时 未满 18 周岁 （ 不含 18 周岁 生日 ）
-X X X C N N N V M M X V M M T X
 0,16 G#CP
 
 身故 保险金 数额 等于 您 已 交纳 的 本合同 及 附加 合同 的 累计 保险费 数额
-N N N V R D V UJ N C V A UJ V N N
 0,16 G#IA
 
 （ 2 ） 如果 被保险人 身故 时 已 满 18 周岁 （ 含 18 周岁 生日 ）
-X X X C N N NG D A M M X N M M T X
 0,17 G#CP
 
 身故 保险金 数额 等于 本合同 的 基本 保险金额
-N N N V N UJ N N
 0,8 G#IA
 
 生存 保险金 被保险人 在 本合同 保险 期间 届满时 仍然 生存
-V N N P N N F N D V
 0,10 G#CP
 
-我们 按 您 已 交纳 的 本合同 及 附加 合同 的 累计 保险费 数额 的 130 % 向 生存 保险金 受益人 给付 生存 保险金
-R P R D V UJ N C V A UJ V N N UJ M X P V N N V V N
-0,24 G#IA
+我们 按 您 已 交纳 的 本合同 及 附加 合同 的 累计 保险费 数额 的 130% 向 生存 保险金 受益人 给付 生存 保险金
+0,23 G#IA
 
 本合同 终止
-N V
 0,2 G#T
 
 （ 一 ） 若 投保 时 被保险人 年龄 小于 五十 周岁
-X M X C VN N N N V M M
 0,11 G#CP
 
-我们 依 下列 约定 承担 保险 责任
-R D V V V N N
-
-
 若 被保险人 于 年满 五十 周岁 后 的 首个 保单 周年 日 的 零时 之前 身故
-C N P A M M F UJ M N T M UJ D F N
 15,16 G#C|0,16 G#CP
 
 本合同 效力 终止
-N N V
 0,3 G#T
 
 我们 按 三倍 基本 保险金额 给付 “ 身故 保险金 ” 予 身故 保险金 受益人
-R P M N N V X N N X VG N N N
 0,14 G#IA
 
 若 被保险人 于 年满 五十 周岁 后 的 首个 保单 周年 日 的 零时 和 年满 六十 周岁 后 的 首个 保单 周年 日 的 零时 之间 身故
-C N P A M M F UJ M N T M UJ D C A M M F UJ M N T M UJ D F N
-0,28 G#CP
+27,28 G#C|0,28 G#CP
 
 本合同 效力 终止
-N N V
-
+0,3 G#T
 
 我们 按 两倍 基本 保险金额 给付 “ 身故 保险金 ” 予 身故 保险金 受益人
-R P M N N V X N N X VG N N N
-0,14 G#IA|0,14 G#IA
+0,14 G#IA
 
 若 被保险人 于 年满 六十 周岁 后 的 首个 保单 周年 日 的 零时 和 年满 六十五 周岁 后 的 首个 保单 周年 日 的 零时 之间 身故
-C N P A M M F UJ M N T M UJ D C A M M F UJ M N T M UJ D F N
-0,28 G#CP|0,28 G#CP
+27,28 G#C|0,28 G#CP
 
 本合同 效力 终止
-N N V
-
+0,3 G#T
 
 我们 按 一倍 基本 保险金额 给付 “ 身故 保险金 ” 予 身故 保险金 受益人
-R P M N N V X N N X VG N N N
-0,14 G#IA|0,14 G#IA
+0,14 G#IA
 
 （ 二 ） 若 投保 时 被保险人 年龄 大于 等于 五十 周岁
-X M X C VN N N N D V M M
 0,12 G#CP
 
-我们 依 下列 约定 承担 保险 责任
-R D V V V N N
-
-
 若 被保险人 于 年满 六十 周岁 后 的 首个 保单 周年 日 的 零时 之前 身故
-C N P A M M F UJ M N T M UJ D F N
-0,16 G#CP
+15,16 G#C|0,16 G#CP
 
 本合同 效力 终止
-N N V
-
+0,3 G#T
 
 我们 按 两倍 基本 保险金额 给付 “ 身故 保险金 ” 予 身故 保险金 受益人
-R P M N N V X N N X VG N N N
-
+0,14 G#IA
 
 若 被保险人 于 年满 六十 周岁 后 的 首个 保单 周年 日 的 零时 和 年满 六十五 周岁 后 的 首个 保单 周年 日 的 零时 之间 身故
-C N P A M M F UJ M N T M UJ D C A M M F UJ M N T M UJ D F N
-
+27,28 G#C|0,28 G#CP
 
 本合同 效力 终止
-N N V
-
+0,3 G#T
 
 我们 按 一倍 基本 保险金额 给付 “ 身故 保险金 ” 予 身故 保险金 受益人
-R P M N N V X N N X VG N N N
-
+0,14 G#IA
 
 在 本 附加 合同 有效期限 内
-P R V A N N
 0,6 G#CP
 
 若 被保险人 因 意外 伤害事故 或于 本 附加 合同 生效 （ 或 最后 一次 复效
-C N P A N C R V A N X C F M A
-9,15 G#PC|3,4 G#C|0,15 G#CP
+9,15 G#PC|2,4 G#C|0,15 G#CP
 
-以 较 迟 者 为准 ） 日 起 九十天 后 首次 发病
-P D A K V X M V M F M V
-0,10 G#PC
+以较 迟者 为准 ） 日起 九十天 后 首次 发病
+0,7 G#PC
 
 经 我们 指定 或 认可 的 医院 的 专科医生 确诊 首次 罹患 本 附加 合同 约定 的 重大 疾病
-N R V C V UJ N UJ NZ V M V R V A V UJ A N
-17,19 G#C|0,19 G#CP
+12,19 G#C|0,19 G#CP
 
 则 我们 按 基本 保险金额 给付 “ 重大 疾病 保险金 ” （ 若 被保险人 同时 符合 一项 以上 重大 疾病 时
-D R P N N V X A N N X X C N C V M F A N N
 2,21 G#IA
 
-该 给付 以 一项 为 限 ） 予 被保险人
-R V P M P V X VG N
-0,9 G#IA
+该 给付 以 一项 为限 ） 予 被保险人
+0,8 G#IA
 
 本 附加 合同 及其 不可 分解 的 主合同 效力 终止
-R V A C V V UJ N N V
 0,10 G#T
 
