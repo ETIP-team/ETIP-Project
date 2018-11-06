@@ -60,11 +60,12 @@ class TrainArguments(BaseArguments):
         print("Position Loss Type:      ", self.pos_loss_method.upper(), "\n")
         print("Position Loss Weight Lambda:      ", self.loss_weight_lambda, "\n")
         print("Learning Rate:      ", self.learning_rate, "\n")
-        print("Optimizer:      ", self.prevent_overfitting_method, "\n")
-        if self.prevent_overfitting_method.lower() == "l2 norm":
+        if self.prevent_overfitting_method.lower() == "l2 regu":
+            print("Prevent Over fitting method:      ", "L2 Regulization", "\n")
             print("Partial l2 Penalty:      ", self.partial_l2_penalty, "\n")
             print("L2 Beta:      ", self.l2_beta, "\n")
         if self.prevent_overfitting_method.lower() == "dropout":
+            print("Prevent Over fitting method:      ", "Dropout", "\n")
             print("Dropout Rate:      ", self.dropout_rate, "\n")
 
         print("Th Train Iou      ", self.th_train_iou, "\n\n")
@@ -74,7 +75,7 @@ class TrainArguments(BaseArguments):
         path = "model/rcnn_jieba/"
         path += "norm_" if self.normalize else ""
         path += self.pos_loss_method + "_"
-        if self.prevent_overfitting_method.lower() == "l2 norm":
+        if self.prevent_overfitting_method.lower() == "l2 regu":
             path += "partial_l2_" if self.partial_l2_penalty else "all_l2_"
         else:
             path += "dropout_"
@@ -162,7 +163,7 @@ class TestAruguments(BaseArguments):
         path = "model/rcnn_jieba/"
         path += "norm_" if self.normalize else ""
         path += self.pos_loss_method + "_"
-        if self.prevent_overfitting_method.lower() == "l2 norm":
+        if self.prevent_overfitting_method.lower() == "l2 regu":
             path += "partial_l2_" if self.partial_l2_penalty else "all_l2_"
         else:
             path += "dropout_"
@@ -181,7 +182,7 @@ class TestAruguments(BaseArguments):
         path = "./result/insurance/"
         path += "normed_data/" if self.normalize else "original_data/"
         path += self.pos_loss_method + "_"
-        if self.prevent_overfitting_method.lower() == "l2 norm":
+        if self.prevent_overfitting_method.lower() == "l2 regu":
             path += "partial_l2_" if self.partial_l2_penalty else "all_l2_"
         else:
             path += "dropout_"
@@ -210,8 +211,10 @@ class TestAruguments(BaseArguments):
         print("Normalize:      ", self.normalize, "\n")
         print("Position Loss Type:      ", self.pos_loss_method.upper(), "\n")
         print("Position Loss Weight Lambda:      ", self.loss_weight_lambda, "\n")
-        if self.prevent_overfitting_method.lower() == "l2 norm":
+        if self.prevent_overfitting_method.lower() == "l2 regu":
+            print("Prevent Over fitting method:      ", "L2 Regulization", "\n")
             print("Partial l2 Penalty:      ", self.partial_l2_penalty, "\n")
         if self.prevent_overfitting_method.lower() == "dropout":
+            print("Prevent Over fitting method:      ", "Dropout", "\n")
             print("Dropout Rate:      ", self.dropout_rate, "\n")
         print("Th Train Iou      ", self.th_train_iou, "\n\n")
