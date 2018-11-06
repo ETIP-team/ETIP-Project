@@ -134,9 +134,6 @@ def list_text_seg(ls):
 
 
 def str2wv(ls):
-    # """Input: ls: the list of sub_lists, which contains the segment result of one string
-    #      Return list of tuples, which numpy size is (1, sentence_length*word_vector_length)
-    #      Note that sentence can be too long for the model"""
     arr = empty_wv
     for i in ls:
         try:
@@ -385,28 +382,3 @@ def get_count_dataframe_by_confusion_matrix(confusion_matrix):
 
     experiment_metrics.append([precision, recall, F1_score])
     return pd.DataFrame(experiment_metrics, columns=["precision", "recall", "F1_score"], index=cfg.LABEL + ["overall"])
-
-# def create_train_path(dataset_path, fold_index):
-#     """Create the temporary training set for this fold."""
-#     temp_train_path = "./train_data_path/"
-#     if not os.path.exists(temp_train_path):
-#         os.makedirs(temp_train_path)
-#     else:
-#         return temp_train_path
-#     fold_paths = os.listdir(dataset_path)
-#     for fold_i in range(cfg.K_FOLD):
-#         if fold_i == fold_index:
-#             continue
-#         else:
-#             one_fold_path = dataset_path+fold_paths[fold_i]+"/"
-#             for file_in_one_fold in os.listdir(one_fold_path):
-#                 shutil.copyfile(one_fold_path+file_in_one_fold, temp_train_path+file_in_one_fold)
-#     return temp_train_path
-#
-#
-# def remove_train_path(train_data_path):
-#     """Remove the temporary train data path"""
-#     for file in os.listdir(train_data_path):
-#         os.remove(train_data_path+file)
-#     os.rmdir(train_data_path)
-#

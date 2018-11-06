@@ -22,6 +22,7 @@ th_score = cfg.TH_SCORE
 def load_model(test_arguments):
     rcnn = RCNN(test_arguments.pos_loss_method, test_arguments.loss_weight_lambda).cuda()
     rcnn.load_state_dict(t.load(test_arguments.model_path))
+    rcnn.eval()  # dropout rate = 0
     return rcnn
 
 
@@ -120,7 +121,7 @@ def main():
     max_test_epoch = 40
     loss_weight_lambda = 2.0
     prevent_overfitting_method = "L2 Norm"
-    partial_l2 = True
+    partial_l2 = False
 
     test_arguments = TestAruguments(norm, pos_loss_method, th_train_iou, min_test_epoch, max_test_epoch,
                                     loss_weight_lambda=loss_weight_lambda, partial_l2_penalty=partial_l2,

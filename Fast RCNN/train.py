@@ -52,8 +52,9 @@ def train_epoch(train_arguments, rcnn):
 
 
 def start_training(train_arguments, folder_index):
-    rcnn = RCNN(train_arguments.pos_loss_method, train_arguments.loss_weight_lambda).cuda()
-
+    rcnn = RCNN(train_arguments.pos_loss_method, train_arguments.loss_weight_lambda,
+                train_arguments.prevent_overfitting_method).cuda()
+    rcnn.train()  # train mode    could use dropout.
     npz_path = train_arguments.get_train_data_path(folder_index)
     npz = np.load(npz_path)
     print("\n\n\nload from:  ", npz_path)
@@ -64,7 +65,7 @@ def start_training(train_arguments, folder_index):
     train_arguments.train_tbbox = npz["train_norm_tbbox"] if train_arguments.normalize else npz['train_tbbox']
     train_arguments.train_sentences = t.Tensor(train_arguments.train_sentences)
     train_arguments.train_set = np.random.permutation(train_arguments.train_sentences.size(0))  # like shuffle
-    if train_arguments.prevent_overfitting_method.lower() == "l2 norm":
+    if train_arguments.prevent_overfitting_method.lower() == "l2 regu":
         if train_arguments.partial_l2_penalty:
             optimizer = optim.Adam([
                 {"params": rcnn.conv1.parameters(), "weight_decay": 0},
@@ -76,7 +77,9 @@ def start_training(train_arguments, folder_index):
         else:
             optimizer = optim.Adam(rcnn.parameters(), lr=train_arguments.learning_rate,
                                    weight_decay=train_arguments.l2_beta)
-        rcnn.optimizer = optimizer
+    else:  # dropout optimizer
+        optimizer = optim.Adam(rcnn.parameters(), lr=train_arguments.learning_rate)
+    rcnn.optimizer = optimizer
 
     for epoch_time in range(train_arguments.max_iter_epoch):
         print('===========================================')
@@ -91,18 +94,21 @@ def start_training(train_arguments, folder_index):
 
 
 def train_k_fold():
-    start_save_epoch = 30
     th_train_iou = 0.6
-    pos_loss_type = "mse"  # lower case
-    prevent_overfitting_method = "L2 Norm"
     with_regressor = True
-    loss_weight_lambda = 2.0
-    norm = True  # False
-    partial_l2_penalty = True  # add penalty in conv1 parameters.
+    start_save_epoch = 30
     max_iter_epoch = 40
 
+    pos_loss_type = "mse"  # lower case
+    prevent_overfitting_method = "Dropout"  # ""L2 Regu"  # Dropout
+    dropout_rate = 0.5
+
+    loss_weight_lambda = 1.0
+    norm = True  # False
+    partial_l2_penalty = True  # add penalty except conv1 parameters.
+
     train_arguments = TrainArguments(start_save_epoch, pos_loss_type, norm, th_train_iou,
-                                     max_iter_epoch, prevent_overfitting_method,
+                                     max_iter_epoch, prevent_overfitting_method, dropout_rate=dropout_rate,
                                      with_regressor=with_regressor, partial_l2_penalty=partial_l2_penalty,
                                      loss_weight_lambda=loss_weight_lambda)
 
