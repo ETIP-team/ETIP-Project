@@ -4,10 +4,10 @@
 	Done in 18-11-6
 
 
--2. double check bugs in train arguments and test arguments class 
+-2. double check bugs in Train and Test Argument class 
 
 
--3. fill other argumentsf in Arguments class
+-3. fill other arguments in Train and Test Argument class
 
 
 -4. clean the code
