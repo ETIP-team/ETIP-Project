@@ -44,7 +44,7 @@ def _test_one_sentence(test_arguments, sentence, rois, rcnn, fold_index):
     pred_cls_score = F.softmax(pred_cls_score, dim=1).data.cpu().numpy()  # softmax score for each row
     pred_tbbox = pred_tbbox.data.cpu().numpy()
     if test_arguments.normalize:
-        pred_tbbox = denorm(pred_tbbox, fold_index, test_arguments.th_train_iou)
+        pred_tbbox = denorm(pred_tbbox, fold_index, test_arguments)
 
     pred_bbox = reg_to_bbox(sentence.size(2), pred_tbbox, rois)
 
@@ -121,9 +121,11 @@ def main():
     max_test_epoch = 40
     loss_weight_lambda = 1.0
     prevent_overfitting_method = "Dropout"  # "L2 Regu" # "Dropout"
-    partial_l2 = True
+    partial_l2 = False
+    dx_compute_method = "left_boundary"  # "centre"
 
     test_arguments = TestAruguments(norm, pos_loss_method, th_train_iou, min_test_epoch, max_test_epoch,
+                                    dx_compute_method=dx_compute_method,
                                     loss_weight_lambda=loss_weight_lambda, partial_l2_penalty=partial_l2,
                                     prevent_overfitting_method=prevent_overfitting_method)
     test_arguments.show_arguments()
@@ -132,7 +134,7 @@ def main():
     all_csv_result = open(write_result_path, "w")
     first_write(all_csv_result)
     th_nms_iou_ls = [0.01]
-    th_iou_p_ls = [0.6, 0.8, 1]  # [1]
+    th_iou_p_ls = [0.8],  # [0.6, 0.8, 1]  # [1]
     for th_iou_p in th_iou_p_ls:
         for th_nms_iou in th_nms_iou_ls:
             test_arguments.th_nms_iou = th_nms_iou
