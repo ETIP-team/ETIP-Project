@@ -1,5 +1,6 @@
 # TODO
--1. add dropout method in train arguments and test arguments   
+-1. add dropout method in train arguments and test arguments 
+
 	Done in 18-11-6
 
 
