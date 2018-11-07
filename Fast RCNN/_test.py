@@ -37,7 +37,7 @@ def load_test_sentence(test_sentence_npz_path):
     return test_sentences, test_sentence_info, test_roi
 
 
-def _test_one_sentence(test_arguments, sentence, rois, rcnn, fold_index):
+def _test_one_sentence(test_arguments, sentence, rois, rcnn, fold_index, this_sentence_len):
     roi_num = rois.shape[0]
     ridx = np.zeros(roi_num).astype(int)
     pred_cls_score, pred_tbbox = rcnn(sentence, rois, ridx)
@@ -46,9 +46,9 @@ def _test_one_sentence(test_arguments, sentence, rois, rcnn, fold_index):
     if test_arguments.normalize:
         pred_tbbox = denorm(pred_tbbox, fold_index, test_arguments)
     if test_arguments.dx_compute_method == "left_boundary":
-        pred_bbox = lb_reg_to_bbox(sentence.size(2), pred_tbbox, rois)
+        pred_bbox = lb_reg_to_bbox(this_sentence_len, pred_tbbox, rois)
     else:
-        pred_bbox = reg_to_bbox(sentence.size(2), pred_tbbox, rois)
+        pred_bbox = reg_to_bbox(this_sentence_len, pred_tbbox, rois)
 
     result_bbox = []
     result_cls = []
@@ -87,12 +87,16 @@ def _test_epoch(test_arguments, fold_index):
     for i in range(sentence_num):
         pi = perm[i]
         sentence = Variable(test_sentences[pi:pi + 1]).cuda()
+        # sentence_real_len =
 
         info = test_sentence_info[pi]
+
         idxs = info['roi_ids']
+        this_sentence_len = len(info['gt_str'].split(" "))
         rois = test_roi[idxs]
 
-        result_bbox, result_cls = _test_one_sentence(test_arguments, sentence, rois, rcnn, fold_index)
+        result_bbox, result_cls = _test_one_sentence(test_arguments, sentence, rois, rcnn, fold_index,
+                                                     this_sentence_len)
 
         evaluate(result_bbox, result_cls, info, test_arguments.confusion_matrix, test_arguments.th_iou_p)
 
@@ -124,7 +128,7 @@ def main():
     loss_weight_lambda = 1.0
     prevent_overfitting_method = "Dropout"  # "L2 Regu" # "Dropout"
     partial_l2 = False
-    dx_compute_method = "left_boundary"  # "left_boundary"  # "centre"
+    dx_compute_method = "centre"  # "left_boundary"  # "centre"
 
     test_arguments = TestAruguments(norm, pos_loss_method, th_train_iou, min_test_epoch, max_test_epoch,
                                     dx_compute_method=dx_compute_method,
@@ -136,7 +140,7 @@ def main():
     all_csv_result = open(write_result_path, "w")
     first_write(all_csv_result)
     th_nms_iou_ls = [0.01]
-    th_iou_p_ls = [0.8]  # [0.6, 0.8, 1]  # [1],
+    th_iou_p_ls = [0.6, 0.8, 1]  # [0.8]  # [0.6, 0.8, 1]  # [1],
     for th_iou_p in th_iou_p_ls:
         for th_nms_iou in th_nms_iou_ls:
             test_arguments.th_nms_iou = th_nms_iou
