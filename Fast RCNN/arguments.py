@@ -11,7 +11,7 @@ from torch.autograd import Variable
 import config as cfg
 
 
-class BaseArguments(object):
+class BaseArguments:
     def __init__(self, normalize, fold_k):
         self.normalize = normalize  # type boolean
         self.fold_k = fold_k
@@ -19,7 +19,7 @@ class BaseArguments(object):
 
 class TrainArguments(BaseArguments):
     def __init__(self, start_save_epoch, pos_loss_method, normalize, th_train_iou, max_iter_epoch,
-                 prevent_overfitting_method,
+                 prevent_overfitting_method, dx_compute_method,
                  fold_k=5, with_regressor=True, partial_l2_penalty=True, dropout_rate=0.5,
                  loss_weight_lambda=1.0, learning_rate=1e-4, l2_beta=1e-3, cuda=True,
                  batch_sentence_num=4, roi_num=64, positive_rate=0.25
@@ -44,6 +44,7 @@ class TrainArguments(BaseArguments):
         self.roi_num = roi_num
         self.pos_roi_num = int(positive_rate * self.roi_num)
         self.neg_roi_num = self.roi_num - self.pos_roi_num
+        self.dx_compute_method = dx_compute_method
 
         # train data info
         self.train_set = None
@@ -68,12 +69,14 @@ class TrainArguments(BaseArguments):
             print("Prevent Over fitting Method:      ", "Dropout", "\n")
             print("Dropout Rate:      ", self.dropout_rate, "\n")
 
-        print("Th Train Iou      ", self.th_train_iou, "\n\n")
+        print("Th Train Iou:      ", self.th_train_iou, "\n")
+        print("Regression Dx Compute Method:      ", end="")
+        print("Left Boundary ", "\n\n") if self.dx_compute_method else print("Centre ", "\n\n")
 
     def get_save_directory(self, folder_index):
         # folder index start from 0
         path = "model/rcnn_jieba/"
-        path += "norm_" if self.normalize else ""
+        path += "norm_" + self.dx_compute_method if self.normalize else ""
         path += self.pos_loss_method + "_"
         if self.prevent_overfitting_method.lower() == "l2 regu":
             path += "partial_l2_" if self.partial_l2_penalty else "all_l2_"
@@ -134,6 +137,7 @@ class TrainArguments(BaseArguments):
 
 class TestAruguments(BaseArguments):
     def __init__(self, normalize, pos_loss_method, th_train_iou, min_test_epoch, max_test_epoch,
+                 dx_compute_method,
                  loss_weight_lambda=1.0, cuda=True, score_threshold=0.6, dropout_rate=0.5,
                  th_nms_iou=0, th_iou_p=0, partial_l2_penalty=True, prevent_overfitting_method="L2 Regu"
                  , fold_k=5, with_regressor=True):
@@ -152,6 +156,7 @@ class TestAruguments(BaseArguments):
         self.max_test_epoch = max_test_epoch
         self.with_regressor = with_regressor
         self.dropout_rate = dropout_rate
+        self.dx_compute_method = dx_compute_method
 
         self.confusion_matrix = None
         self.model_path = None
@@ -217,4 +222,6 @@ class TestAruguments(BaseArguments):
         if self.prevent_overfitting_method.lower() == "dropout":
             print("Prevent Over Fitting Method:      ", "Dropout", "\n")
             print("Dropout Rate:      ", self.dropout_rate, "\n")
-        print("Th Train Iou      ", self.th_train_iou, "\n\n")
+        print("Th Train Iou:      ", self.th_train_iou, "\n")
+        print("Regression Dx Compute Method:      ", end="")
+        print("Left Boundary ", "\n\n") if self.dx_compute_method else print("Centre ", "\n\n")
