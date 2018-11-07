@@ -8,7 +8,7 @@
 import os
 import pickle
 import numpy as np
-from utils import calc_ious_1d, bbox_transform_1d
+from utils import calc_ious_1d, bbox_transform_1d, lb_bbox_transform_1d
 import config as cfg
 
 th_iou_train = cfg.TH_IOU_TRAIN
@@ -17,13 +17,14 @@ all_mean = []
 all_deviation = []
 
 
-def feature_scaling(ndarray_all, pos_indexes):
+def feature_scaling(ndarray_all, pos_indexes, add_flag=False):
     mean_ls = []
     deviation_ls = []
     result_ls = []
-    ndarray = ndarray_all[pos_indexes]
-    for i in range(ndarray.shape[1]):
-        column = ndarray[:, i]
+    norm_ndarray = ndarray_all[pos_indexes]
+    after_norm_ndarray = ndarray_all.copy()
+    for i in range(norm_ndarray.shape[1]):
+        column = norm_ndarray[:, i]
         mean = np.mean(column)
         deviation = np.std(column, ddof=1)
         deviation_ls.append(deviation)
@@ -32,10 +33,11 @@ def feature_scaling(ndarray_all, pos_indexes):
             result_ls.append(((column - mean) / deviation))
         else:
             result_ls.append((column - mean))
-    all_mean.append(mean_ls)
-    all_deviation.append(deviation_ls)
-    ndarray_all[pos_indexes] = np.array(np.mat(result_ls).T)
-    return ndarray_all
+    if add_flag:
+        all_mean.append(mean_ls)
+        all_deviation.append(deviation_ls)
+    after_norm_ndarray[pos_indexes] = np.array(np.mat(result_ls).T)
+    return after_norm_ndarray
 
 
 def process_data_train(pkl_file_path, save_path, th_iou_train):
@@ -46,6 +48,8 @@ def process_data_train(pkl_file_path, save_path, th_iou_train):
     train_cls = []
     train_tbbox = []
     train_norm_tbbox = []
+
+    train_lb_tbbox = []
     sample_num = len(all_data)
     for sample_index in range(sample_num):
         gt_boxes = all_data[sample_index]["ground_truth_bbox"]
@@ -64,28 +68,22 @@ def process_data_train(pkl_file_path, save_path, th_iou_train):
         max_ious = ious.max(axis=1)
         max_idx = ious.argmax(axis=1)
         tbbox = bbox_transform_1d(bboxs, gt_boxes[max_idx])
+        lb_tbbox = lb_bbox_transform_1d(bboxs, gt_boxes[max_idx])
 
         pos_idx = []
         neg_idx = []
 
-        if len(gt_boxes) > 2:
-            wait = True
-        unique_cls = []
         for roi_index in range(nroi):
-            # this region proposal do not overlap with any ground truth, we give up this roi
             if max_ious[roi_index] < 0.1:
                 continue
             gid = len(train_roi)
             train_roi.append(rbbox[roi_index])
             train_tbbox.append(tbbox[roi_index])
-            # positive sample
-            # if max_ious[roi_index] >= th_iou_train:
+            train_lb_tbbox.append(lb_tbbox[roi_index])
             if max_ious[roi_index] >= th_iou_train:
                 pos_idx.append(gid)
                 train_cls.append(gt_classes[max_idx[roi_index]])
-                # train_tbbox.append(tbbox[roi_index])
                 train_norm_tbbox.append(gid)
-            # negative sample!
             else:
                 neg_idx.append(gid)
                 train_cls.append(0)
@@ -103,25 +101,26 @@ def process_data_train(pkl_file_path, save_path, th_iou_train):
     train_sentence_info = np.array(train_sentence_info)
     train_roi = np.array(train_roi)
     train_cls = np.array(train_cls)
-    train_tbbox = np.array(train_tbbox)  # do not need to be float type!  in sentence the tbbox info should be int!
-    # train_norm_tbbox = feature_scaling(np.array(train_norm_tbbox))
-    train_norm_tbbox = feature_scaling(train_tbbox, train_norm_tbbox)
-    wait = True
+    train_tbbox = np.array(train_tbbox)
+    train_lb_tbbox = np.array(train_lb_tbbox)
+
+    train_norm_lb_tbbox = feature_scaling(train_lb_tbbox, train_norm_tbbox, True)
+    train_norm_tbbox = feature_scaling(train_tbbox, train_norm_tbbox, False)
 
     np.savez(open(save_path, 'wb'),
-             # np.savez(open('dataset/train/train_data_npz/train.npz', 'wb')
              train_sentences=train_sentences, train_sentence_info=train_sentence_info,
-             train_roi=train_roi, train_cls=train_cls, train_tbbox=train_tbbox, train_norm_tbbox=train_norm_tbbox)
+             train_roi=train_roi, train_cls=train_cls, train_tbbox=train_tbbox,
+             train_norm_tbbox=train_norm_tbbox, train_norm_lb_tbbox=train_norm_lb_tbbox)
     print("save in ", save_path)
 
 
 def process_data_train_k_fold():
-    th_iou_train = 0.9
+    th_iou_train = 0.6
     train_pkl_folder = 'dataset/train/train_relabeled_data_pkl/'
     save_folder = 'dataset/train/train_relabeled_data_npz/'
     ls_pkl_file_path = [train_pkl_folder + pkl for pkl in os.listdir(train_pkl_folder)]
     for i in range(len(ls_pkl_file_path)):
-        save_path = save_folder + "relabeled_train_th_iou_" + str(th_iou_train) + str(i + 1) + ".npz"
+        save_path = save_folder + "train_th_iou_" + str(th_iou_train) + str(i + 1) + ".npz"
         process_data_train(ls_pkl_file_path[i], save_path, th_iou_train)
     print("th_iou_train", th_iou_train)
 
