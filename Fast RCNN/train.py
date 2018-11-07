@@ -62,7 +62,13 @@ def start_training(train_arguments, folder_index):
     train_arguments.train_sentence_info = npz['train_sentence_info']
     train_arguments.train_roi = npz['train_roi']
     train_arguments.train_cls = npz['train_cls']
-    train_arguments.train_tbbox = npz["train_norm_tbbox"] if train_arguments.normalize else npz['train_tbbox']
+    if train_arguments.normalize:
+        if train_arguments.dx_compute_method == "left_boundary":
+            train_arguments.train_tbbox = npz["train_norm_lb_tbbox"]
+        else:
+            train_arguments.train_tbbox = npz["train_norm_tbbox"]
+    else:
+        train_arguments.train_tbbox = npz['train_tbbox']
     train_arguments.train_sentences = t.Tensor(train_arguments.train_sentences)
     train_arguments.train_set = np.random.permutation(train_arguments.train_sentences.size(0))  # like shuffle
     if train_arguments.prevent_overfitting_method.lower() == "l2 regu":
@@ -100,15 +106,17 @@ def train_k_fold():
     max_iter_epoch = 40
 
     pos_loss_type = "mse"  # lower case
-    prevent_overfitting_method = "Dropout"  # ""L2 Regu"  # Dropout
+    prevent_overfitting_method = "Dropout"  # "L2 Regu"
     dropout_rate = 0.5
+    dx_compute_method = "left_boundary"  # centre
 
     loss_weight_lambda = 1.0
     norm = True  # False
-    partial_l2_penalty = True  # add penalty except conv1 parameters.
+    partial_l2_penalty = False
 
     train_arguments = TrainArguments(start_save_epoch, pos_loss_type, norm, th_train_iou,
-                                     max_iter_epoch, prevent_overfitting_method, dropout_rate=dropout_rate,
+                                     max_iter_epoch, prevent_overfitting_method, dx_compute_method,
+                                     dropout_rate=dropout_rate,
                                      with_regressor=with_regressor, partial_l2_penalty=partial_l2_penalty,
                                      loss_weight_lambda=loss_weight_lambda)
 
