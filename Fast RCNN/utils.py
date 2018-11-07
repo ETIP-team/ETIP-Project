@@ -102,7 +102,7 @@ def write_one_result(all_csv_result, th_train_iou, th_iou_nms, th_iou_p, temp_pa
 
 def denorm(pred_bbox, k_fold_index, test_arguments):  # todo
     all_deviation = norm_info[str(test_arguments.th_train_iou)][test_arguments.dx_compute_method]["all_deviation"]
-    all_mean = norm_info[str(test_arguments.th_train_iou)]["test_arguments.dx_compute_method"]["all_mean"]
+    all_mean = norm_info[str(test_arguments.th_train_iou)][test_arguments.dx_compute_method]["all_mean"]
     pred_bbox[:, :, 0] = (pred_bbox[:, :, 0] * all_deviation[k_fold_index][0]) + all_mean[k_fold_index][0]
     pred_bbox[:, :, 1] = (pred_bbox[:, :, 1] * all_deviation[k_fold_index][1]) + all_mean[k_fold_index][1]
     return pred_bbox
@@ -219,8 +219,8 @@ def lb_reg_to_bbox(sentence_length, reg, box):  # use x left boundary
     out_width = bbox_width * np.exp(reg[:, :, 1])
 
     return np.array([
-        np.maximum(0, bbox_lb_x),
-        np.minimum(sentence_length, out_lb_x + out_width), ])
+        np.maximum(0, bbox_lb_x - 0*out_width),
+        np.minimum(sentence_length, out_lb_x + 1*out_width), ])
 
 
 def reg_to_bbox(sentence_length, reg, box):  # todo # rectify the ctr_x.
@@ -277,6 +277,7 @@ def evaluate(pred_bboxes, pred_cls, info, confusion_matrix, th_iou=0.6):  # todo
     gt_cls_hit_ls = [0 for i in range(len(gt_cls))]
     s_length = len(gt_str_space.split(" "))
     if pred_bboxes.size > 0 and th_iou == 1:
+        # todo cell the right boundary
         pred_bboxes = np.round(pred_bboxes, 0)
         pred_bboxes[:, 0][pred_bboxes[:, 0] < 0] = 0
         pred_bboxes[:, 1][pred_bboxes[:, 1] > s_length] = s_length

@@ -124,7 +124,7 @@ def main():
     loss_weight_lambda = 1.0
     prevent_overfitting_method = "Dropout"  # "L2 Regu" # "Dropout"
     partial_l2 = False
-    dx_compute_method = "left_boundary"  # "centre"
+    dx_compute_method = "left_boundary"  # "left_boundary"  # "centre"
 
     test_arguments = TestAruguments(norm, pos_loss_method, th_train_iou, min_test_epoch, max_test_epoch,
                                     dx_compute_method=dx_compute_method,
@@ -136,7 +136,7 @@ def main():
     all_csv_result = open(write_result_path, "w")
     first_write(all_csv_result)
     th_nms_iou_ls = [0.01]
-    th_iou_p_ls = [0.8],  # [0.6, 0.8, 1]  # [1]
+    th_iou_p_ls = [0.8]  # [0.6, 0.8, 1]  # [1],
     for th_iou_p in th_iou_p_ls:
         for th_nms_iou in th_nms_iou_ls:
             test_arguments.th_nms_iou = th_nms_iou

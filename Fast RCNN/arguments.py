@@ -71,12 +71,12 @@ class TrainArguments(BaseArguments):
 
         print("Th Train Iou:      ", self.th_train_iou, "\n")
         print("Regression Dx Compute Method:      ", end="")
-        print("Left Boundary ", "\n\n") if self.dx_compute_method else print("Centre ", "\n\n")
+        print("Left Boundary ", "\n\n") if self.dx_compute_method == "left_boundary" else print("Centre ", "\n\n")
 
     def get_save_directory(self, folder_index):
         # folder index start from 0
         path = "model/rcnn_jieba/"
-        path += "norm_" + self.dx_compute_method if self.normalize else ""
+        path += "norm_" + self.dx_compute_method + "_" if self.normalize else ""
         path += self.pos_loss_method + "_"
         if self.prevent_overfitting_method.lower() == "l2 regu":
             path += "partial_l2_" if self.partial_l2_penalty else "all_l2_"
@@ -166,7 +166,7 @@ class TestAruguments(BaseArguments):
     def get_model_path(self, folder_index, model_epoch):  # todo
         # folder index start from 0
         path = "model/rcnn_jieba/"
-        path += "norm_" if self.normalize else ""
+        path += "norm_" + self.dx_compute_method + "_" if self.normalize else ""
         path += self.pos_loss_method + "_"
         if self.prevent_overfitting_method.lower() == "l2 regu":
             path += "partial_l2_" if self.partial_l2_penalty else "all_l2_"
@@ -178,14 +178,14 @@ class TestAruguments(BaseArguments):
 
         return path
 
-    def get_test_npz_path(self, folder_index):  # todo
+    def get_test_npz_path(self, folder_index):
         # folder index start from 0
         path = "dataset/test/test_relabeled_data_npz/test" + str(folder_index + 1) + ".npz"
         return path
 
-    def get_write_result_path(self):  # todo
+    def get_write_result_path(self):
         path = "./result/insurance/"
-        path += "normed_data/" if self.normalize else "original_data/"
+        path += "normed_data/" + self.dx_compute_method + "_" if self.normalize else "original_data/"
         path += self.pos_loss_method + "_"
         if self.prevent_overfitting_method.lower() == "l2 regu":
             path += "partial_l2_" if self.partial_l2_penalty else "all_l2_"
@@ -203,7 +203,7 @@ class TestAruguments(BaseArguments):
         print("\nTh_train_iou:  ", self.th_train_iou, "th_nms_iou", self.th_nms_iou, "th_iou_p", self.th_iou_p)
         all_csv_result.write(
             "th_train_iou= " + str(self.th_train_iou) + ", th_nms= " + str(self.th_nms_iou) + ", th_p= " + str(
-                self.th_iou_p) + ",,")
+                self.th_iou_p) + ",,,,,")
         for d_l in data_lists:
             for d in d_l:
                 all_csv_result.write(str(d))
@@ -224,4 +224,4 @@ class TestAruguments(BaseArguments):
             print("Dropout Rate:      ", self.dropout_rate, "\n")
         print("Th Train Iou:      ", self.th_train_iou, "\n")
         print("Regression Dx Compute Method:      ", end="")
-        print("Left Boundary ", "\n\n") if self.dx_compute_method else print("Centre ", "\n\n")
+        print("Left Boundary ", "\n\n") if self.dx_compute_method == "left_boundary" else print("Centre ", "\n\n")
