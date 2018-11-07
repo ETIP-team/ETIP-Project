@@ -207,7 +207,23 @@ def txt_split(text_str):
     return ls_seg_sentences
 
 
-def reg_to_bbox(sentence_length, reg, box):  # todo   use x left boundary.   # rectify the ctr_x.
+def lb_reg_to_bbox(sentence_length, reg, box):  # use x left boundary
+    bbox_width = box[:, 1] - box[:, 0]  # Region length
+    bbox_lb_x = box[:, 0]  # x left boundary
+
+    bbox_width = bbox_width[:, np.newaxis]
+    bbox_lb_x = bbox_lb_x[:, np.newaxis]
+
+    out_lb_x = reg[:, :, 0] + bbox_lb_x
+
+    out_width = bbox_width * np.exp(reg[:, :, 1])
+
+    return np.array([
+        np.maximum(0, bbox_lb_x),
+        np.minimum(sentence_length, out_lb_x + out_width), ])
+
+
+def reg_to_bbox(sentence_length, reg, box):  # todo # rectify the ctr_x.
     bbox_width = box[:, 1] - box[:, 0]  # Region length
     bbox_ctr_x = box[:, 0] + 0.5 * bbox_width  # x coordinate   # Region coordinate
 

@@ -11,7 +11,7 @@ from torch.autograd import Variable
 import config as cfg
 from model import RCNN
 from utils import reg_to_bbox, non_maximum_suppression, evaluate, get_count_dataframe_by_confusion_matrix, denorm
-from utils import first_write
+from utils import first_write, lb_reg_to_bbox
 from arguments import TestAruguments
 
 word_embedding_dim = cfg.WORD_EMBEDDING_DIM
@@ -45,8 +45,10 @@ def _test_one_sentence(test_arguments, sentence, rois, rcnn, fold_index):
     pred_tbbox = pred_tbbox.data.cpu().numpy()
     if test_arguments.normalize:
         pred_tbbox = denorm(pred_tbbox, fold_index, test_arguments)
-
-    pred_bbox = reg_to_bbox(sentence.size(2), pred_tbbox, rois)
+    if test_arguments.dx_compute_method == "left_boundary":
+        pred_bbox = lb_reg_to_bbox(sentence.size(2), pred_tbbox, rois)
+    else:
+        pred_bbox = reg_to_bbox(sentence.size(2), pred_tbbox, rois)
 
     result_bbox = []
     result_cls = []
