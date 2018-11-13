@@ -100,7 +100,7 @@ def start_training(train_arguments, folder_index):
 
 
 def train_k_fold():
-    th_train_iou = 0.6
+    th_train_iou = 0.8
     with_regressor = True
     start_save_epoch = 30
     max_iter_epoch = 40
@@ -108,7 +108,7 @@ def train_k_fold():
     pos_loss_type = "mse"  # lower case
     prevent_overfitting_method = "Dropout"  # "L2 Regu"
     dropout_rate = 0.5
-    dx_compute_method = "left_boundary"  # centre
+    dx_compute_method = "centre"  # centre   # left_boundary
 
     loss_weight_lambda = 1.0
     norm = True  # False
