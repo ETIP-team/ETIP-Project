@@ -8,6 +8,7 @@
 -2. **Database** ：500 Chinese insurance contracts, which include life, disability, health, property, home, and auto insurance.  ETIP dataset is a kind of nested NER, but different from GENIA and ACE2005, in particular the length of the entities.
 
 
+-3. **ROI-SW** : Sliding Window to Region of Interst.
 ### DataSet Information
 | Category ID              |  N      |  ![Alt text](http://latex.codecogs.com/gif.latex?%5Cbar%7BL%7D)   | ![Alt text](http://latex.codecogs.com/gif.latex?%5Coverline%7BSLR%7D)  |
 | :-----------------------:|:-------:|:-------:|:-------:|
