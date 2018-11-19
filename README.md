@@ -1,4 +1,4 @@
-# ETIP: A general element tagging problem for contract analysis solved by sliding window technique
+# ETIP: An element tagging problem for Chinese  insurance policy analysis
 -------------------
 
 ### Project Description
