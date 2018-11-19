@@ -27,7 +27,7 @@ class ROIPooling(nn.Module):
     def forward(self, sentences, rois, roi_idx):
         n = rois.shape[0]
         left_boundary = rois[:, 0]
-        right_boundary = rois[:, 1] + 1
+        right_boundary = rois[:, 1]
 
         x1 = left_boundary
         x2 = right_boundary

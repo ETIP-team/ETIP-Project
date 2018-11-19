@@ -8,7 +8,7 @@
 import os
 import pickle
 import numpy as np
-from utils import calc_ious_1d, bbox_transform_1d
+from utils import calc_ious_1d, bbox_transform_1d, lb_bbox_transform_1d
 import config as cfg
 
 th_iou_train = cfg.TH_IOU_TRAIN
@@ -49,7 +49,7 @@ def process_data_train(pkl_file_path, save_path, th_iou_train):
     train_tbbox = []
     train_norm_tbbox = []
 
-    # train_lb_tbbox = []
+    train_lb_tbbox = []
     sample_num = len(all_data)
     for sample_index in range(sample_num):
         gt_boxes = all_data[sample_index]["ground_truth_bbox"]
@@ -68,7 +68,7 @@ def process_data_train(pkl_file_path, save_path, th_iou_train):
         max_ious = ious.max(axis=1)
         max_idx = ious.argmax(axis=1)
         tbbox = bbox_transform_1d(bboxs, gt_boxes[max_idx])
-        # lb_tbbox = lb_bbox_transform_1d(bboxs, gt_boxes[max_idx])
+        lb_tbbox = lb_bbox_transform_1d(bboxs, gt_boxes[max_idx])
 
         pos_idx = []
         neg_idx = []
@@ -79,7 +79,7 @@ def process_data_train(pkl_file_path, save_path, th_iou_train):
             gid = len(train_roi)
             train_roi.append(rbbox[roi_index])
             train_tbbox.append(tbbox[roi_index])
-            # train_lb_tbbox.append(lb_tbbox[roi_index])
+            train_lb_tbbox.append(lb_tbbox[roi_index])
             if max_ious[roi_index] >= th_iou_train:
                 pos_idx.append(gid)
                 train_cls.append(gt_classes[max_idx[roi_index]])
@@ -102,22 +102,22 @@ def process_data_train(pkl_file_path, save_path, th_iou_train):
     train_roi = np.array(train_roi)
     train_cls = np.array(train_cls)
     train_tbbox = np.array(train_tbbox)
-    # train_lb_tbbox = np.array(train_lb_tbbox)
-    train_norm_tbbox = feature_scaling(train_tbbox, train_norm_tbbox, True)
+    train_lb_tbbox = np.array(train_lb_tbbox)
+
+    train_norm_lb_tbbox = feature_scaling(train_lb_tbbox, train_norm_tbbox, True)
+    train_norm_tbbox = feature_scaling(train_tbbox, train_norm_tbbox, False)
 
     np.savez(open(save_path, 'wb'),
              train_sentences=train_sentences, train_sentence_info=train_sentence_info,
              train_roi=train_roi, train_cls=train_cls, train_tbbox=train_tbbox,
-             train_norm_tbbox=train_norm_tbbox)
+             train_norm_tbbox=train_norm_tbbox, train_norm_lb_tbbox=train_norm_lb_tbbox)
     print("save in ", save_path)
 
 
 def process_data_train_k_fold():
-    th_iou_train = 0.8
-    train_pkl_folder = 'dataset/train/train_relabeled_data_pkl_11_16_rb_modify/'
-    save_folder = 'dataset/train/train_relabeled_data_npz_11_16_rb_modify/'
-    if not os.path.exists(save_folder):
-        os.makedirs(save_folder)
+    th_iou_train = 0.6
+    train_pkl_folder = 'dataset/train/train_relabeled_data_pkl/'
+    save_folder = 'dataset/train/train_relabeled_data_npz/'
     ls_pkl_file_path = [train_pkl_folder + pkl for pkl in os.listdir(train_pkl_folder)]
     for i in range(len(ls_pkl_file_path)):
         save_path = save_folder + "train_th_iou_" + str(th_iou_train) + str(i + 1) + ".npz"
@@ -136,7 +136,7 @@ def process_data_test(pkl_file_path, save_path):
         gt_boxes = np.array([list(item) for item in gt_boxes])
         gt_classes = all_data[sample_index]["ground_truth_cls"]
         bboxs = all_data[sample_index]["region_proposal"]
-        gt_str = all_data[sample_index]["str"].split(" ")
+        gt_str = all_data[sample_index]["str"]
         # be matrix
         bboxs = np.array([list(item) for item in bboxs])
         nroi = len(bboxs)
@@ -163,10 +163,8 @@ def process_data_test(pkl_file_path, save_path):
 
 
 def process_data_test_k_fold():
-    train_pkl_folder = 'dataset/test/test_relabeled_data_pkl_11_16_rb_modify/'
-    save_folder = 'dataset/test/test_relabeled_data_npz_11_16_rb_modify/'
-    if not os.path.exists(save_folder):
-        os.makedirs(save_folder)
+    train_pkl_folder = 'dataset/test/test_relabeled_data_pkl/'
+    save_folder = 'dataset/test/test_relabeled_data_npz/'
     ls_pkl_file_path = [train_pkl_folder + pkl for pkl in os.listdir(train_pkl_folder)]
     for i in range(len(ls_pkl_file_path)):
         save_path = save_folder + "test" + str(i + 1) + ".npz"

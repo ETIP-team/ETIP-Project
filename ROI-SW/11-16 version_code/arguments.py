@@ -76,7 +76,7 @@ class TrainArguments(BaseArguments):
 
     def get_save_directory(self, folder_index):
         # folder index start from 0
-        path = "model/rcnn_jieba/11_16_rb_modify_"
+        path = "model/rcnn_jieba/"
         path += "norm_" + self.dx_compute_method + "_" if self.normalize else ""
         path += self.pos_loss_method + "_"
         if self.prevent_overfitting_method.lower() == "l2 regu":
@@ -91,7 +91,7 @@ class TrainArguments(BaseArguments):
 
     def get_train_data_path(self, folder_index):
         # folder index start from 0
-        return "dataset/train/train_relabeled_data_npz_11_16_rb_modify/train_th_iou_" + str(self.th_train_iou) + str(
+        return "dataset/train/train_relabeled_data_npz/train_th_iou_" + str(self.th_train_iou) + str(
             folder_index + 1) + ".npz"
 
     def batch_train_data_generator(self, perm):
@@ -139,7 +139,7 @@ class TrainArguments(BaseArguments):
 class TestAruguments(BaseArguments):
     def __init__(self, normalize, pos_loss_method, th_train_iou, min_test_epoch, max_test_epoch,
                  dx_compute_method,
-                 loss_weight_lambda=1.0, cuda=True, score_threshold=0.6, dropout_rate=0.5, output_flow=True,
+                 loss_weight_lambda=1.0, cuda=True, score_threshold=0.6, dropout_rate=0.5,
                  th_nms_iou=0, th_iou_p=0, partial_l2_penalty=True, prevent_overfitting_method="L2 Regu"
                  , fold_k=5, with_regressor=True):
         super(TestAruguments, self).__init__(normalize, fold_k)
@@ -159,7 +159,6 @@ class TestAruguments(BaseArguments):
         self.dropout_rate = dropout_rate
         self.dx_compute_method = dx_compute_method
         self.nms_return_all = True
-        self.output_flow = output_flow
 
         self.confusion_matrix = None
         self.model_path = None
@@ -168,7 +167,7 @@ class TestAruguments(BaseArguments):
 
     def get_model_path(self, folder_index, model_epoch):  # todo
         # folder index start from 0
-        path = "model/rcnn_jieba/11_16_rb_modify_"
+        path = "model/rcnn_jieba/"
         path += "norm_" + self.dx_compute_method + "_" if self.normalize else ""
         path += self.pos_loss_method + "_"
         if self.prevent_overfitting_method.lower() == "l2 regu":
@@ -183,7 +182,7 @@ class TestAruguments(BaseArguments):
 
     def get_test_npz_path(self, folder_index):
         # folder index start from 0
-        path = "dataset/test/test_relabeled_data_npz_11_16_rb_modify/test" + str(folder_index + 1) + ".npz"
+        path = "dataset/test/test_relabeled_data_npz/test" + str(folder_index + 1) + ".npz"
         return path
 
     def get_write_result_path(self):

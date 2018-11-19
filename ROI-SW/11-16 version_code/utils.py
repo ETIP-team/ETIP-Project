@@ -34,12 +34,12 @@ hit = [0]
 
 norm_info = {"0.6": {
     "centre": {
-        "all_mean": [[0.4850649467634713, 0.2692324869396469], [0.4983876224292012, 0.26975801824681317],
-                     [0.5206665870266396, 0.2739168225967976], [0.49799454069411175, 0.270190837504645],
-                     [0.5045989698307579, 0.2785267265351758]],
-        "all_deviation": [[2.1773948089607114, 0.193394922296268], [2.2520335454860914, 0.19336100005183582],
-                          [2.183443137053205, 0.19120864507979132], [2.1610545548806086, 0.19131912435737067],
-                          [2.2176285823654847, 0.18409173816839708]]},
+        "all_mean": [[0.06443895298506289, 0.24921900449936088], [0.07358772181097258, 0.25045570684169505],
+                     [0.08552335185463283, 0.25378268665231224], [0.0722001228938262, 0.2499207120587632],
+                     [0.0690014425388684, 0.2573712646714699]],
+        "all_deviation": [[2.193887953222562, 0.20025750261275815], [2.2718000657373274, 0.19973858438050374],
+                          [2.2150875539497994, 0.1965857106123908], [2.175039202244989, 0.19913427903962],
+                          [2.2406560778201627, 0.192379409701591]]},
     "left_boundary": {
         "all_mean": [[-2.2831599326334344, 0.24921900449936088], [-2.3766376697975247, 0.25045570684169505],
                      [-2.3828652950893527, 0.25378268665231224], [-2.243151903237282, 0.2499207120587632],
@@ -51,12 +51,12 @@ norm_info = {"0.6": {
 },
     "0.8": {
         "centre": {
-            "all_mean": [[0.43257544722108426, 0.12225034353871672], [0.4451171619321901, 0.12234651656030723],
-                         [0.4608574393565962, 0.12389159484944227], [0.4442847124824684, 0.12103677620280144],
-                         [0.4498525073746313, 0.12602654233102104]],
-            "all_deviation": [[1.0992460948604497, 0.09530469671917992], [1.1400499978206826, 0.0948102343252837],
-                              [1.1011214914476593, 0.09439264710129325], [1.094330081994799, 0.09660622948035186],
-                              [1.1222961682859232, 0.09105384759770371]]
+            "all_mean": [[0.03111014869351812, 0.10445007686158266], [0.037572928821470244, 0.10523528550053966],
+                         [0.0418747687754347, 0.10599033194468542], [0.03701144887485196, 0.10409750019725891],
+                         [0.03273780308235987, 0.10737650507590252]],
+            "all_deviation": [[1.1238326697207834, 0.09710832458180578], [1.1705871043184342, 0.09613037703358712],
+                              [1.1449200003450926, 0.09535004808422333], [1.1203488005079396, 0.09727440367749295],
+                              [1.1500399367630698, 0.0941451946949091]]
         },
         "left_boundary": {
             # to be filled
@@ -76,51 +76,6 @@ norm_info = {"0.6": {
         }
     }
 }
-
-# norm_info = {"0.6": {
-#     "centre": {
-#         "all_mean": [[0.06443895298506289, 0.24921900449936088], [0.07358772181097258, 0.25045570684169505],
-#                      [0.08552335185463283, 0.25378268665231224], [0.0722001228938262, 0.2499207120587632],
-#                      [0.0690014425388684, 0.2573712646714699]],
-#         "all_deviation": [[2.193887953222562, 0.20025750261275815], [2.2718000657373274, 0.19973858438050374],
-#                           [2.2150875539497994, 0.1965857106123908], [2.175039202244989, 0.19913427903962],
-#                           [2.2406560778201627, 0.192379409701591]]},
-#     "left_boundary": {
-#         "all_mean": [[-2.2831599326334344, 0.24921900449936088], [-2.3766376697975247, 0.25045570684169505],
-#                      [-2.3828652950893527, 0.25378268665231224], [-2.243151903237282, 0.2499207120587632],
-#                      [-2.3880108991825613, 0.2573712646714699]],
-#         "all_deviation": [[3.1510883343378837, 0.20025750261275815], [3.243162736750187, 0.19973858438050374],
-#                           [3.1915002819666904, 0.1965857106123908], [3.0769540883131996, 0.19913427903962],
-#                           [3.1638410325460593, 0.192379409701591]]
-#     }
-# },
-#     "0.8": {
-#         "centre": {
-#             "all_mean": [[0.03111014869351812, 0.10445007686158266], [0.037572928821470244, 0.10523528550053966],
-#                          [0.0418747687754347, 0.10599033194468542], [0.03701144887485196, 0.10409750019725891],
-#                          [0.03273780308235987, 0.10737650507590252]],
-#             "all_deviation": [[1.1238326697207834, 0.09710832458180578], [1.1705871043184342, 0.09613037703358712],
-#                               [1.1449200003450926, 0.09535004808422333], [1.1203488005079396, 0.09727440367749295],
-#                               [1.1500399367630698, 0.0941451946949091]]
-#         },
-#         "left_boundary": {
-#             # to be filled
-#         }
-#     },
-#     "0.9": {
-#         "centre": {
-#             "all_mean": [[0.010611817109917463, 0.04085855679433742], [0.012721665381649962, 0.04099686693343283],
-#                          [0.01305664185694462, 0.04137338143608464], [0.011869635193133048, 0.040320387189508734],
-#                          [0.010872447626624237, 0.041767302468701605]],
-#             "all_deviation": [[0.5699429477422212, 0.046797115821464834], [0.5914874606939978, 0.0468368080526009],
-#                               [0.5812051916821024, 0.04634683705849847], [0.5695373929985009, 0.047248527422787616],
-#                               [0.5813492141600299, 0.04616946291496999]]
-#         },
-#         "left_boundary": {
-#             # to be filled
-#         }
-#     }
-# }
 nms_mis_hit = [0] * 7
 
 
@@ -167,22 +122,26 @@ def lb_bbox_transform_1d(ex_rois, gt_rois):
     return targets
 
 
-def bbox_transform_1d(ex_rois, gt_rois):  # modify in 11-16
-    ex_widths = ex_rois[:, 1] - ex_rois[:, 0] + 1
-    ex_ctr_x = (ex_rois[:, 1] + ex_rois[:, 0]) / 2
+def bbox_transform_1d(ex_rois, gt_rois):
+    ex_widths = ex_rois[:, 1] - ex_rois[:, 0]
+    ex_ctr_x = ex_rois[:, 0] + 0.5 * ex_widths
 
-    gt_widths = gt_rois[:, 1] - gt_rois[:, 0] + 1
-    gt_ctr_x = (gt_rois[:, 1] + gt_rois[:, 0]) / 2
+    gt_widths = gt_rois[:, 1] - gt_rois[:, 0]
+    gt_ctr_x = gt_rois[:, 0] + 0.5 * gt_widths
 
-    targets_dx = gt_ctr_x - ex_ctr_x
+    # targets_dx = (gt_ctr_x - ex_ctr_x) / ex_widths
+    targets_dx = (gt_ctr_x - ex_ctr_x)
     targets_dw = np.log(gt_widths / ex_widths)
 
     targets = np.array([targets_dx, targets_dw]).T
     return targets
 
 
-def calc_ious_1d_1(ex_rois, gt_rois):  # modify  in 11-16
-    ex_area = ex_rois[:, 1] - ex_rois[:, 0]
+def calc_ious_1d(ex_rois, gt_rois):
+    try:
+        ex_area = ex_rois[:, 1] - ex_rois[:, 0]
+    except:
+        wait = True
     gt_area = gt_rois[:, 1] - gt_rois[:, 0]
 
     area_sum = ex_area.reshape((-1, 1)) + gt_area.reshape((1, -1))
@@ -193,21 +152,6 @@ def calc_ious_1d_1(ex_rois, gt_rois):  # modify  in 11-16
     area_i = np.maximum(rb - lb, 0)
     area_u = area_sum - area_i
     ious = area_i / area_u
-    return ious
-
-
-def calc_ious_1d(ex_rois, gt_rois):  # modify  in 11-16
-    ex_width = ex_rois[:, 1] - ex_rois[:, 0] + 1
-    gt_width = gt_rois[:, 1] - gt_rois[:, 0] + 1
-
-    area_sum = ex_width.reshape((-1, 1)) + gt_width.reshape((1, -1))
-
-    lb = np.maximum(ex_rois[:, 0].reshape((-1, 1)), gt_rois[:, 0].reshape((1, -1)))
-    rb = np.minimum(ex_rois[:, 1].reshape((-1, 1)) + 1, gt_rois[:, 1].reshape((1, -1)) + 1)
-
-    area_intersection = np.maximum(rb - lb, 0)
-    area_union = area_sum - area_intersection
-    ious = area_intersection / area_union
     return ious
 
 
@@ -279,9 +223,9 @@ def lb_reg_to_bbox(sentence_length, reg, box):  # use x left boundary
         np.minimum(sentence_length, out_lb_x + 1 * out_width), ])
 
 
-def reg_to_bbox(sentence_length, reg, box):
-    bbox_width = box[:, 1] - box[:, 0] + 1  # Region length
-    bbox_ctr_x = (box[:, 1] + box[:, 0]) / 2  # x coordinate   # Region coordinate
+def reg_to_bbox(sentence_length, reg, box):  # todo # rectify the ctr_x.
+    bbox_width = box[:, 1] - box[:, 0]  # Region length
+    bbox_ctr_x = box[:, 0] + 0.5 * bbox_width  # x coordinate   # Region coordinate
 
     bbox_width = bbox_width[:, np.newaxis]
     bbox_ctr_x = bbox_ctr_x[:, np.newaxis]
@@ -292,35 +236,11 @@ def reg_to_bbox(sentence_length, reg, box):
     out_width = bbox_width * np.exp(reg[:, :, 1])
 
     return np.array([
-        np.maximum(0, out_ctr_x - 0.5 * (out_width - 1)),
-        np.minimum(sentence_length, out_ctr_x + 0.5 * (out_width - 1))])
+        np.maximum(0, out_ctr_x - 0.5 * out_width),
+        np.minimum(sentence_length, out_ctr_x + 0.5 * out_width), ])
 
 
-def non_maximum_suppression(scores, bboxs, original_roi, iou_threshold=0.5, score_threshold=0.6, info=None,
-                            return_all_flag=True):
-    roi_num = scores.shape[0]
-    sorted_score_indexs = np.argsort(scores)[::-1]
-    bboxs = bboxs[sorted_score_indexs, :]
-    ious = calc_ious_1d(bboxs, bboxs)
-
-    result = []
-    drop = []
-    result_index = []
-
-    for i in range(roi_num):
-        if i == 0 or ious[i, result_index].max() < iou_threshold:  # rectify in 10-29
-            result.append(bboxs[i])
-            result_index.append(i)
-        else:
-            drop.append(bboxs[i])
-    if return_all_flag:
-        return result, drop, original_roi[sorted_score_indexs[result_index]], scores[sorted_score_indexs[result_index]]
-    else:
-        return result
-
-
-def non_maximum_suppression_all_regression(scores, bboxs, original_roi, iou_threshold=0.5, score_threshold=0.6,
-                                           info=None, return_all_flag=True):
+def non_maximum_suppression(scores, bboxs, iou_threshold=0.5, score_threshold=0.6, info=None, return_all_flag=True):
     roi_num = scores.shape[0]
     # sort the roi score and get it's index from big to small
     sorted_score_indexs = np.argsort(scores)[::-1]
@@ -328,7 +248,7 @@ def non_maximum_suppression_all_regression(scores, bboxs, original_roi, iou_thre
     while score_right_boundary < roi_num and scores[sorted_score_indexs[score_right_boundary]] >= score_threshold:
         score_right_boundary += 1
     if score_right_boundary == 0:
-        return [], [], [], [] if return_all_flag else []
+        return [], [] if return_all_flag else []
     sorted_score_indexs = sorted_score_indexs[:score_right_boundary]
     if len(sorted_score_indexs) > 2:
         wait = True
@@ -346,7 +266,7 @@ def non_maximum_suppression_all_regression(scores, bboxs, original_roi, iou_thre
         else:
             drop.append(bboxs[i])
     if return_all_flag:
-        return result, drop, original_roi[sorted_score_indexs[result_index]], scores[sorted_score_indexs[result_index]]
+        return result, drop
     else:
         return result
 
@@ -358,9 +278,20 @@ def evaluate(pred_bboxes, pred_cls, drop_bbox, drop_cls, info, confusion_matrix,
     gt_cls = info["gt_cls"]
     gt_str_space = info["gt_str"]
     gt_cls_hit_ls = [0 for i in range(len(gt_cls))]
-    s_length = len(gt_str_space)
+    s_length = len(gt_str_space.split(" "))
     # if pred_bboxes.size > 0 and th_iou == 1:
-
+    if pred_bboxes.size > 0:
+        # todo cell the right boundary
+        # pred_bboxes = np.round(pred_bboxes, 0)
+        pred_bboxes[:, 0] = np.round(pred_bboxes[:, 0], 0)
+        pred_bboxes[:, 1] = np.ceil(pred_bboxes[:, 1])
+        pred_bboxes[:, 0][pred_bboxes[:, 0] < 0] = 0
+        pred_bboxes[:, 1][pred_bboxes[:, 1] > s_length] = s_length
+        # drop box
+    if drop_bbox.size > 0:
+        drop_bbox = np.round(drop_bbox, 0)
+        drop_bbox[:, 0][drop_bbox[:, 0] < 0] = 0
+        drop_bbox[:, 1][drop_bbox[:, 1] > s_length] = s_length
     if len(pred_cls) > 0:
         # if len(gt_cls) > 1:
         #     wait = True

@@ -15,9 +15,9 @@ import config as cfg
 # Word2Vec.load("model/word_vector_model/all.seg300w50428.model")
 
 path = "dataset/train/train_relabeled_data_10_30/"
-pkl_path = "dataset/train/train_relabeled_data_pkl_11_16_rb_modify/"
+pkl_path = "dataset/train/train_relabeled_data_pkl/"
 # path = "dataset/test/test_relabeled_data_10_30/"
-# pkl_path = "dataset/test/test_relabeled_data_pkl_11_16_rb_modify/"
+# pkl_path = "dataset/test/test_relabeled_data_pkl/"
 
 # mention_hyper_graph
 # for file in os.listdir(path):
@@ -74,6 +74,7 @@ for file in os.listdir(path):
             sub_ls = sub_ls[len(sub_ls) - 2:]
         if len(sub_ls) < 1:
             continue
+            # continue
         one_data = {}
         one_data["sentence"] = str2wv(sub_ls[0].split(" ")).reshape(1, cfg.SENTENCE_LENGTH, word_embedding_dim)
         one_data["str"] = sub_ls[0]
@@ -91,8 +92,6 @@ for file in os.listdir(path):
         for item in labels:
             try:
                 tuple_ = tuple([int(item) for item in item.split(" ")[0].split(",")])
-                # 11-16 right boundary -1
-                tuple_[-1] -= 1
             except:
                 wait = True
             # ls_ground_truth.append(tuple_)
@@ -104,12 +103,10 @@ for file in os.listdir(path):
                 wait = True
         for start_i in range(0, sentence_length):
             for length_j in range(1, sentence_length - start_i + 1):
-                tuple_ = (start_i, start_i + length_j-1)
+                tuple_ = (start_i, start_i + length_j)
                 # if tuple_ in one_data["ground_truth_bbox"]:
                 #     continue
                 one_data["region_proposal"].append(tuple_)
         all_data.append(one_data)
-    if not os.path.exists(pkl_path):
-        os.makedirs(pkl_path)
     with open(pkl_path + file[:-5] + ".pkl", "wb") as f:
         pickle.dump(all_data, f)

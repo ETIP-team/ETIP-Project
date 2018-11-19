@@ -106,11 +106,11 @@ def train_k_fold():
     max_iter_epoch = 40
 
     pos_loss_type = "mse"  # lower case
-    prevent_overfitting_method = "L2 Regu"  # "L2 Regu"  # "Dropout"
+    prevent_overfitting_method = "Dropout"  # "L2 Regu"
     dropout_rate = 0.5
-    dx_compute_method = "centre"
+    dx_compute_method = "centre"  # centre   # left_boundary
 
-    loss_weight_lambda = 5.0
+    loss_weight_lambda = 1.0
     norm = True  # False
     partial_l2_penalty = False
 
