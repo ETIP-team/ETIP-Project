@@ -40,7 +40,6 @@ def train_epoch(train_arguments, rcnn):
 
     for sentence, rois, ridx, gt_cls, gt_tbbox in train_arguments.batch_train_data_generator(perm):
         loss, loss_cls, loss_loc = train_batch(sentence, rois, ridx, gt_cls, gt_tbbox, rcnn)
-        # loss = train_batch(sentence, rois, ridx, gt_cls, rcnn, optimizer)
         losses.append(loss)
         losses_cls.append(loss_cls)
         losses_loc.append(loss_loc)
@@ -100,17 +99,17 @@ def start_training(train_arguments, folder_index):
 
 
 def train_k_fold():
-    th_train_iou = 0.8
+    th_train_iou = 0.9
     with_regressor = True
-    start_save_epoch = 20
-    max_iter_epoch = 60
+    start_save_epoch = 60
+    max_iter_epoch = 150
 
     pos_loss_type = "mse"  # lower case
     prevent_overfitting_method = "Dropout"  # "L2 Regu"  # "Dropout"
     dropout_rate = 0.5
     dx_compute_method = "centre"
 
-    loss_weight_lambda = 1.0
+    loss_weight_lambda = 2.0
     norm = True  # False
     partial_l2_penalty = False
 

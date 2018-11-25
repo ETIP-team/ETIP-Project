@@ -76,11 +76,7 @@ class TrainArguments(BaseArguments):
 
     def get_save_directory(self, folder_index):
         # folder index start from 0
-        # path = "model/rcnn_jieba/global_nega_11_16_rb_modify_"
-        # path = "model/rcnn_jieba/more_2_11_16_rb_modify_"
-
-        path = "model/rcnn_jieba/gap_0.2_word_3_11_16_rb_modify_"
-        # path = "model/rcnn_jieba/11_16_rb_modify_"
+        path = "model/rcnn_jieba/no_bg_11_16_rb_modify_"
         path += "norm_" + self.dx_compute_method + "_" if self.normalize else ""
         path += self.pos_loss_method + "_"
         if self.prevent_overfitting_method.lower() == "l2 regu":
@@ -95,11 +91,7 @@ class TrainArguments(BaseArguments):
 
     def get_train_data_path(self, folder_index):
         # folder index start from 0
-        # return "dataset/train/global_nega_train_relabeled_data_npz_11_16_rb_modify/train_th_iou_" + str(
-        #     self.th_train_iou) + str(
-        #     folder_index + 1) + ".npz"
-        #
-        return "dataset/train/gap_0.2_word_3_train_relabeled_data_npz_11_16_rb_modify/train_th_iou_" + str(
+        return "dataset/train/no_bg_train_relabeled_data_npz_11_16_rb_modify/train_th_iou_" + str(
             self.th_train_iou) + str(
             folder_index + 1) + ".npz"
 
@@ -119,15 +111,15 @@ class TrainArguments(BaseArguments):
                 neg_idx = info['neg_idx']
                 ids = []
 
-                if len(pos_idx) > 0:
-                    ids.append(np.random.choice(pos_idx, size=self.pos_roi_num))
-                if len(neg_idx) > 0:
-                    ids.append(np.random.choice(neg_idx, size=self.neg_roi_num))
-                if len(ids) == 0:
-                    continue
+                # if len(pos_idx) > 0:
+                #     ids.append(np.random.choice(pos_idx, size=self.pos_roi_num))
+                # if len(neg_idx) > 0:
+                #     ids.append(np.random.choice(neg_idx, size=self.neg_roi_num))
+                # if len(ids) == 0:
+                #     continue
 
                 # all roi  18-10-19
-                # ids.append(pos_idx)
+                ids.append(pos_idx)
                 # ids.append(neg_idx)
                 # all roi
 
@@ -177,13 +169,7 @@ class TestAruguments(BaseArguments):
 
     def get_model_path(self, folder_index, model_epoch):  # todo
         # folder index start from 0
-        # path = "model/rcnn_jieba/global_nega_11_16_rb_modify_"
-        # path = "model/rcnn_jieba/more_2_11_16_rb_modify_"
-        # path = "model/rcnn_jieba/11_16_rb_modify_"  # best
-
-        path = "model/rcnn_jieba/gap_0.2_word_3_11_16_rb_modify_"
-
-
+        path = "model/rcnn_jieba/no_bg_11_16_rb_modify_"
         path += "norm_" + self.dx_compute_method + "_" if self.normalize else ""
         path += self.pos_loss_method + "_"
         if self.prevent_overfitting_method.lower() == "l2 regu":
@@ -198,16 +184,12 @@ class TestAruguments(BaseArguments):
 
     def get_test_npz_path(self, folder_index):
         # folder index start from 0
-        path = "dataset/test/test_relabeled_data_npz_11_16_rb_modify/test" + str(folder_index + 1) + ".npz"
+        path = "dataset/test/no_bg_test_relabeled_data_npz_11_16_rb_modify/test" + str(folder_index + 1) + ".npz"
         return path
 
     def get_write_result_path(self):
         path = "./result/insurance/"
-        # path += "normed_data/more_2_"
-
-        path += self.dx_compute_method + "_" if self.normalize else "original_data/"
-        path += "global_nega_"
-
+        path += "normed_data/" + self.dx_compute_method + "_" if self.normalize else "original_data/"
         path += self.pos_loss_method + "_"
         if self.prevent_overfitting_method.lower() == "l2 regu":
             path += "partial_l2_" if self.partial_l2_penalty else "all_l2_"

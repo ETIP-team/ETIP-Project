@@ -15,9 +15,9 @@ import config as cfg
 # Word2Vec.load("model/word_vector_model/all.seg300w50428.model")
 
 # path = "dataset/train/train_relabeled_data_10_30/"
-# pkl_path = "dataset/train/train_relabeled_data_pkl_11_16_rb_modify/"
+# pkl_path = "dataset/train/no_bg_train_relabeled_data_pkl_11_16_rb_modify/"
 path = "dataset/test/test_relabeled_data_10_30/"
-pkl_path = "dataset/test/test_relabeled_data_pkl_11_16_rb_modify/"
+pkl_path = "dataset/test/no_bg_test_relabeled_data_pkl_11_16_rb_modify/"
 
 # mention_hyper_graph
 # for file in os.listdir(path):
@@ -92,19 +92,19 @@ for file in os.listdir(path):
             try:
                 tuple_ = tuple([int(item) for item in item.split(" ")[0].split(",")])
                 # 11-16 right boundary -1
-                tuple_ = tuple_[0], tuple_[1] - 1
+                tuple_[-1] -= 1
             except:
                 wait = True
             # ls_ground_truth.append(tuple_)
             one_data["ground_truth_bbox"].append(tuple_)
             # make it a number.
             try:
-                one_data["ground_truth_cls"].append(cfg.LABEL.index(item[item.find("#") + 1:]) + 1)
+                one_data["ground_truth_cls"].append(cfg.LABEL.index(item[item.find("#") + 1:]))
             except:
                 wait = True
         for start_i in range(0, sentence_length):
             for length_j in range(1, sentence_length - start_i + 1):
-                tuple_ = (start_i, start_i + length_j - 1)
+                tuple_ = (start_i, start_i + length_j-1)
                 # if tuple_ in one_data["ground_truth_bbox"]:
                 #     continue
                 one_data["region_proposal"].append(tuple_)

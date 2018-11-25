@@ -76,11 +76,7 @@ class TrainArguments(BaseArguments):
 
     def get_save_directory(self, folder_index):
         # folder index start from 0
-        # path = "model/rcnn_jieba/global_nega_11_16_rb_modify_"
-        # path = "model/rcnn_jieba/more_2_11_16_rb_modify_"
-
-        path = "model/rcnn_jieba/gap_0.2_word_3_11_16_rb_modify_"
-        # path = "model/rcnn_jieba/11_16_rb_modify_"
+        path = "model/rcnn_jieba/11_16_rb_modify_"
         path += "norm_" + self.dx_compute_method + "_" if self.normalize else ""
         path += self.pos_loss_method + "_"
         if self.prevent_overfitting_method.lower() == "l2 regu":
@@ -95,12 +91,7 @@ class TrainArguments(BaseArguments):
 
     def get_train_data_path(self, folder_index):
         # folder index start from 0
-        # return "dataset/train/global_nega_train_relabeled_data_npz_11_16_rb_modify/train_th_iou_" + str(
-        #     self.th_train_iou) + str(
-        #     folder_index + 1) + ".npz"
-        #
-        return "dataset/train/gap_0.2_word_3_train_relabeled_data_npz_11_16_rb_modify/train_th_iou_" + str(
-            self.th_train_iou) + str(
+        return "dataset/train/train_relabeled_data_npz_11_16_rb_modify/train_th_iou_" + str(self.th_train_iou) + str(
             folder_index + 1) + ".npz"
 
     def batch_train_data_generator(self, perm):
@@ -177,13 +168,7 @@ class TestAruguments(BaseArguments):
 
     def get_model_path(self, folder_index, model_epoch):  # todo
         # folder index start from 0
-        # path = "model/rcnn_jieba/global_nega_11_16_rb_modify_"
-        # path = "model/rcnn_jieba/more_2_11_16_rb_modify_"
-        # path = "model/rcnn_jieba/11_16_rb_modify_"  # best
-
-        path = "model/rcnn_jieba/gap_0.2_word_3_11_16_rb_modify_"
-
-
+        path = "model/rcnn_jieba/11_16_rb_modify_"
         path += "norm_" + self.dx_compute_method + "_" if self.normalize else ""
         path += self.pos_loss_method + "_"
         if self.prevent_overfitting_method.lower() == "l2 regu":
@@ -203,11 +188,7 @@ class TestAruguments(BaseArguments):
 
     def get_write_result_path(self):
         path = "./result/insurance/"
-        # path += "normed_data/more_2_"
-
-        path += self.dx_compute_method + "_" if self.normalize else "original_data/"
-        path += "global_nega_"
-
+        path += "normed_data/" + self.dx_compute_method + "_" if self.normalize else "original_data/"
         path += self.pos_loss_method + "_"
         if self.prevent_overfitting_method.lower() == "l2 regu":
             path += "partial_l2_" if self.partial_l2_penalty else "all_l2_"

@@ -11,11 +11,10 @@ import numpy as np
 from utils import calc_ious_1d, bbox_transform_1d
 import config as cfg
 
-# th_iou_train = cfg.TH_IOU_TRAIN
+th_iou_train = cfg.TH_IOU_TRAIN
 
 all_mean = []
 all_deviation = []
-nega_num = [0]
 
 
 def feature_scaling(ndarray_all, pos_indexes, add_flag=False):
@@ -41,56 +40,8 @@ def feature_scaling(ndarray_all, pos_indexes, add_flag=False):
     return after_norm_ndarray
 
 
-def neighboring_merge(left_list, right_list):
-    """Compute the union and intersection of two sentences which can be part duplicated
-        For instance:
-        "w1w2w3" and "w3w4w5w6"
-        Return "w1w2w3w4w5w6" and "w3" """
-    min_length = min(len(left_list), len(right_list))
-    current_index = 999
-    for index in range(-1, -min_length - 1, -1):
-        if left_list[index:] == right_list[:abs(index)]:
-            current_index = index
-    if current_index < 0:
-        union = left_list + right_list[abs(current_index):]
-        return union, left_list[current_index:]
-    else:
-        return "", ""
-
-
-def get_all_gt(all_data):
-    sample_num = len(all_data)
-    all_gt_ls = [[] for i in range(cfg.CLASSES_NUM + 1)]
-    for sentence_index in range(sample_num):
-        bbox = all_data[sentence_index]["ground_truth_bbox"]
-        cls = all_data[sentence_index]["ground_truth_cls"]
-        gt_str_ls = all_data[sentence_index]["str"].split(" ")
-        for sample_index in range(len(cls)):
-            sample = bbox[sample_index]
-            all_gt_ls[cls[sample_index]].append(gt_str_ls[sample[0]: sample[1] + 1])
-
-    return all_gt_ls
-
-
-def check_global_nega(all_gt_ls, bbox, sentence_str, th_iou_train):
-    wait = True
-    sentence_str_ls = sentence_str.split(" ")[bbox[0]: bbox[1] + 1]
-    max_iou = 0
-    for cls_index in range(cfg.CLASSES_NUM + 1):
-        for str_ls in all_gt_ls[cls_index]:
-            iou = len(set(str_ls) & set(sentence_str_ls)) / len(set(str_ls) | set(sentence_str_ls))
-            if iou > max_iou:
-                max_iou = iou
-    if max_iou < th_iou_train:
-        return True
-    else:
-        return False
-
-
 def process_data_train(pkl_file_path, save_path, th_iou_train):
     all_data = pickle.load(open(pkl_file_path, "rb"))
-    all_gt_ls = get_all_gt(all_data)
-
     train_sentences = []
     train_sentence_info = []
     train_roi = []
@@ -98,6 +49,7 @@ def process_data_train(pkl_file_path, save_path, th_iou_train):
     train_tbbox = []
     train_norm_tbbox = []
 
+    # train_lb_tbbox = []
     sample_num = len(all_data)
     for sample_index in range(sample_num):
         gt_boxes = all_data[sample_index]["ground_truth_bbox"]
@@ -122,24 +74,19 @@ def process_data_train(pkl_file_path, save_path, th_iou_train):
         neg_idx = []
 
         for roi_index in range(nroi):
+            if max_ious[roi_index] < 0.1:
+                continue
             gid = len(train_roi)
-
-            # train_roi.append(rbbox[roi_index])
-            # train_tbbox.append(tbbox[roi_index])
+            train_roi.append(rbbox[roi_index])
+            train_tbbox.append(tbbox[roi_index])
             # train_lb_tbbox.append(lb_tbbox[roi_index])
             if max_ious[roi_index] >= th_iou_train:
                 pos_idx.append(gid)
                 train_cls.append(gt_classes[max_idx[roi_index]])
                 train_norm_tbbox.append(gid)
-                train_roi.append(rbbox[roi_index])
-                train_tbbox.append(tbbox[roi_index])
             else:
-                if check_global_nega(all_gt_ls, rbbox[roi_index], all_data[sample_index]["str"], th_iou_train):
-                    nega_num[0] += 1
-                    train_roi.append(rbbox[roi_index])
-                    train_tbbox.append(tbbox[roi_index])
-                    neg_idx.append(gid)
-                    train_cls.append(0)
+                neg_idx.append(gid)
+                train_cls.append(0)
 
         pos_idx = np.array(pos_idx)
         neg_idx = np.array(neg_idx)
@@ -166,9 +113,9 @@ def process_data_train(pkl_file_path, save_path, th_iou_train):
 
 
 def process_data_train_k_fold():
-    th_iou_train = 0.6
+    th_iou_train = 0.8
     train_pkl_folder = 'dataset/train/train_relabeled_data_pkl_11_16_rb_modify/'
-    save_folder = 'dataset/train/global_nega_train_relabeled_data_npz_11_16_rb_modify/'
+    save_folder = 'dataset/train/train_relabeled_data_npz_11_16_rb_modify/'
     if not os.path.exists(save_folder):
         os.makedirs(save_folder)
     ls_pkl_file_path = [train_pkl_folder + pkl for pkl in os.listdir(train_pkl_folder)]
@@ -227,12 +174,11 @@ def process_data_test_k_fold():
 
 
 def main():
-    process_data_test_k_fold()
-    # process_data_train_k_fold()
+    # process_data_test_k_fold()
+    process_data_train_k_fold()
 
 
 if __name__ == '__main__':
     main()
     print("all_mean", all_mean)
     print("all_deviation", all_deviation)
-    print("all_nega", nega_num)
