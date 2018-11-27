@@ -8,10 +8,12 @@
 import os
 import pickle
 import numpy as np
-from utils import calc_ious_1d, bbox_transform_1d
+from utils import calc_ious_1d, bbox_transform_1d, calc_intersection_union
 import config as cfg
 
 th_iou_train = cfg.TH_IOU_TRAIN
+
+cover_nega = open("cover_nega.txt", "w")
 
 all_mean = []
 all_deviation = []
@@ -60,8 +62,10 @@ def process_data_train(pkl_file_path, save_path, th_iou_train):
         bboxs = np.array([list(item) for item in bboxs])
         nroi = len(bboxs)
         sentence_matrix = all_data[sample_index]["sentence"]
-
-        ious = calc_ious_1d(bboxs, gt_boxes)
+        sentence_str_ls = all_data[sample_index]["str"].split(" ")
+        intersection, union = calc_intersection_union(bboxs, gt_boxes)
+        ious = intersection / union
+        length_union_minus_intersection = union - intersection
 
         rbbox = bboxs
 
@@ -84,13 +88,28 @@ def process_data_train(pkl_file_path, save_path, th_iou_train):
                 pos_idx.append(gid)
                 train_cls.append(gt_classes[max_idx[roi_index]])
                 train_norm_tbbox.append(gid)
-            elif max_ious[roi_index] < th_iou_train - 0.2:
-                gt_length = gt_boxes[max_idx[roi_index]][1] - gt_boxes[max_idx[roi_index]][0] + 1
-                roi_length = bboxs[roi_index][1] - bboxs[roi_index][0] + 1
-                if gt_length - roi_length <= 3:
-                    # if bboxs[roi_index][1] - bboxs[roi_index][0] + 1 <= 1:
+            elif max_ious[roi_index] <= th_iou_train - 0.2:
+                # max_ious[roi_index]
+                # gt_length = gt_boxes[max_idx[roi_index]][1] - gt_boxes[max_idx[roi_index]][0] + 1
+                # roi_length = bboxs[roi_index][1] - bboxs[roi_index][0] + 1
+                # if abs(gt_length - roi_length) <= 3:
+                if length_union_minus_intersection[roi_index][max_idx[roi_index]] <= 3:
                     continue
+                # cover_nega.write()
+                if gt_classes[max_idx[roi_index]] == 1:
+                    cover_nega.write("原句：\n")
+                    cover_nega.write(" ".join(sentence_str_ls) + "\n")
+                    cover_nega.write("Ground Truth：\n")
+                    cover_nega.write(
+                        " ".join(
+                            sentence_str_ls[
+                            gt_boxes[max_idx[roi_index]][0]:gt_boxes[max_idx[roi_index]][1] + 1]) + "\n")
+                    cover_nega.write("负样本：\n")
+                    cover_nega.write(" ".join(sentence_str_ls[bboxs[roi_index][0]:bboxs[roi_index][1] + 1]) + "\n")
+                    cover_nega.write("\n\n")
+                # cover_nega.write("")
                 gid = len(train_roi)
+
                 train_roi.append(rbbox[roi_index])
                 train_tbbox.append(tbbox[roi_index])
                 neg_idx.append(gid)
@@ -122,8 +141,10 @@ def process_data_train(pkl_file_path, save_path, th_iou_train):
 
 def process_data_train_k_fold():
     th_iou_train = 0.8
-    train_pkl_folder = 'dataset/train/train_relabeled_data_pkl_11_16_rb_modify/'
-    save_folder = 'dataset/train/gap_0.2_word_3_train_relabeled_data_npz_11_16_rb_modify/'
+    # train_pkl_folder = 'dataset/train/train_relabeled_data_pkl_11_16_rb_modify/'
+    train_pkl_folder = 'dataset/train/train_relabeled_data_pkl_11_22/'
+    # save_folder = 'dataset/train/gap_0.2_word_3_train_relabeled_data_npz_11_16_rb_modify/'
+    save_folder = 'dataset/train/gap_0.2_word_3_train_relabeled_data_npz_11_22/'
     if not os.path.exists(save_folder):
         os.makedirs(save_folder)
     ls_pkl_file_path = [train_pkl_folder + pkl for pkl in os.listdir(train_pkl_folder)]
@@ -171,8 +192,8 @@ def process_data_test(pkl_file_path, save_path):
 
 
 def process_data_test_k_fold():
-    train_pkl_folder = 'dataset/test/test_relabeled_data_pkl_11_16_rb_modify/'
-    save_folder = 'dataset/test/test_relabeled_data_npz_11_16_rb_modify/'
+    train_pkl_folder = 'dataset/test/test_relabeled_data_pkl_11_22/'
+    save_folder = 'dataset/test/test_relabeled_data_npz_11_22/'
     if not os.path.exists(save_folder):
         os.makedirs(save_folder)
     ls_pkl_file_path = [train_pkl_folder + pkl for pkl in os.listdir(train_pkl_folder)]
@@ -182,7 +203,7 @@ def process_data_test_k_fold():
 
 
 def main():
-    # process_data_test_k_fold()
+    process_data_test_k_fold()
     process_data_train_k_fold()
 
 

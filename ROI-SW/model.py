@@ -61,7 +61,7 @@ class RCNN(nn.Module):  # todo result connect one more full connected layer. to 
                       ),
             nn.ReLU(),
         )
-        self.roi_pool = ROIPooling(output_size=(1, pooling_out))
+        self.roi_pool = ROIPooling(output_size=(pooling_out, 1))
         self.flatten_feature = feature_maps_number * pooling_out
         self.cls_fc1 = nn.Linear(self.flatten_feature, self.flatten_feature)
         self.cls_score = nn.Linear(self.flatten_feature, classes_num + 1)

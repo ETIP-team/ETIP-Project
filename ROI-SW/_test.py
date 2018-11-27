@@ -54,7 +54,8 @@ def score_filter(pred_cls_score, score_th):
     return filter_indexs[0]
 
 
-def _test_one_sentence(file, test_arguments, sentence, rois, rcnn, fold_index, this_sentence_len, info):
+def _test_one_sentence(file_before, test_arguments, sentence, rois, rcnn, fold_index, this_sentence_len,
+                       info):
     roi_num = rois.shape[0]
     ridx = np.zeros(roi_num).astype(int)
     pred_cls_score, pred_tbbox = rcnn(sentence, rois, ridx)
@@ -77,7 +78,7 @@ def _test_one_sentence(file, test_arguments, sentence, rois, rcnn, fold_index, t
     output_bbox = pred_bbox.T.copy()
     output_result_cls = np.argmax(pred_cls_score, axis=1).copy()
     int_bbox(output_bbox, len(info["gt_str"]))
-    output_file_result(file, output_bbox, output_result_cls, rois, info, np.max(pred_cls_score, axis=1))
+    output_file_result(file_before, output_bbox, output_result_cls, rois, info, np.max(pred_cls_score, axis=1))
     # if test_arguments.output_flow:
     #     output_detect_result(output_bbox, output_result_cls, rois, info, np.max(pred_cls_score, axis=1))
 
@@ -114,6 +115,7 @@ def _test_one_sentence(file, test_arguments, sentence, rois, rcnn, fold_index, t
         c_score_ls.extend(c_score)
         result_cls.extend([c] * len(boxes))  # print the predict result of this sentence.
         drop_cls.extend([c] * len(_boxes))
+    # output_file_result(file_after, result_bbox, result_cls, original_roi_ls, info, np.max(pred_cls_score, axis=1))
 
     return np.array(result_bbox), np.array(result_cls), np.array(drop_bbox), np.array(drop_cls), np.array(
         original_roi_ls), np.array(c_score_ls)
@@ -207,7 +209,7 @@ def _test_one_sentence_all_regression(test_arguments, sentence, rois, rcnn, fold
         original_roi_ls), np.array(c_score_ls)
 
 
-def _test_epoch(file, test_arguments, fold_index):
+def _test_epoch(file_before, file_after, test_arguments, fold_index):
     rcnn = load_model(test_arguments)
     test_sentences, test_sentence_info, test_roi = load_test_sentence(test_arguments.test_sentence_npz_path)
 
@@ -223,7 +225,7 @@ def _test_epoch(file, test_arguments, fold_index):
         rois = test_roi[idxs]
 
         result_bbox, result_cls, drop_bbox, drop_cls, original_rois, scores = _test_one_sentence(
-            file,
+            file_before,
             test_arguments,
             sentence, rois,
             rcnn,
@@ -235,6 +237,7 @@ def _test_epoch(file, test_arguments, fold_index):
         drop_bbox = int_bbox(drop_bbox, this_sentence_len)
         if test_arguments.output_flow:
             output_detect_result(result_bbox, result_cls, original_rois, info, scores)
+        output_file_result(file_after, result_bbox, result_cls, original_rois, info, scores)
 
         evaluate(result_bbox, result_cls, drop_bbox, drop_cls, info, test_arguments.confusion_matrix,
                  test_arguments.th_iou_p)
@@ -262,13 +265,13 @@ def output_detect_result(result_bbox, result_cls, original_rois, info, scores):
     return
 
 
-def _test_k_fold(file, test_arguments, all_csv_result):
+def _test_k_fold(file_before, file_after, test_arguments, all_csv_result):
     for model_epoch in range(test_arguments.min_test_epoch, test_arguments.max_test_epoch + 1):
         test_arguments.initialize_confusion_matrix()
         for fold_index in range(test_arguments.fold_k):
             test_arguments.model_path = test_arguments.get_model_path(fold_index, model_epoch)
             test_arguments.test_sentence_npz_path = test_arguments.get_test_npz_path(fold_index)
-            _test_epoch(file, test_arguments, fold_index)
+            _test_epoch(file_before, file_after, test_arguments, fold_index)
         print("Not even classify right", utils.not_detect_ls)
         print("NMS Drop bbox", utils.nms_mis_hit)
         print("IOU lower than th", utils.iou_lower_hit)
@@ -288,10 +291,10 @@ def _test_k_fold(file, test_arguments, all_csv_result):
 
 def main():
     pos_loss_method = "mse"  # "mse"
-    th_train_iou = 0.8  # 0.8
+    th_train_iou = 0.6  # 0.8
     norm = True  # False
-    min_test_epoch = 21
-    max_test_epoch = 60
+    min_test_epoch = 31
+    max_test_epoch = 40
     loss_weight_lambda = 1.0
     prevent_overfitting_method = "Dropout"  # "L2 Regu" # "Dropout"
     partial_l2 = False
@@ -312,10 +315,11 @@ def main():
     th_iou_p_ls = [0.6, 0.8, 1]
     for th_iou_p in th_iou_p_ls:
         for th_nms_iou in th_nms_iou_ls:
-            file = open("Before NMS.txt", "w")
+            file_before = open("Debug Before NMS.txt", "w")
+            file_after = open("Debug After NMS.txt", "w")
             test_arguments.th_nms_iou = th_nms_iou
             test_arguments.th_iou_p = th_iou_p
-            _test_k_fold(file, test_arguments, all_csv_result)
+            _test_k_fold(file_before, file_after, test_arguments, all_csv_result)
 
 
 if __name__ == '__main__':

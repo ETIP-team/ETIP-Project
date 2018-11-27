@@ -16,6 +16,10 @@ import config as cfg
 all_mean = []
 all_deviation = []
 nega_num = [0]
+gap_th = 0.2
+nega_length_th = 3
+
+cover_nega = open("global_cover_nega.txt", "w")
 
 
 def feature_scaling(ndarray_all, pos_indexes, add_flag=False):
@@ -78,10 +82,16 @@ def check_global_nega(all_gt_ls, bbox, sentence_str, th_iou_train):
     max_iou = 0
     for cls_index in range(cfg.CLASSES_NUM + 1):
         for str_ls in all_gt_ls[cls_index]:
-            iou = len(set(str_ls) & set(sentence_str_ls)) / len(set(str_ls) | set(sentence_str_ls))
+            # if "".join(sentence_str_ls).find("".join(str_ls)) > -1:
+            #     return False
+            intersection = len(set(str_ls) & set(sentence_str_ls))
+            union = len(set(str_ls) | set(sentence_str_ls))
+            iou = intersection / union
+            if union - intersection <= nega_length_th:
+                return False
             if iou > max_iou:
                 max_iou = iou
-    if max_iou < th_iou_train:
+    if max_iou <= th_iou_train - gap_th:
         return True
     else:
         return False
@@ -108,7 +118,7 @@ def process_data_train(pkl_file_path, save_path, th_iou_train):
         bboxs = np.array([list(item) for item in bboxs])
         nroi = len(bboxs)
         sentence_matrix = all_data[sample_index]["sentence"]
-
+        sentence_str_ls = all_data[sample_index]["str"].split(" ")
         ious = calc_ious_1d(bboxs, gt_boxes)
 
         rbbox = bboxs
@@ -124,9 +134,6 @@ def process_data_train(pkl_file_path, save_path, th_iou_train):
         for roi_index in range(nroi):
             gid = len(train_roi)
 
-            # train_roi.append(rbbox[roi_index])
-            # train_tbbox.append(tbbox[roi_index])
-            # train_lb_tbbox.append(lb_tbbox[roi_index])
             if max_ious[roi_index] >= th_iou_train:
                 pos_idx.append(gid)
                 train_cls.append(gt_classes[max_idx[roi_index]])
@@ -136,6 +143,18 @@ def process_data_train(pkl_file_path, save_path, th_iou_train):
             else:
                 if check_global_nega(all_gt_ls, rbbox[roi_index], all_data[sample_index]["str"], th_iou_train):
                     nega_num[0] += 1
+                    if gt_classes[max_idx[roi_index]] == 1:
+                        cover_nega.write("原句：\n")
+                        cover_nega.write(" ".join(sentence_str_ls) + "\n")
+                        # cover_nega.write("Ground Truth：\n")
+                        # cover_nega.write(
+                        #     " ".join(
+                        #         sentence_str_ls[
+                        #         gt_boxes[max_idx[roi_index]][0]:gt_boxes[max_idx[roi_index]][1] + 1]) + "\n")
+                        cover_nega.write("负样本：\n")
+                        cover_nega.write(" ".join(sentence_str_ls[bboxs[roi_index][0]:bboxs[roi_index][1] + 1]) + "\n")
+                        cover_nega.write("\n\n")
+
                     train_roi.append(rbbox[roi_index])
                     train_tbbox.append(tbbox[roi_index])
                     neg_idx.append(gid)
@@ -166,7 +185,7 @@ def process_data_train(pkl_file_path, save_path, th_iou_train):
 
 
 def process_data_train_k_fold():
-    th_iou_train = 0.6
+    th_iou_train = 0.7
     train_pkl_folder = 'dataset/train/train_relabeled_data_pkl_11_16_rb_modify/'
     save_folder = 'dataset/train/global_nega_train_relabeled_data_npz_11_16_rb_modify/'
     if not os.path.exists(save_folder):
@@ -227,8 +246,8 @@ def process_data_test_k_fold():
 
 
 def main():
-    process_data_test_k_fold()
-    # process_data_train_k_fold()
+    # process_data_test_k_fold()
+    process_data_train_k_fold()
 
 
 if __name__ == '__main__':
