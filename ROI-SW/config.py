@@ -34,7 +34,7 @@ KERNAL_LENGTH = 3
 L2_BETA = 0.001
 FEATURE_MAPS_NUM = 36
 
-POOLING_OUT = 2  # to be declared.
+POOLING_OUT = 8  # to be declared.
 
 # Training Setting
 TH_IOU_TRAIN = 0.6

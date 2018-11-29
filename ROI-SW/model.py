@@ -31,6 +31,10 @@ class ROIPooling(nn.Module):
 
         x1 = left_boundary
         x2 = right_boundary
+
+        # modify roi projection.
+        # x1 = np.maximum(left_boundary - 1, 0)
+        # x2 = np.minimum(right_boundary + 1, sentences.shape[2])
         y1 = np.zeros((n, 1), dtype=int)
         y2 = np.ones((n, 1), dtype=int)
 
@@ -55,7 +59,7 @@ class RCNN(nn.Module):  # todo result connect one more full connected layer. to 
         self.conv1 = nn.Sequential(
             nn.Conv2d(in_channels=1,
                       out_channels=feature_maps_number,
-                      kernel_size=(kernal_length, word_embedding_dim),
+                      kernel_size=(kernal_length, word_embedding_dim),  # kernal size
                       stride=1,
                       padding=(1, 0)
                       ),
@@ -80,7 +84,7 @@ class RCNN(nn.Module):  # todo result connect one more full connected layer. to 
         self.lambd = lambd
         self.optimizer = None
 
-    def forward(self, sentence, rois, ridx, dropout_rate=0.5):  # todo a little
+    def forward(self, sentence, rois, ridx, dropout_rate=0.5):
         sentence = sentence.float()
         result = self.conv1(sentence)
         result = self.roi_pool(result, rois, ridx)

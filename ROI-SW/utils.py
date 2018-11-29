@@ -358,7 +358,7 @@ def non_maximum_suppression_all_regression(scores, bboxs, original_roi, iou_thre
         return result
 
 
-def evaluate(pred_bboxes, pred_cls, drop_bbox, drop_cls, info, confusion_matrix, th_iou=0.6):  # todo
+def evaluate(original_rois, pred_bboxes, pred_cls, drop_bbox, drop_cls, info, confusion_matrix, th_iou=0.6):  # todo
     assert len(pred_bboxes) == len(pred_cls)
     assert len(drop_bbox) == len(drop_cls)
     gt_bboxes = info["gt_bboxs"]
@@ -425,8 +425,21 @@ def evaluate(pred_bboxes, pred_cls, drop_bbox, drop_cls, info, confusion_matrix,
                         classes_num, pred_cls[pred_index] - 1] += 1  # predict do not hit any ground truth
                     not_hit[pred_cls[pred_index] - 1].append((pred_bboxes[pred_index],
                                                               gt_bboxes[hit_index]))  # todo
+                    # if pred_cls[pred_index] == 4:
+                    #     print("原句：", "".join(gt_str_space))
+                    #     print("FP：",
+                    #           "".join(gt_str_space[int(pred_bboxes[pred_index][0]):int(pred_bboxes[pred_index][1]) + 1]))
+                    #     # print(pred_bboxes[pred_index][0])
+                    #     print("Class Type:", cfg.LABEL[pred_cls[pred_index] - 1])
+                    #     print("错误类型：", "th_p iou不足\n\n")
             else:
                 confusion_matrix[classes_num, pred_cls[pred_index] - 1] += 1
+                # if pred_cls[pred_index] == 4:
+                #     print("原句：", "".join(gt_str_space))
+                #     print("FP：",
+                #           "".join(gt_str_space[int(pred_bboxes[pred_index][0]):int(pred_bboxes[pred_index][1]) + 1]))
+                #     print("Class Type:", cfg.LABEL[pred_cls[pred_index] - 1])
+                #     print("错误类型：", "不在原句中\n\n")
 
     # check the drop bbox if hit:
     # if min(gt_cls_hit_ls) != 0 and len(drop_cls) > 0:  # lose hit at least one
@@ -465,7 +478,7 @@ def evaluate(pred_bboxes, pred_cls, drop_bbox, drop_cls, info, confusion_matrix,
                 # print("IOU lower than threshold")
             # print("Label：", cfg.LABEL[gt_cls[i] - 1])
             # print("\n\n")
-            if gt_cls[i] == 1:
+            if gt_cls[i] == 3:
                 wait = True
     return
 

@@ -81,8 +81,10 @@ class TrainArguments(BaseArguments):
 
         # path = "model/rcnn_jieba/gap_0.2_word_3_11_16_rb_modify_"
         # path = "model/rcnn_jieba/gap_0.2_word_3_11_22_"
-        # path = "model/rcnn_jieba/11_16_rb_modify_"   # best
-        path = "model/rcnn_jieba/debug_11_16_rb_modify_"
+        # path = "model/rcnn_jieba/11_16_rb_modify_"   # best 82.8
+        # path = "model/rcnn_jieba/debug_11_16_rb_modify_"  # best  83.9
+        # path = "model/rcnn_jieba/no_c_nega_11_16_rb_modify_"  # best 84.1
+        path = "model/rcnn_jieba/pooling_out_" + str(cfg.POOLING_OUT) + "_no_c_nega_11_16_rb_modify_"  #
         path += "norm_" + self.dx_compute_method + "_" if self.normalize else ""
         path += self.pos_loss_method + "_"
         if self.prevent_overfitting_method.lower() == "l2 regu":
@@ -102,7 +104,7 @@ class TrainArguments(BaseArguments):
         #     folder_index + 1) + ".npz"
         #
         # return "dataset/train/gap_0.2_word_3_train_relabeled_data_npz_11_22/train_th_iou_" + str(
-        return "dataset/train/train_relabeled_data_npz_11_16_rb_modify/train_th_iou_" + str(
+        return "dataset/train/no_c_nega_train_relabeled_data_npz_11_16_rb_modify/train_th_iou_" + str(
             self.th_train_iou) + str(
             folder_index + 1) + ".npz"
 
@@ -181,9 +183,12 @@ class TestAruguments(BaseArguments):
     def get_model_path(self, folder_index, model_epoch):  # todo
         # folder index start from 0
         # path = "model/rcnn_jieba/global_nega_11_16_rb_modify_"
-        path = "model/rcnn_jieba/debug_11_16_rb_modify_"
+        # path = "model/rcnn_jieba/debug_11_16_rb_modify_"
         # path = "model/rcnn_jieba/more_2_11_16_rb_modify_"
 
+        # path = "model/rcnn_jieba/no_c_nega_11_16_rb_modify_"  # best
+
+        path = "model/rcnn_jieba/pooling_out_" + str(cfg.POOLING_OUT) + "_no_c_nega_11_16_rb_modify_"  #
         # path = "model/rcnn_jieba/11_16_rb_modify_"  # best
 
         # path = "model/rcnn_jieba/gap_0.2_word_3_11_16_rb_modify_"
@@ -209,6 +214,7 @@ class TestAruguments(BaseArguments):
 
     def get_write_result_path(self):
         path = "./result/insurance/"
+        path += "no_c_nega_"
         # path += "normed_data/global_nega_gap0.2_more_3_"
 
         path += self.dx_compute_method + "_" if self.normalize else "original_data/"

@@ -87,8 +87,8 @@ def check_global_nega(all_gt_ls, bbox, sentence_str, th_iou_train):
             intersection = len(set(str_ls) & set(sentence_str_ls))
             union = len(set(str_ls) | set(sentence_str_ls))
             iou = intersection / union
-            if union - intersection <= nega_length_th:
-                return False
+            # if union - intersection <= nega_length_th:
+            #     return False
             if iou > max_iou:
                 max_iou = iou
     if max_iou <= th_iou_train - gap_th:

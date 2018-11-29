@@ -99,7 +99,7 @@ def _test_one_sentence(file_before, test_arguments, sentence, rois, rcnn, fold_i
         c_cls_score = pred_cls_score[cls_index[0], c]
         c_bboxs = pred_bbox[:, cls_index[0]].T
         original_roi = rois[np.where(argmax_softmax == c)[0], :]
-        if c == 1:
+        if c == 1 or c == 7:
             boxes, _boxes, roi, c_score = non_maximum_suppression(c_cls_score, c_bboxs, original_roi,
                                                                   iou_threshold=0.01,
                                                                   score_threshold=test_arguments.score_threshold,
@@ -239,7 +239,7 @@ def _test_epoch(file_before, file_after, test_arguments, fold_index):
             output_detect_result(result_bbox, result_cls, original_rois, info, scores)
         output_file_result(file_after, result_bbox, result_cls, original_rois, info, scores)
 
-        evaluate(result_bbox, result_cls, drop_bbox, drop_cls, info, test_arguments.confusion_matrix,
+        evaluate(original_rois, result_bbox, result_cls, drop_bbox, drop_cls, info, test_arguments.confusion_matrix,
                  test_arguments.th_iou_p)
     return
 
@@ -300,7 +300,7 @@ def main():
     partial_l2 = False
     dx_compute_method = "centre"
     output_flow = False
-    th_score = 0.45
+    th_score = 0.0
     test_arguments = TestAruguments(norm, pos_loss_method, th_train_iou, min_test_epoch, max_test_epoch,
                                     dx_compute_method=dx_compute_method, output_flow=output_flow,
                                     score_threshold=th_score,
@@ -311,8 +311,8 @@ def main():
 
     all_csv_result = open(write_result_path, "w")
     first_write(all_csv_result)
-    th_nms_iou_ls = [0]
-    th_iou_p_ls = [0.6, 0.8, 1]
+    th_nms_iou_ls = [0.0]
+    th_iou_p_ls = [0.6]  # [0.6, 0.8, 1]
     for th_iou_p in th_iou_p_ls:
         for th_nms_iou in th_nms_iou_ls:
             file_before = open("Debug Before NMS.txt", "w")

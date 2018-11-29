@@ -88,15 +88,23 @@ def process_data_train(pkl_file_path, save_path, th_iou_train):
                 pos_idx.append(gid)
                 train_cls.append(gt_classes[max_idx[roi_index]])
                 train_norm_tbbox.append(gid)
-            elif max_ious[roi_index] <= th_iou_train - 0.2:
-                # max_ious[roi_index]
-                # gt_length = gt_boxes[max_idx[roi_index]][1] - gt_boxes[max_idx[roi_index]][0] + 1
-                # roi_length = bboxs[roi_index][1] - bboxs[roi_index][0] + 1
-                # if abs(gt_length - roi_length) <= 3:
-                if length_union_minus_intersection[roi_index][max_idx[roi_index]] <= 3:
-                    continue
+            # elif max_ious[roi_index] <= th_iou_train - 0.2:
+            #     # max_ious[roi_index]
+            #     # gt_length = gt_boxes[max_idx[roi_index]][1] - gt_boxes[max_idx[roi_index]][0] + 1
+            #     # roi_length = bboxs[roi_index][1] - bboxs[roi_index][0] + 1
+            #     # if abs(gt_length - roi_length) <= 3:
+            #     if length_union_minus_intersection[roi_index][max_idx[roi_index]] <= 3:
+            #         continue
+            else:
                 # cover_nega.write()
-                if gt_classes[max_idx[roi_index]] == 1:
+                if 1 in gt_classes:
+                    all_gt_c_bbox = gt_boxes[np.where(np.array(gt_classes) == 1)]
+                    max_c_iou = calc_ious_1d(bboxs[roi_index, np.newaxis],
+                                             gt_boxes[np.where(np.array(gt_classes) == 1)]).max()
+                    if max_c_iou > 0:
+                        continue
+                # if gt_classes[max_idx[roi_index]] == 1:
+                if True:
                     cover_nega.write("原句：\n")
                     cover_nega.write(" ".join(sentence_str_ls) + "\n")
                     cover_nega.write("Ground Truth：\n")
@@ -140,11 +148,11 @@ def process_data_train(pkl_file_path, save_path, th_iou_train):
 
 
 def process_data_train_k_fold():
-    th_iou_train = 0.8
-    # train_pkl_folder = 'dataset/train/train_relabeled_data_pkl_11_16_rb_modify/'
-    train_pkl_folder = 'dataset/train/train_relabeled_data_pkl_11_22/'
-    # save_folder = 'dataset/train/gap_0.2_word_3_train_relabeled_data_npz_11_16_rb_modify/'
-    save_folder = 'dataset/train/gap_0.2_word_3_train_relabeled_data_npz_11_22/'
+    th_iou_train = 0.6
+    train_pkl_folder = 'dataset/train/train_relabeled_data_pkl_11_16_rb_modify/'
+    # train_pkl_folder = 'dataset/train/train_relabeled_data_pkl_11_22/'
+    save_folder = 'dataset/train/no_c_nega_train_relabeled_data_npz_11_16_rb_modify/'
+    # save_folder = 'dataset/train/no_c_nega_train_relabeled_data_npz_11_22/'
     if not os.path.exists(save_folder):
         os.makedirs(save_folder)
     ls_pkl_file_path = [train_pkl_folder + pkl for pkl in os.listdir(train_pkl_folder)]
@@ -203,7 +211,7 @@ def process_data_test_k_fold():
 
 
 def main():
-    process_data_test_k_fold()
+    # process_data_test_k_fold()
     process_data_train_k_fold()
 
 
