@@ -35,6 +35,7 @@ class AttentionNestedNERModel(nn.Module):
 
         decode_hidden_units = hidden_units * 2 if encode_bi_flag else hidden_units
         # max nested level one hot!
+        # * 3 is VNER.
         self.decode_lstm = nn.LSTM(decode_hidden_units * 2 + self.config.max_nested_level, hidden_units * 2,
                                    decode_num_layers)
 
@@ -45,8 +46,10 @@ class AttentionNestedNERModel(nn.Module):
         else:  # dot method. should not go here.
             pass
 
-        self.linear1 = nn.Linear(decode_hidden_units, self.linear_hidden_units)
-        self.linear2 = nn.Linear(self.linear_hidden_units, self.classes_num)
+        # self.linear1 = nn.Linear(decode_hidden_units, self.linear_hidden_units)
+        # 4-12 one linear layer.
+        # self.linear2 = nn.Linear(self.linear_hidden_units, self.classes_num)
+        self.linear2 = nn.Linear(decode_hidden_units, self.classes_num)
 
         self.optimizer = None
         self.cross_entropy_loss = nn.CrossEntropyLoss()
@@ -138,9 +141,15 @@ class AttentionNestedNERModel(nn.Module):
 
                 # todo context_input add control info.
 
-                context_input = self.compute_context_input(s_compute, h, context_index)
+                context_input = self.compute_context_input(s_compute, h,
+                                                           context_index)  # [seq_len = 1, num_batch, embedding * 2]
+
+                # include h_decode_s_previous.
+                # context_input = t.cat([context_input, s_compute, control_nested_tensor],
+                #                       2)  # add in third dim. 4-9 VNER
 
                 context_input = t.cat([context_input, control_nested_tensor], 2)  # add in third dim.
+
                 # save one time output and update the cell state.
 
                 one_time_output, (s_i, cell_state_i) = self.decode_lstm.forward(context_input, (s_i, cell_state_i))
@@ -150,7 +159,7 @@ class AttentionNestedNERModel(nn.Module):
 
         output = t.cat(output_list, 0)  # [nested_level, seq_len, batch_num, decode_hidden_size]
 
-        output = F.relu(self.linear1(output))
+        # output = F.relu(self.linear1(output))  # forward 4-12 one linear.
         output = self.linear2(output)  # [seq_len, batch_num, bio_classes_num]
         return output.reshape(-1, self.classes_num)
 

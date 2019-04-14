@@ -9,8 +9,8 @@ from torch.autograd import Variable
 import pandas as pd
 import numpy as np
 
-from bilstm_attention import AttentionNestedNERModel
-from config import Config
+from bilstm_attention_crf import AttentionNestedNERModel
+from crf_config import Config
 from attention_neww2vmodel import geniaDataset
 
 from utils import data_prepare, output_summary, output_sent, output_level
@@ -119,12 +119,15 @@ def _test_one_sentence(config: Config, model: AttentionNestedNERModel, word_ids:
     else:
         one_seq_word_ids = Variable(t.Tensor([word_ids]).long())
 
-    predict_result = model.forward(one_seq_word_ids, config.max_nested_level).squeeze(1)  # [seq_len, BIO labels]
-    predict_result = predict_result.reshape(config.max_nested_level, len(word_ids), 1, len(config.bio_labels))
-    predict_result = predict_result.squeeze(2)  # remove batch num = 1
-    predict_result = predict_result.cpu().data.numpy()
+    predict_score, predict_result = model.predict(one_seq_word_ids)
+    # todo process here.
+    predict_result = np.array(predict_result)
+    # predict_result = np.array(predict_result).reshape(config.max_nested_level, len(word_ids), 1,
+    #                                                        len(config.bio_labels))
+    # predict_result = predict_result.squeeze(2)  # remove batch num = 1
+    # predict_result = predict_result.cpu().data.numpy()
     for nested_level in range(config.max_nested_level):
-        predict_bio_label_index = np.argmax(predict_result[nested_level], axis=1)
+        predict_bio_label_index = predict_result[nested_level]
         # todo rectify.
         # predict_bio_label_index = rectify_bio_labels(predict_bio_label_index)
         # predict_bio_label_index = t.argmax(predict_result, dim=1).cpu().data.numpy()
@@ -172,7 +175,7 @@ def _test(config: Config, model: AttentionNestedNERModel):
 
 def start_test(config: Config, model: AttentionNestedNERModel):
     print("Start Testing------------------------------------------------", "\n" * 2)
-    for epoch in range(config.start_test_epoch, config.max_epoch):
+    for epoch in range(config.start_test_epoch - 1, config.max_epoch):
         model = config.load_model(model, epoch)
         _test(config, model)
     return

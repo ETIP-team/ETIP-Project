@@ -14,6 +14,8 @@ class Config:
         self.cuda = True  # False
         self.WORD_VEC_MODEL_PATH = "./model/word_vector_model/wikipedia-pubmed-and-PMC-w2v.bin"  # ACE05
         # self.WORD_VEC_MODEL_PATH = "./model/word_vector_model/bio_nlp_vec.tar/bio_nlp_vec/PubMed-shuffle-win-2.bin"
+        self.START_TAG = "<START>"
+        self.STOP_TAG = "<STOP>"
 
         # model config.
 
@@ -35,6 +37,10 @@ class Config:
         for one_label in self.labels:
             self.bio_labels.extend(["B-" + one_label, "I-" + one_label])
 
+        self.bio_labels.extend([self.START_TAG, self.STOP_TAG])
+        self.tag_to_ix = {}
+        for i, tag in enumerate(self.bio_labels):
+            self.tag_to_ix[tag] = i
         self.classes_num = len(self.bio_labels)  # Begin, Inside, Out of entity
         self.max_nested_level = 1
 
@@ -44,7 +50,7 @@ class Config:
         self.max_epoch = 20
         self.start_save_epoch = 1
 
-        self.start_test_epoch = 10
+        self.start_test_epoch = 1
 
         self.train_data = None
         self.train_label = None
@@ -61,7 +67,7 @@ class Config:
 
     def model_save_path(self, epoch, create_flag=True):
         final_model_path = "./model/" + self.dataset_type + "/"
-        final_model_path += "bi_" if self.encode_bi_flag else ""
+        final_model_path += "crf_bi_" if self.encode_bi_flag else ""
         final_model_path += self.attention_method
         final_model_path += "_max_nested_level_" + str(self.max_nested_level)
         final_model_path += "_hidden_units_" + str(self.hidden_units)
