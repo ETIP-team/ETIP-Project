@@ -3,6 +3,7 @@
 # Created by Drogo Zhang
 #
 # On 2019-04-03
+# Comment: only support one sentence once a time!
 
 import numpy as np
 import torch as t
@@ -31,11 +32,10 @@ def prepare_sequence(config: Config, seqs, to_ix):
 
 
 # Compute log sum exp in a numerically stable way for the forward algorithm
-def log_sum_exp(vecs):
-    num_batch = vecs.shape[0]
-    max_score = vecs[range(num_batch), t.argmax(vecs, dim=1)]  # [num_batch]
-    max_score_broadcast = max_score.view(num_batch, -1).expand(num_batch, vecs.shape[1])  # [num_batch, bio_labels]
-    return max_score + t.log(t.sum(t.exp(vecs - max_score_broadcast), dim=1))
+def log_sum_exp(vec):
+    max_score = vec[0, argmax(vec)]  # [num_batch]
+    max_score_broadcast = max_score.view(1, -1).expand(1, vec.shape[1])  # [num_batch, bio_labels]
+    return max_score + t.log(t.sum(t.exp(vec - max_score_broadcast)))
 
 
 class AttentionNestedNERModel(nn.Module):
@@ -192,23 +192,22 @@ class AttentionNestedNERModel(nn.Module):
         output = self.hidden2tag(output)  # [nested_level, seq_len, batch_num, bio_labels_num]
         return output
 
-    def _score_sentence(self, feats, tags):  # todo
-        # feats shape [seq_len, num_batch, targets]
-        num_batch = feats.shape[1]
+    def _score_sentence(self, feats, tags):
+        # feats shape [seq_len, targets]
+
         # Gives the score of a provided tag sequence
-        scores = t.zeros(num_batch).cuda() if self.config.cuda else t.zeros(num_batch)  # [1]
-        start_tensor_tag = t.Tensor([self.config.tag_to_ix[self.config.START_TAG]]).long().unsqueeze(0).expand(
-            num_batch, 1)
+        score = t.zeros(1).cuda() if self.config.cuda else t.zeros(1)  # [1]
+        start_tensor_tag = t.Tensor([self.config.tag_to_ix[self.config.START_TAG]]).long()
         start_tensor_tag = start_tensor_tag.cuda() if self.config.cuda else start_tensor_tag
-        tags = t.cat([start_tensor_tag, tags], 1)
+        tags = t.cat([start_tensor_tag, tags])
         for i, feat in enumerate(feats):  # i+1, i means i transfer to i+1
-            scores = scores + self.transitions[tags[:, i + 1], tags[:, i]] + feat[range(feat.shape[0]), tags[:, i + 1]]
-        scores = scores + self.transitions[[self.config.tag_to_ix[self.config.STOP_TAG]] * num_batch, tags[:, -1]]
-        return scores
+            score = score + self.transitions[tags[i + 1], tags[i]] + feat[tags[i + 1]]
+        score = score + self.transitions[self.config.tag_to_ix[self.config.STOP_TAG], tags[-1]]
+        return score
 
     def _viterbi_decode(self, feats):  # todo
         backpointers = []
-
+        # feats shape [seq_len, bio_labels]
         # Initialize the viterbi variables in log space
         init_vvars = t.full((1, self.tagset_size), -10000.).cuda() if self.config.cuda else t.full(
             (1, self.tagset_size), -10000.)
@@ -252,12 +251,12 @@ class AttentionNestedNERModel(nn.Module):
         return path_score, best_path
 
     def _forward_alg(self, feats):
-        # feats shape [seq_len, num_batch, bio_labels]
-        num_batch = feats.shape[1]
+        # feats shape [seq_len, bio_labels]
+        # num_batch = feats.shape[1]
         # Do the forward algorithm to compute the partition function
-        init_alphas = t.full((num_batch, self.tagset_size), -10000.).cuda()
+        init_alphas = t.full((1, self.tagset_size), -10000.).cuda()
         # START_TAG has all of the score.
-        init_alphas[:, self.config.tag_to_ix[self.config.START_TAG]] = 0.
+        init_alphas[0][self.config.tag_to_ix[self.config.START_TAG]] = 0.
 
         # Wrap in a variable so that we will get automatic back prop
         forward_var = init_alphas
@@ -268,33 +267,34 @@ class AttentionNestedNERModel(nn.Module):
             for next_tag in range(self.tagset_size):
                 # broadcast the emission score: it is the same regardless of
                 # the previous tag
-                # emit_score = feat[next_tag].view(1, -1).expand(1, self.tagset_size)
-                emit_score = feat[:, next_tag].unsqueeze(1).expand(num_batch, self.tagset_size)  # [1, num_batch]
+                emit_score = feat[next_tag].view(1, -1).expand(1, self.tagset_size)
+                # emit_score = feat[next_tag].unsqueeze(1).expand(num_batch, self.tagset_size)  # [1, num_batch]
                 # the ith entry of trans_score is the score of transitioning to
                 # next_tag from i
-                trans_score = self.transitions[next_tag].unsqueeze(0).expand(num_batch, self.tagset_size)
+                # trans_score = self.transitions[next_tag].unsqueeze(0).expand(num_batch, self.tagset_size)
+                trans_score = self.transitions[next_tag].view(1, -1)
                 # The ith entry of next_tag_var is the value for the
                 # edge (i -> next_tag) before we do log-sum-exp
                 next_tag_var = forward_var + trans_score + emit_score
                 # The forward variable for this tag is log-sum-exp of all the
                 # scores.
-                alphas_t.append(log_sum_exp(next_tag_var))
-            forward_var = t.cat(alphas_t).view(num_batch, self.tagset_size)  # [num_batch, targets]
-        terminal_var = forward_var + self.transitions[self.config.tag_to_ix[self.config.STOP_TAG]].unsqueeze(
-            0).expand(num_batch, self.tagset_size)  # stop prob. [num_batch, targets]
+                alphas_t.append(log_sum_exp(next_tag_var).view(1))
+            forward_var = t.cat(alphas_t).view(1, self.tagset_size)  # [num_batch, targets]
+        terminal_var = forward_var + self.transitions[
+            self.config.tag_to_ix[self.config.STOP_TAG]]  # stop prob. [num_batch, targets]
         alpha = log_sum_exp(terminal_var)  # [num_batch]
         return alpha
 
-    def neg_log_likelihood(self, seqs, tags):  # todo nested level.
-        # tags:[nested_level, seq_len, batch_num]
-        feats = self._get_lstm_features(seqs)  # [nested_level, seq_len, num_batch, bio_labels]
+    def neg_log_likelihood(self, seq, tags):
+        # tags:[nested_level, seq_len]
+        feats = self._get_lstm_features(seq).squeeze(2)  # [nested_level, seq_len, bio_labels]
         level_losses = []  # [nested_level, num_batch]
         for nested_level in range(self.config.max_nested_level):
             forward_score = self._forward_alg(feats[nested_level])
-            gold_score = self._score_sentence(feats[nested_level], tags[nested_level])
-            level_losses.append((forward_score - gold_score).unsqueeze(0))
+            gold_score = self._score_sentence(feats[nested_level], tags[nested_level].squeeze())
+            level_losses.append((forward_score - gold_score))
 
-        return t.sum(t.cat(level_losses), dim=0).mean()  # single value
+        return t.cat(level_losses).mean()  # single value
 
     def predict(self, sentence):  # only support one sentence!
         # Get the emission scores from the BiLSTM

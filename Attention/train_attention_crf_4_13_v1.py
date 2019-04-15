@@ -20,28 +20,28 @@ from utils import data_prepare
 def train_one_batch(config: Config, model: AttentionNestedNERModel, one_batch_data: list, one_batch_label: list):
     # consider carefully to split for batch
     # partition by length or actually one seq to save.
-
-    seq_length = len(one_batch_data[0])
+    batch_loss = []
 
     # if max_seqs_nested_level > 1 and seq_length > 2:
     #     wait = True
-
-    if config.cuda:
-        seqs_word_ids = Variable(t.Tensor(one_batch_data).cuda().long()).reshape(-1, seq_length)
-        seqs_labels = Variable(t.Tensor(one_batch_label).cuda().long())
-    else:
-        seqs_word_ids = Variable(t.Tensor(one_batch_data).long()).reshape(-1, seq_length)
-        seqs_labels = Variable(t.Tensor(one_batch_label).long())
-
-    seqs_labels = seqs_labels.permute(1, 0, 2)  # [nested_level, batch_num, seq_len]
-
-    neg_log_loss = model.neg_log_likelihood(seqs_word_ids, seqs_labels)
-    # one_batch_loss = model.calc_loss(predict_result, seqs_labels.reshape(-1))
-    # print(neg_log_loss)
-    model.zero_grad()
-    neg_log_loss.backward()
-    model.optimizer.step()
-    return neg_log_loss.cpu().data.numpy()
+    for seq_index in range(len(one_batch_label)):
+        one_seq_word_ids = one_batch_data[seq_index]
+        one_seq_labels = one_batch_label[seq_index]
+        if config.cuda:
+            one_seq_word_ids = Variable(t.Tensor([one_seq_word_ids]).cuda().long())
+            one_seq_labels = Variable(t.Tensor([one_seq_labels]).cuda().long())
+        else:
+            one_seq_word_ids = Variable(t.Tensor(one_seq_word_ids).long())
+            one_seq_labels = Variable(t.Tensor(one_seq_labels).long())
+        # one_seq_labels = [nested_level, num_batch]
+        neg_log_loss = model.neg_log_likelihood(one_seq_word_ids, one_seq_labels)
+        # one_batch_loss = model.calc_loss(predict_result, seqs_labels.reshape(-1))
+        # print(neg_log_loss)
+        batch_loss.append(neg_log_loss.cpu().data.numpy())
+        model.optimizer.zero_grad()
+        neg_log_loss.backward()
+        model.optimizer.step()
+    return np.array(batch_loss).mean()
 
 
 def train_one_epoch(config: Config,
